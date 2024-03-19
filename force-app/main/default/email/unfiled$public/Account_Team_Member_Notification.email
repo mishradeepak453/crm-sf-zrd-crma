@@ -1,0 +1,15 @@
+Hallo {!AccountTeamMember.Member_Name__c},
+
+du wurdest von {!AccountTeamMember.CreatedBy} dem Account Team von {!AccountTeamMember.Account_Name__c} hinzugefügt.
+
+Logge dich ein um mehr über den Account zu erfahren.
+{!AccountTeamMember.Account_Link__c}
+
+
+
+Viele Grüße
+dein Zeppelin Salesforce-Team
+
+
+
+Dies ist eine automatische generierte E-Mail, bitte nicht antworten.

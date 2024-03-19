@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_999999</fullName>
+    <active>true</active>
+    <description>SF-64 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country. Format (&quot;\\d{6}&quot;). Example: 999999.</description>
+    <errorConditionFormula>OR(
+IF(
+OR(
+BillingCountry == &quot;BY&quot;,
+BillingCountry == &quot;CN&quot;,
+BillingCountry == &quot;EC&quot;,
+BillingCountry == &quot;IN&quot;,
+BillingCountry == &quot;KZ&quot;,
+BillingCountry == &quot;KG&quot;,
+BillingCountry == &quot;RO&quot;,
+BillingCountry == &quot;RU&quot;,
+BillingCountry == &quot;SG&quot;,
+BillingCountry == &quot;TJ&quot;,
+BillingCountry == &quot;UZ&quot;
+),
+NOT(REGEX(BillingPostalCode, (&quot;\\d{6}&quot;))),FALSE),
+IF(AND(
+NOT(ISBLANK(ShippingPostalCode)),
+OR(
+ShippingCountry == &quot;BY&quot;,
+ShippingCountry == &quot;CN&quot;,
+ShippingCountry == &quot;EC&quot;,
+ShippingCountry == &quot;IN&quot;,
+ShippingCountry == &quot;KZ&quot;,
+ShippingCountry == &quot;KG&quot;,
+ShippingCountry == &quot;RO&quot;,
+ShippingCountry == &quot;RU&quot;,
+ShippingCountry == &quot;SG&quot;,
+ShippingCountry == &quot;TJ&quot;,
+ShippingCountry == &quot;UZ&quot;
+)),
+NOT(REGEX(ShippingPostalCode, (&quot;\\d{6}&quot;))),FALSE)
+)
+&amp;&amp; ISPICKVAL( Core_Customer_Type__c, &quot;7&quot;)
+&amp;&amp; $Permission.Core_Account_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorMessage>Please enter a valid format for the Zip Code! This should consist of six numbers. Example: 999999</errorMessage>
+</ValidationRule>

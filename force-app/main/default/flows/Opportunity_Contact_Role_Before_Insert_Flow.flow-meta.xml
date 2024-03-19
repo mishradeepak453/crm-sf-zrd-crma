@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <customErrors>
+        <description>Error for Primary Contact Roles that have a deletion flag or do not belong to the related Account.</description>
+        <name>Primary_Contact_Error</name>
+        <label>Primary Contact Error</label>
+        <locationX>50</locationX>
+        <locationY>503</locationY>
+        <customErrorMessages>
+            <errorMessage>{!PrimaryContactErrorText}</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>PrimaryContactError_relevant</name>
+        <label>PrimaryContactError relevant?</label>
+        <locationX>182</locationX>
+        <locationY>395</locationY>
+        <defaultConnectorLabel>NO Primary Contact Error</defaultConnectorLabel>
+        <rules>
+            <name>Primary_Contact_Error_Decision</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.IsPrimary</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Contact.Deletion_Code__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Get_Contact.AccountId</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Opportunity.AccountId</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Primary_Contact_Error</targetReference>
+            </connector>
+            <label>Primary Contact Error</label>
+        </rules>
+    </decisions>
+    <description>:: Checks if the Primary Contact is valid</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>PrimaryContactErrorText</name>
+        <dataType>String</dataType>
+        <expression>IF(ISPICKVAL({!$User.LanguageLocaleKey}, &quot;de&quot;), &quot;Ein primärer Kontakt darf kein Löschkennzeichen haben und muss zum Opporunity-Account gehören&quot;, &quot;A primary Contact must not have a deletion flag and has to belong to the Opportunity Account&quot;)</expression>
+    </formulas>
+    <interviewLabel>Opportunity Contact Role before {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity Contact Role Before Insert Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Contact</name>
+        <label>Get Contact</label>
+        <locationX>182</locationX>
+        <locationY>287</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>PrimaryContactError_relevant</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contact</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>AccountId</queriedFields>
+        <queriedFields>Deletion_Code__c</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Contact</targetReference>
+        </connector>
+        <object>OpportunityContactRole</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

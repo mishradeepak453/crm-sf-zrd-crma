@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Es können nur Opportunities ausgewählt werden, die mit dem Account des Auftrags verknüpft sind, die das gleiche Geschäftsfeld wie der Auftrag haben und, die in der Angebotsphase oder geschlossen-gewonnen sind.</help>
+    <label>Opportunity</label>
+    <name>Opportunity__c</name>
+    <relationshipLabel>Aufträge</relationshipLabel>
+</CustomFieldTranslation>

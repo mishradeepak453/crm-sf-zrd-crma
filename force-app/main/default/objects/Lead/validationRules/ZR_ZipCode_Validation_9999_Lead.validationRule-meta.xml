@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_9999_Lead</fullName>
+    <active>true</active>
+    <description>SF-158 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country. Format (&quot;\\d{4}&quot;). Example: 9999.</description>
+    <errorConditionFormula>IF(
+AND(
+NOT(ISBLANK( PostalCode )),
+OR(
+Country == &quot;AR&quot;,
+Country == &quot;AM&quot;,
+Country == &quot;AU&quot;,
+Country == &quot;AT&quot;,
+Country == &quot;BD&quot;,
+Country == &quot;BE&quot;,
+Country == &quot;BG&quot;,
+Country == &quot;CY&quot;,
+Country == &quot;DK&quot;,
+Country == &quot;GE&quot;,
+Country == &quot;GL&quot;,
+Country == &quot;HU&quot;,
+Country == &quot;LV&quot;,
+Country == &quot;LI&quot;,
+Country == &quot;LU&quot;,
+Country == &quot;MK&quot;,
+Country == &quot;MD&quot;,
+Country == &quot;NZ&quot;,
+Country == &quot;NO&quot;,
+Country == &quot;PH&quot;,
+Country == &quot;PT&quot;,
+Country == &quot;SI&quot;,
+Country == &quot;ZA&quot;,
+Country == &quot;CH&quot;,
+Country == &quot;TN&quot;
+)),
+NOT(REGEX(PostalCode, (&quot;\\d{4}&quot;))),FALSE)
+&amp;&amp;  $Permission.Core_Lead_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>PostalCode</errorDisplayField>
+    <errorMessage>Please enter a valid format for the Zip Code! This should consist of four numbers. Example: 9999</errorMessage>
+</ValidationRule>

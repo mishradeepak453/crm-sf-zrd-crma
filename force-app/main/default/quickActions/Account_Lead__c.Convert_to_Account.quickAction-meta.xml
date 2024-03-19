@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>1. Not integration relevant
+2. ZR
+3. SF-1155</description>
+    <flowDefinition>Convert_Account_Lead_Screen_Flow</flowDefinition>
+    <label>Convert to Account</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

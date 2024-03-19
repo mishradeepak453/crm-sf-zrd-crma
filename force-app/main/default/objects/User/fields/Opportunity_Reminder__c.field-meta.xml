@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Reminder__c</fullName>
+    <defaultValue>4</defaultValue>
+    <description>1. Not integration relevant
+2. ZR
+3.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the number of weeks after which you would like to be notified, when there have not been any Updates made on an Opportunity owned by you. This also has influence on which Opportunities are going to be shown in the List View &quot;Meine ruhenden Opportunities&quot;.</inlineHelpText>
+    <label>Opportunity Reminder</label>
+    <precision>1</precision>
+    <required>true</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

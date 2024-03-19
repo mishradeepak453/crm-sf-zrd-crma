@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Project Account Relation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Project Account Relations</value>
+    </caseValues>
+    <layouts>
+        <layout>Project Account Relation Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Project Account Relation</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage>A maximum of one building owner is allowed per project.</errorMessage>
+        <name>Max_One_Building_Owner_Per_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Start_Date_Before_End_Date</name>
+    </validationRules>
+</CustomObjectTranslation>

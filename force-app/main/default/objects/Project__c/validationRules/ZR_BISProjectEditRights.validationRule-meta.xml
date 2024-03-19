@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_BISProjectEditRights</fullName>
+    <active>true</active>
+    <description>SF-828 This validation rule ensures, that only users in the role &quot;Vertriebssteuerung&quot; can edit fields on projects synchronized with BIS.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Core_Source_System__c, &quot;BIS&quot;),
+$Permission.Core_Project_Bypass_Validation_Rules  = FALSE,
+$UserRole.DeveloperName  &lt;&gt; &quot;Sales_Excellence&quot;,
+NOT(CONTAINS($Profile.Name, &quot;dministrator&quot;)),
+NOT(CONTAINS( $User.Username , &quot;bis@force.com&quot;)),
+OR(
+ISCHANGED(Project_Construction_Progress__c),
+ISCHANGED(Name),
+ISCHANGED(Description__c),
+ISCHANGED(Project_ID_BIS__c),
+ISCHANGED(Announcement_ID__c),
+ISCHANGED(Total_Volume__c), 
+ISCHANGED(Project_Construction_Start__c),
+ISCHANGED(Project_Construction_End__c),
+ISCHANGED(Submission_Date__c),
+ISCHANGED( Project_Address__Street__s ),
+ISCHANGED( Project_Address__PostalCode__s ),
+ISCHANGED( Project_Address__City__s ),
+ISCHANGED( Project_Address__StateCode__s ),
+ISCHANGED( Project_Address__CountryCode__s ),
+ISCHANGED (Announcer__c) 
+)
+)</errorConditionFormula>
+    <errorMessage>You can not change this information on a project that has been synchronized from BIS to Salesforce. If you need changes to be made, please reach out to Sales Control.</errorMessage>
+</ValidationRule>

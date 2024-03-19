@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>1. Not integration relevant
+2. Core
+3. SF-269</description>
+    <flowDefinition>Core_Grant_Screen_Flow</flowDefinition>
+    <icon>Grant_Icon</icon>
+    <label>New Grant</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

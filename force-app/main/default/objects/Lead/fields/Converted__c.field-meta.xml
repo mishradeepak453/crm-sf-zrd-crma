@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Converted__c</fullName>
+    <description>1. Not integration relevant
+2. ZR
+3, Helper field to determine, if a Lead has been converted</description>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Status, &quot;Converted&quot;)||ISPICKVAL(Status, &quot;New&quot;)||ISPICKVAL(Status, &quot;Qualification&quot;), TRUE, FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Converted</label>
+    <type>Checkbox</type>
+</CustomField>

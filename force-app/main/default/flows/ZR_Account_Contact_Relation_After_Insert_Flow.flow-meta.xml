@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <assignments>
+        <description>Counts how many Account Contact Relationships are existing for related Contact.</description>
+        <name>Count_all_ACRs</name>
+        <label>Count all ACRs</label>
+        <locationX>226</locationX>
+        <locationY>575</locationY>
+        <assignmentItems>
+            <assignToReference>ACR_Count_Total</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>Get_all_related_ACRs</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_all_related_ACRs_with_DC</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Stores the number of Account Contact Relationships with Deletion Code set for related Contact.</description>
+        <name>Count_all_ACRs_with_DC</name>
+        <label>Count all ACRs with DC</label>
+        <locationX>226</locationX>
+        <locationY>815</locationY>
+        <assignmentItems>
+            <assignToReference>ACR_Count_withDC</assignToReference>
+            <operator>AssignCount</operator>
+            <value>
+                <elementReference>Get_all_related_ACRs_with_DC</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>All_ACRs_with_DC_True</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Checks whether all related Account Contact Relationships have a deletion code set.</description>
+        <name>All_ACRs_with_DC_True</name>
+        <label>All ACRs with DC True?</label>
+        <locationX>226</locationX>
+        <locationY>935</locationY>
+        <defaultConnector>
+            <targetReference>Created_by_Integration_User</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not all ACRs with DC</defaultConnectorLabel>
+        <rules>
+            <name>All_ACRs_with_DC</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ACR_Count_Total</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>ACR_Count_withDC</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_DC_on_Contact</targetReference>
+            </connector>
+            <label>All ACRs with DC</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks whether the ACR has been created by integration user or not.</description>
+        <name>Created_by_Integration_User</name>
+        <label>Created by Integration User</label>
+        <locationX>380</locationX>
+        <locationY>1367</locationY>
+        <defaultConnectorLabel>By Integration User</defaultConnectorLabel>
+        <rules>
+            <name>Not_By_Integration_User</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.LastModifiedBy.FirstName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Integration</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Person_ID_filled</targetReference>
+            </connector>
+            <label>Not By Integration User</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks what the current value of Deletion Code is.</description>
+        <name>Deletion_Code_Status</name>
+        <label>Deletion Code Status?</label>
+        <locationX>380</locationX>
+        <locationY>335</locationY>
+        <defaultConnector>
+            <targetReference>Set_Contact_DC_to_FALSE</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Deletion Code False</defaultConnectorLabel>
+        <rules>
+            <name>Deletion_Code_True</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Deletion_Code__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_all_related_ACRs</targetReference>
+            </connector>
+            <label>Deletion Code True</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Person_ID_filled</name>
+        <label>Person ID filled</label>
+        <locationX>182</locationX>
+        <locationY>1487</locationY>
+        <defaultConnectorLabel>Empty Person ID</defaultConnectorLabel>
+        <rules>
+            <name>Filled_Person_Id</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Contact.PersonID__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Platform_Event</targetReference>
+            </connector>
+            <label>Filled Person Id</label>
+        </rules>
+    </decisions>
+    <description>- Sets Deletion Code on Contact if this and all other Account Contact Relationships have a Deletion Code or removes Deletion Code from Contact, if the record does not have a Deletion Code set
+- Send Platform Event to Grace, if update was done by anyone other than the Integration User</description>
+    <environments>Default</environments>
+    <interviewLabel>ZR_Account_Contact_Relation_Before {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account Contact Relation After Insert Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Platform_Event</name>
+        <label>Create Platform Event</label>
+        <locationX>50</locationX>
+        <locationY>1607</locationY>
+        <inputAssignments>
+            <field>AccountId__c</field>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Account_Customer_Number__c</field>
+            <value>
+                <elementReference>$Record.Account.Core_Customer_Number__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ContactId__c</field>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Contact_Person_ID__c</field>
+            <value>
+                <elementReference>$Record.Contact_Person_ID__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Deletion_Code__c</field>
+            <value>
+                <elementReference>$Record.Deletion_Code__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Department__c</field>
+            <value>
+                <elementReference>$Record.Department__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Direct__c</field>
+            <value>
+                <elementReference>$Record.IsDirect</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>EndDate__c</field>
+            <value>
+                <elementReference>$Record.EndDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Role__c</field>
+            <value>
+                <elementReference>$Record.Role__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Salesforce_Id__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account_Contact_Relation__e</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <description>Retrieves all Account Contact Relationships for the related Contact.</description>
+        <name>Get_all_related_ACRs</name>
+        <label>Get all related ACRs</label>
+        <locationX>226</locationX>
+        <locationY>455</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Count_all_ACRs</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ContactId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>AccountContactRelation</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <description>Retrieves all Account Contact Relations with Deletion Code = TRUE for the related Contact.</description>
+        <name>Get_all_related_ACRs_with_DC</name>
+        <label>Get all related ACRs with DC</label>
+        <locationX>226</locationX>
+        <locationY>695</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Count_all_ACRs_with_DC</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ContactId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Deletion_Code__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>AccountContactRelation</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Sets the deletion code on related Contact to FALSE.</description>
+        <name>Set_Contact_DC_to_FALSE</name>
+        <label>Set Contact DC to FALSE</label>
+        <locationX>534</locationX>
+        <locationY>455</locationY>
+        <connector>
+            <targetReference>Created_by_Integration_User</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Deletion_Code__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Deletion_Code__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Set Contact Deletion Code to TRUE.</description>
+        <name>Set_DC_on_Contact</name>
+        <label>Set DC on Contact</label>
+        <locationX>94</locationX>
+        <locationY>1055</locationY>
+        <connector>
+            <targetReference>Created_by_Integration_User</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Deletion_Code__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Deletion_Code__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Contact</object>
+    </recordUpdates>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Deletion_Code_Status</targetReference>
+        </connector>
+        <object>AccountContactRelation</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Number of Account Contact Relationships associated to the related contact.</description>
+        <name>ACR_Count_Total</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <description>Number of Account Contact Relationships with Deletion Code = True for the related Contact.</description>
+        <name>ACR_Count_withDC</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+</Flow>

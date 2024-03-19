@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BIS_Import_Username__c</fullName>
+    <description>1. Not integration relevant
+2. ZRD
+3. SF-1261. Used for Project Before Update Flow, to identify if changes have been done by Import User.</description>
+    <externalId>false</externalId>
+    <label>BIS Import Username</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

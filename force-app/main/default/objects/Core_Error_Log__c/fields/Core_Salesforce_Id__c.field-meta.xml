@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Core_Salesforce_Id__c</fullName>
+    <description>1. Integration relevant (GRACE)
+2. Core
+3. SF-782</description>
+    <externalId>false</externalId>
+    <label>Salesforce Id</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

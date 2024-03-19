@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Flow_Date__c</fullName>
+    <description>1. Not integration relevant
+2. ZR
+3. SF- 1185 Set via Flow &quot;Contact set Deletion Code Flow&quot; to bypass Validation Rule &quot;No_Deletion_Code_on_Direct_ACR&quot;</description>
+    <externalId>false</externalId>
+    <label>Flow Date</label>
+    <required>false</required>
+    <type>DateTime</type>
+</CustomField>

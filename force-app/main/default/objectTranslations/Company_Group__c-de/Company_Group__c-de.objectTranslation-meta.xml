@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Konzerngruppe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Konzerngruppen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Konzerngruppe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Konzerngruppen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Konzerngruppe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Konzergruppen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Konzerngruppe</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Konzerngruppen</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Company Group-Layout</layout>
+        <sections>
+            <label>Benutzdefinierte Links</label>
+            <section>Benutzerdefinierte Links</section>
+        </sections>
+        <sections>
+            <label>Vertriebsinformationen</label>
+            <section>Sales Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Konzerngruppe</nameFieldLabel>
+    <validationRules>
+        <errorMessage>Der Konzerngruppenname darf nicht geändert werden.</errorMessage>
+        <name>Company_Group_Name_not_editable</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte gib ein Gültig-Bis-Datum für die Konzerngruppeninfo an.</errorMessage>
+        <name>Info_Valid_Until_mandatory_for_CG_Info</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Die Konzerngruppeninfo kann max. 12 Monate gültig sein.</errorMessage>
+        <name>Info_Valid_Until_max_12_months</name>
+    </validationRules>
+</CustomObjectTranslation>

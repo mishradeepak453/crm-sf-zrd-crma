@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Interne Projekt-/ Bauphase</label>
+    <name>Internal_Project_Construction_Progress__c</name>
+    <picklistValues>
+        <masterLabel>Build-Up</masterLabel>
+        <translation>Ausbau</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Building Shell</masterLabel>
+        <translation>Rohbau</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Completion</masterLabel>
+        <translation>Abgeschlossen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Demolition</masterLabel>
+        <translation>Abriss</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Discussion</masterLabel>
+        <translation>Diskussion</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Planning</masterLabel>
+        <translation>Planung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pre Planning</masterLabel>
+        <translation>Vorplanung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shortly before Start</masterLabel>
+        <translation>Kurz vor Beginn</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Underground Construction</masterLabel>
+        <translation>Tiefbau</translation>
+    </picklistValues>
+</CustomFieldTranslation>

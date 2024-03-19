@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Sends a notification to the Owner of the related Account.</description>
+        <name>Send_Notification_Account_Owner</name>
+        <label>Send Notification Account Owner</label>
+        <locationX>50</locationX>
+        <locationY>1295</locationY>
+        <actionName>customNotificationAction</actionName>
+        <actionType>customNotificationAction</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>customNotifTypeId</name>
+            <value>
+                <elementReference>Get_Custom_Notification.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>body</name>
+            <value>
+                <elementReference>NotificationBodyAccount</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>title</name>
+            <value>
+                <elementReference>NotificationSubjectAccount</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientIds</name>
+            <value>
+                <elementReference>RecipientIdAccount</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>targetId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>customNotificationAction</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <description>Sends a notification to the Owner of the related Project.</description>
+        <name>Send_Notification_Project_Owner</name>
+        <label>Send Notification Project Owner</label>
+        <locationX>380</locationX>
+        <locationY>815</locationY>
+        <actionName>customNotificationAction</actionName>
+        <actionType>customNotificationAction</actionType>
+        <connector>
+            <targetReference>Is_Creator_same_as_Account_Owner</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>body</name>
+            <value>
+                <elementReference>NotificationBodyProject</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>title</name>
+            <value>
+                <elementReference>NotificationSubjectProject</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientIds</name>
+            <value>
+                <elementReference>RecipientIdProject</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>customNotifTypeId</name>
+            <value>
+                <elementReference>Get_Custom_Notification.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>targetId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>customNotificationAction</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <description>Sends a notification to the Owner of the related Account.</description>
+        <name>X1_von_Send_Notification_Account_Owner2</name>
+        <label>Send Notification Account Owner</label>
+        <locationX>1106</locationX>
+        <locationY>935</locationY>
+        <actionName>customNotificationAction</actionName>
+        <actionType>customNotificationAction</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>customNotifTypeId</name>
+            <value>
+                <elementReference>Get_Custom_Notification2.Id</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>body</name>
+            <value>
+                <elementReference>NotificationBodyAccount</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>title</name>
+            <value>
+                <elementReference>NotificationSubjectAccount</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientIds</name>
+            <value>
+                <elementReference>RecipientIdAccount</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>targetId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>customNotificationAction</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>57.0</apiVersion>
+    <assignments>
+        <name>Assign_Recipient_Id_Account</name>
+        <label>Assign Recipient Id Account</label>
+        <locationX>50</locationX>
+        <locationY>1175</locationY>
+        <assignmentItems>
+            <assignToReference>RecipientIdAccount</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>$Record.Account__r.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Send_Notification_Account_Owner</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Recipient_Id_Project</name>
+        <label>Assign Recipient Id Project</label>
+        <locationX>380</locationX>
+        <locationY>575</locationY>
+        <assignmentItems>
+            <assignToReference>RecipientIdProject</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>$Record.Project__r.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_Custom_Notification</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>X1_von_Assign_Recipient_Id_Account2</name>
+        <label>Assign Recipient Id Account</label>
+        <locationX>1106</locationX>
+        <locationY>695</locationY>
+        <assignmentItems>
+            <assignToReference>RecipientIdAccount</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>$Record.Account__r.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Get_Custom_Notification2</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Checks whether the Account Owner is active.</description>
+        <name>Is_Account_Owner_Active</name>
+        <label>Is Account Owner Active?</label>
+        <locationX>182</locationX>
+        <locationY>1055</locationY>
+        <defaultConnectorLabel>Account Owner inactive</defaultConnectorLabel>
+        <rules>
+            <name>Account_Owner_Active</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account__r.Owner.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Recipient_Id_Account</targetReference>
+            </connector>
+            <label>Account Owner Active</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks whether the creator of the PAR is the same as the Owner of the related Account.</description>
+        <name>Is_Creator_same_as_Account_Owner</name>
+        <label>Is Creator same as Account Owner?</label>
+        <locationX>380</locationX>
+        <locationY>935</locationY>
+        <defaultConnectorLabel>Account Owner IS same</defaultConnectorLabel>
+        <rules>
+            <name>Account_Owner_is_NOT_same</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$User.Id</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Account__r.OwnerId</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Is_Account_Owner_Active</targetReference>
+            </connector>
+            <label>Account Owner is NOT same</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks whether the creator of the Project Account relation is the same as the Owner of the related Project.</description>
+        <name>Is_Creator_same_as_Project_Owner</name>
+        <label>Is Creator same as Project Owner?</label>
+        <locationX>1023</locationX>
+        <locationY>335</locationY>
+        <defaultConnector>
+            <targetReference>X1_von_Is_Creator_same_as_Account_Owner2</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Creator equals Owner</defaultConnectorLabel>
+        <rules>
+            <name>Creator_is_NOT_Owner</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.Id</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Project__r.Owner:User.Id</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Is_Owner_Active</targetReference>
+            </connector>
+            <label>Creator is NOT Owner</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks whether the Project Owner is active or not.</description>
+        <name>Is_Owner_Active</name>
+        <label>Is Owner Active?</label>
+        <locationX>611</locationX>
+        <locationY>455</locationY>
+        <defaultConnectorLabel>Owner is NOT active</defaultConnectorLabel>
+        <rules>
+            <name>Owner_is_active</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Project__r.Owner:User.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Recipient_Id_Project</targetReference>
+            </connector>
+            <label>Owner is active</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks whether the Account Owner is active.</description>
+        <name>X1_von_Is_Account_Owner_Active2</name>
+        <label>Account Owner Active?</label>
+        <locationX>1238</locationX>
+        <locationY>575</locationY>
+        <defaultConnectorLabel>Account Owner inactive</defaultConnectorLabel>
+        <rules>
+            <name>X1_von_Account_Owner_Active2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Account__r.Owner.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>X1_von_Assign_Recipient_Id_Account2</targetReference>
+            </connector>
+            <label>Account Owner Active</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks whether the creator of the PAR is the same as the Owner of the related Account.</description>
+        <name>X1_von_Is_Creator_same_as_Account_Owner2</name>
+        <label>Is Creator same as Account Owner?</label>
+        <locationX>1436</locationX>
+        <locationY>455</locationY>
+        <defaultConnectorLabel>Account Owner IS same</defaultConnectorLabel>
+        <rules>
+            <name>X1_von_Account_Owner_is_NOT_same2</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$User.Id</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Account__r.OwnerId</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>X1_von_Is_Account_Owner_Active2</targetReference>
+            </connector>
+            <label>Account Owner is NOT same</label>
+        </rules>
+    </decisions>
+    <description>:: Sends Notification to Project and Account Owner</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>NotificationBodyAccount</name>
+        <dataType>String</dataType>
+        <expression>IF(ISPICKVAL({!$Record.Account__r.Owner.LanguageLocaleKey},&apos;de&apos;),
+{!$Record.CreatedBy.FirstName}+&apos; &apos;+{!$Record.CreatedBy.LastName}+&apos; hat gerade den Account &apos;+{!$Record.Account__r.Name}+&apos; zum Projekt &apos;+{!$Record.Project__r.Name}+&apos; hinzugefügt.&apos;,
+{!$Record.CreatedBy.FirstName}+&apos; &apos;+{!$Record.CreatedBy.LastName}+&apos; has added the Account &apos;+{!$Record.Account__r.Name}+&apos; to the Project &apos;+{!$Record.Project__r.Name}+&apos;.&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>NotificationBodyProject</name>
+        <dataType>String</dataType>
+        <expression>IF(ISPICKVAL({!$Record.Project__r.Owner:User.LanguageLocaleKey},&apos;de&apos;),
+{!$Record.CreatedBy.FirstName}+&apos; &apos;+{!$Record.CreatedBy.LastName}+&apos; hat gerade den Account &apos;+{!$Record.Account__r.Name}+&apos; zum Projekt &apos;+{!$Record.Project__r.Name}+&apos; hinzugefügt.&apos;,
+{!$Record.CreatedBy.FirstName}+&apos; &apos;+{!$Record.CreatedBy.LastName}+&apos; has added the Account &apos;+{!$Record.Account__r.Name}+&apos; to the Project &apos;+{!$Record.Project__r.Name}+&apos;.&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>NotificationSubjectAccount</name>
+        <dataType>String</dataType>
+        <expression>IF( ISPICKVAL({!$Record.Account__r.Owner.LanguageLocaleKey}, &apos;de&apos;), &apos;Account zu Projekt hinzugefügt&apos;, &apos;Account added to Project&apos;)</expression>
+    </formulas>
+    <formulas>
+        <name>NotificationSubjectProject</name>
+        <dataType>String</dataType>
+        <expression>IF( ISPICKVAL({!$Record.Project__r.Owner:User.LanguageLocaleKey}, &apos;de&apos;), &apos;Account zu Projekt hinzugefügt&apos;, &apos;Account added to Project&apos;)</expression>
+    </formulas>
+    <interviewLabel>Project Account Relation After Insert Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Project Account Relation After Insert Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Custom_Notification</name>
+        <label>Get Custom Notification</label>
+        <locationX>380</locationX>
+        <locationY>695</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Send_Notification_Project_Owner</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Notification_for_Project_Account_Relation</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>CustomNotificationType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Custom_Notification2</name>
+        <label>Get Custom Notification</label>
+        <locationX>1106</locationX>
+        <locationY>815</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>X1_von_Send_Notification_Account_Owner2</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Notification_for_Project_Account_Relation</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>CustomNotificationType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>897</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_Creator_same_as_Project_Owner</targetReference>
+        </connector>
+        <object>Project_Account_Relation__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>RecipientIdAccount</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>RecipientIdProject</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

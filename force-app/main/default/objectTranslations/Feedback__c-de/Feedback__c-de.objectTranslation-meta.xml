@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Feedback</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Feedbacks</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Feedback</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Feedbacks</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Feedbacks</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Feedbacks</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Feedback</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Feedbacks</value>
+    </caseValues>
+    <gender>Neuter</gender>
+    <layouts>
+        <layout>Bug Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Beschreibung</label>
+            <section>Description</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Improvement Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Beschreibung</label>
+            <section>Description</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Feedback Nr.</nameFieldLabel>
+    <recordTypes>
+        <description>Feedback in Bezug auf Fehler/Probleme mit existierenden Funktionalitäten</description>
+        <label>Fehler</label>
+        <name>Bug</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Feedback und Ideen für neue Funktionalitäten</description>
+        <label>Neue Anforderung</label>
+        <name>Improvement</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage>Bitte verlinke zum entsprechenden Feedback.</errorMessage>
+        <name>Merged_In_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte gib den Link zur User Story an.</errorMessage>
+        <name>User_Story_Link_mandatory</name>
+    </validationRules>
+</CustomObjectTranslation>

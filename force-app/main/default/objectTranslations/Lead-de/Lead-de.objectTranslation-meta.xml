@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Lead Layout</layout>
+        <sections>
+            <label></label>
+            <section>Description</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage>Bitte trage Adressinformationen in die Felder Straße Postleitzahl, Stadt und Land ein, um diesen Lead erfolgreich zu qualifizieren.</errorMessage>
+        <name>ZR_AddressMandatory_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage weniger als 60 Zeichen ein.</errorMessage>
+        <name>ZR_Company_Emaillength_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage eine Abteilung ein um diesen Lead erfolgreich zu qualifizieren.</errorMessage>
+        <name>ZR_DepartmentMandatory_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage weniger als 60 Zeichen ein.</errorMessage>
+        <name>ZR_Emaillength_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage einen Vornamen ein um diesen Lead erfolgreich zu qualifizieren.</errorMessage>
+        <name>ZR_FirstNameMandatory_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage einen Job Titel ein um diesen Lead erfolgreich zu qualifizieren.</errorMessage>
+        <name>ZR_JobTitleMandatory_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage eine valide Mobilnummer ein, diese sollte mit einem &apos;+&apos; und der Ländervorwahl beginnen, keine Buchstaben oder Sonderzeichen enthalten und mindestens 10, maximal 20 Zeichen lang sein. Beispiel: +49123456789</errorMessage>
+        <name>ZR_Mobilenumber_DIN5008_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage eine valide Telefonnummer ein, diese sollte mit einem &apos;+&apos; und der Ländervorwahl beginnen, keine Buchstaben oder Sonderzeichen enthalten und mindestens 10, maximal 20 Zeichen lang sein. Beispiel: +49123456789</errorMessage>
+        <name>ZR_Phonenumber_DIN5008_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage in mindestens eines der Felder &quot;Mobil&quot; oder &quot;Telefon&quot; etwas ein um diesen Lead erfolgreich zu qualifizieren.</errorMessage>
+        <name>ZR_PhoneorMobilMandatory_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage das Geschäftsfeld ein, um diesen Lead erfolgreich zu qualifizieren.</errorMessage>
+        <name>ZR_Potential_Mandatory_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage eine Anrede ein um diesen Lead erfolgreich zu qualifizieren.</errorMessage>
+        <name>ZR_SalutationMandatory_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Möchtest du den Lead wirklich ohne E-Mail speichern? Dann bitte mit „Speichern ohne E-Mail,“ bestätigen und bei Bekanntwerden nachtragen.</errorMessage>
+        <name>ZR_SaveWithoutEmail_2_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Möchtest du den Lead wirklich ohne Persönliche E-Mail speichern? Dann bitte mit „Speichern ohne E-Mail,“ bestätigen und bei Bekanntwerden nachtragen.</errorMessage>
+        <name>ZR_SaveWithoutPersonalEmail_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus sechs Zahlen bestehen. Beispiel: 999999</errorMessage>
+        <name>ZR_ZipCode_Validation_999999_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus fünf Zahlen bestehen. Beispiel: 99999</errorMessage>
+        <name>ZR_ZipCode_Validation_99999_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus vier Zahlen bestehen. Beispiel: 9999</errorMessage>
+        <name>ZR_ZipCode_Validation_9999_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit drei Zahlen beginnen, gefolgt von einem Leerzeichen und zwei weiteren Zahlen. Beispiel: 999 99</errorMessage>
+        <name>ZR_ZipCode_Validation_999_99_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus drei Zahlen bestehen. Beispiel: 999</errorMessage>
+        <name>ZR_ZipCode_Validation_999_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus zwei Großbuchstaben gefolgt von drei Zahlen bestehen. Beispiel: AA999</errorMessage>
+        <name>ZR_ZipCode_Validation_AD_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus vier oder sechs Zahlen bestehen. Beispiel: 9999 oder 999999</errorMessage>
+        <name>ZR_ZipCode_Validation_AZ_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus zwei Großbuchstaben und vier Zahlen bestehen. Beispiel: AA9999</errorMessage>
+        <name>ZR_ZipCode_Validation_BN_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus acht Zahlen bestehen und kann zwischen der fünften und sechsten Zahl einen Bindestrich haben. Beispiel: 99999999 oder 99999-999</errorMessage>
+        <name>ZR_ZipCode_Validation_BR_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit einem Großbuchstaben beginnen, gefolgt von einer Zahl, einem Großbuchstaben, einem Leerzeichen, einer weiteren Zahl, einem Großuchstaben und optional einer weiteren Zahl. Beispiel: A9A 9A oder A9A 9A9</errorMessage>
+        <name>ZR_ZipCode_Validation_CA_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte einem dieser Beispiele folgen: A9 9AA, AA9 9AA, AA99 9AA, A99 9AA, A9A 9AA oder AA9A 9AA.</errorMessage>
+        <name>ZR_ZipCode_Validation_GB_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte einem dieser Beispiele folgen: AA9 9AA oder AA99 9AA</errorMessage>
+        <name>ZR_ZipCode_Validation_GG_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus fünf oder sieben Zahlen bestehen. Beispiel: 99999 oder 9999999</errorMessage>
+        <name>ZR_ZipCode_Validation_IL_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit zwei Zahlen beginnen, gefolgt von einem Großbuchstaben, einem Leerzeichen, einer Zahl und zwei weiteren Großbuchstaben. Beispiel: AA9 9AA</errorMessage>
+        <name>ZR_ZipCode_Validation_JE_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit drei Zahlen beginnen, gefolgt von einem Bindestrich und vier weiteren Zahlen. Beispiel: 999-9999</errorMessage>
+        <name>ZR_ZipCode_Validation_JP_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Dieser sollte mit drei Zahlen beginnen, gefolgt von einem Bindestrich und drei weiteren Zahlen. Beispiel: 999-999</errorMessage>
+        <name>ZR_ZipCode_Validation_KR_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus fünf oder sechs Zahlen bestehen. Beispiel: 99999 oder 999999</errorMessage>
+        <name>ZR_ZipCode_Validation_MN_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus vier oder fünf Zahlen bestehen. Beispiel: 9999 oder 99999</errorMessage>
+        <name>ZR_ZipCode_Validation_MV_MX_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit vier Zahlen beginnen, optional gefolgt von einem Leerzeichen und zwei Großbuchstaben. Beispiel: 9999 oder 9999 AA</errorMessage>
+        <name>ZR_ZipCode_Validation_NL_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit zwei Zahlen beginnen, gefolgt von einem Bindestrich und vier weiteren Zahlen. Beispiel: 99-9999</errorMessage>
+        <name>ZR_ZipCode_Validation_PL_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit vier Zahlen beginnen, gefolgt von einem Bindestrich und drei weiteren Zahlen. Beispiel: 9999-999</errorMessage>
+        <name>ZR_ZipCode_Validation_PT_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus einem Großbuchstaben gefolgt von drei Zahlen bestehen. Beispiel: A999</errorMessage>
+        <name>ZR_ZipCode_Validation_SZ_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus drei oder fünf Zahlen bestehen. Beispiel: 999 oder 99999</errorMessage>
+        <name>ZR_ZipCode_Validation_TW_Lead</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,9 @@
+Hallo {!Task.CreatedBy}, 
+
+deine Aufgabe  {!Task.Subject} wurde Abgeschlossen.
+
+Logge dich ein um mehr über die Aufgabe zu erfahren.
+{!Task.Link}
+
+Viele Grüße
+dein Zeppelin Salesforce-Team

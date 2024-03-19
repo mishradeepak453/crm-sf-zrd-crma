@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Eine politisch exponierte Person ist eine Person, die aufgrund ihrer Position in der Regierung oder im öffentlichen Bereich oder aufgrund ihrer engen Verbindungen zu solchen Personen (Ehepartner) potentiell korrumpierbar ist.</help>
+    <label>Politisch exponierte Person</label>
+    <name>Core_Politically_exposed_Person__c</name>
+    <picklistValues>
+        <masterLabel>No</masterLabel>
+        <translation>Nein</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes</masterLabel>
+        <translation>Ja</translation>
+    </picklistValues>
+</CustomFieldTranslation>

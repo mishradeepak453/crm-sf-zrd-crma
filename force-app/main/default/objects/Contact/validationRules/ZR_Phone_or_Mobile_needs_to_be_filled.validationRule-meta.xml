@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_Phone_or_Mobile_needs_to_be_filled</fullName>
+    <active>true</active>
+    <description>SF-66 This rule ensures, that for every contact either the phone or the mobile number is entered.</description>
+    <errorConditionFormula>AND(ISBLANK( MobilePhone), ISBLANK(Phone))
+&amp;&amp; $Permission.Core_Contact_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>Phone</errorDisplayField>
+    <errorMessage>Please add at least one phone number. Either the field &apos;Mobile&apos; or &apos;Phone&apos; has to be filled.</errorMessage>
+</ValidationRule>

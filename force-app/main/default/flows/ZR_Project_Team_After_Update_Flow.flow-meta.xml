@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Activation_Email_DE</name>
+        <label>Activation Email DE</label>
+        <locationX>754</locationX>
+        <locationY>755</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Get_active_Project_Team_Member</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Team_Member__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>ActivationEmailSubjectDE</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>ActivationEmailBodyDE</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Activation_Email_EN</name>
+        <label>Activation Email EN</label>
+        <locationX>1018</locationX>
+        <locationY>755</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Get_active_Project_Team_Member</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Team_Member__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>ActivationEmailSubjectEN</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>ActivationEmailBodyEN</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Deactivation_Email_DE</name>
+        <label>Deactivation Email DE</label>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Get_Project_Share_Records</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Team_Member__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>DeactivationEmailSubjectDE</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>DeactivationEmailBodyDE</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Deactivation_Email_EN</name>
+        <label>Deactivation Email EN</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Get_Project_Share_Records</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Team_Member__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>DeactivationEmailSubjectEN</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>DeactivationEmailBodyEN</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>51.0</apiVersion>
+    <assignments>
+        <name>Assign_Name</name>
+        <label>Assign Name</label>
+        <locationX>1007</locationX>
+        <locationY>1631</locationY>
+        <assignmentItems>
+            <assignToReference>TeamMemberADNames</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Iterate_over_Project_Team_Members.Team_Member_AD_Login_Name__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Iterate_over_Project_Team_Members</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Is_Project_Team_Member_active_User_Activation</name>
+        <label>Is Project Team Member active User (Activation)</label>
+        <locationX>1084</locationX>
+        <locationY>539</locationY>
+        <defaultConnector>
+            <targetReference>Get_active_Project_Team_Member</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Project_Team_Member_is_active_User_and_not_Remover_activation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Team_Member__r.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Team_Member__r.Id</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$User.Id</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Team_Member_Language_Activation</targetReference>
+            </connector>
+            <label>Project Team Member is active User and not Remover (activation)</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Project_Team_Member_active_User_Deactivation</name>
+        <label>Is Project Team Member active User (Deactivation)</label>
+        <locationX>380</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Get_Project_Share_Records</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Project_Team_Member_is_active_User_and_not_Remover_deactivation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Team_Member__r.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Team_Member__r.Id</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$User.Id</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Team_Member_Language_Deactivation</targetReference>
+            </connector>
+            <label>Project Team Member is active User and not Remover (deactivation)</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_there_a_share_record_available</name>
+        <label>Is there a share record available?</label>
+        <locationX>380</locationX>
+        <locationY>1031</locationY>
+        <defaultConnector>
+            <targetReference>Get_active_Project_Team_Member</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No share record found</defaultConnectorLabel>
+        <rules>
+            <name>Share_Record_found</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ProjectShareRecords</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Delete_Project_Share_Records</targetReference>
+            </connector>
+            <label>Share Record found</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Team_Member_Activation_changed</name>
+        <label>Team Member Activation changed?</label>
+        <locationX>919</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Other Update</defaultConnectorLabel>
+        <rules>
+            <name>Team_Member_set_to_inactive</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.Active__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Active__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Is_Project_Team_Member_active_User_Deactivation</targetReference>
+            </connector>
+            <label>Team Member set to inactive</label>
+        </rules>
+        <rules>
+            <name>Team_Member_set_to_active</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.Active__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Active__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Sharing_Record</targetReference>
+            </connector>
+            <label>Team Member set to active</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks the language set for the Team Member User.</description>
+        <name>Team_Member_Language_Activation</name>
+        <label>Team Member Language? (Activation)</label>
+        <locationX>886</locationX>
+        <locationY>647</locationY>
+        <defaultConnector>
+            <targetReference>Activation_Email_EN</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Language NOT DE (Activation)</defaultConnectorLabel>
+        <rules>
+            <name>Language_DE_Activation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Team_Member__r.LanguageLocaleKey</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>de</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Activation_Email_DE</targetReference>
+            </connector>
+            <label>Language DE (Activation)</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks the language set for the Team Member User.</description>
+        <name>Team_Member_Language_Deactivation</name>
+        <label>Team Member Language? (Deactivation)</label>
+        <locationX>182</locationX>
+        <locationY>539</locationY>
+        <defaultConnector>
+            <targetReference>Deactivation_Email_EN</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Language NOT DE (Deactivation)</defaultConnectorLabel>
+        <rules>
+            <name>Language_DE_Deactivation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Team_Member__r.LanguageLocaleKey</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>de</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Deactivation_Email_DE</targetReference>
+            </connector>
+            <label>Language DE (Deactivation)</label>
+        </rules>
+    </decisions>
+    <description>- Sends an Email to the User that has been activated and creates the sharing for the Team Member
+- Sends an Email to the User that has been deactivated and removes the sharing for the Team Member
+- Removes deactivated Team Member from Project helper field
+- Adds activated Team Member to Project helper field</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>NamesFormula</name>
+        <dataType>String</dataType>
+        <expression>{!TeamMemberADNames}</expression>
+    </formulas>
+    <formulas>
+        <name>ProjectLink</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Enterprise_Server_URL_100}, FIND(&apos;/services&apos;, {!$Api.Enterprise_Server_URL_100})) &amp; {!$Record.Project__r.Id}</expression>
+    </formulas>
+    <interviewLabel>Project Team After Update Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Project Team After Update Flow</label>
+    <loops>
+        <name>Iterate_over_Project_Team_Members</name>
+        <label>Iterate over Project Team Members</label>
+        <locationX>919</locationX>
+        <locationY>1523</locationY>
+        <collectionReference>TeamMembers</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Assign_Name</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Update_Project</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Sharing_Record</name>
+        <label>Create Sharing Record</label>
+        <locationX>1084</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>Is_Project_Team_Member_active_User_Activation</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>AccessLevel</field>
+            <value>
+                <stringValue>Edit</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <elementReference>$Record.Project__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RowCause</field>
+            <value>
+                <stringValue>Project_Team_Member__c</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>UserOrGroupId</field>
+            <value>
+                <elementReference>$Record.Team_Member__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Project__Share</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordDeletes>
+        <name>Delete_Project_Share_Records</name>
+        <label>Delete Project Share Records</label>
+        <locationX>248</locationX>
+        <locationY>1139</locationY>
+        <connector>
+            <targetReference>Get_active_Project_Team_Member</targetReference>
+        </connector>
+        <inputReference>ProjectShareRecords</inputReference>
+    </recordDeletes>
+    <recordLookups>
+        <name>Get_active_Project_Team_Member</name>
+        <label>Get active Project Team Member</label>
+        <locationX>919</locationX>
+        <locationY>1415</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Iterate_over_Project_Team_Members</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Project__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Project__r.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Active__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Project_Team__c</object>
+        <outputReference>TeamMembers</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Team_Member__c</queriedFields>
+        <queriedFields>Team_Member_AD_Login_Name__c</queriedFields>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Project_Share_Records</name>
+        <label>Get Project Share Records</label>
+        <locationX>380</locationX>
+        <locationY>923</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_there_a_share_record_available</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ParentId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Project__r.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>UserOrGroupId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Team_Member__r.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>RowCause</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Project_Team_Member__c</stringValue>
+            </value>
+        </filters>
+        <object>Project__Share</object>
+        <outputReference>ProjectShareRecords</outputReference>
+        <queriedFields>Id</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Project</name>
+        <label>Update Project</label>
+        <locationX>919</locationX>
+        <locationY>1823</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Project__r.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Automation_Time__c</field>
+            <value>
+                <elementReference>$Flow.InterviewStartTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Collected_Team_Members__c</field>
+            <value>
+                <elementReference>NamesFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Project__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>793</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Team_Member_Activation_changed</targetReference>
+        </connector>
+        <object>Project_Team__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>ActivationEmailBodyDE</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hallo {!$Record.Team_Member__r.FirstName} {!$Record.Team_Member__r.LastName},
+
+
+
+du wurdest von {!$Record.CreatedBy.FirstName} {!$Record.CreatedBy.LastName} dem Projekt {!$Record.Project__r.Name} hinzugefügt.
+
+Logge dich ein, um mehr über das Projekt zu erfahren. 
+
+{!ProjectLink}
+
+
+
+Viele Grüße,
+
+dein Zeppelin Salesforce-Team
+
+
+
+Dies ist eine automatisch generierte E-Mail, bitte nicht antworten.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>ActivationEmailBodyEN</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hello {!$Record.Team_Member__r.FirstName} {!$Record.Team_Member__r.LastName},
+
+
+
+You have been added to the Project {!$Record.Project__r.Name} by {!$Record.CreatedBy.FirstName} {!$Record.CreatedBy.LastName}.
+
+Log in to see the details of the Project.
+
+{!ProjectLink}
+
+
+
+Best regards,
+
+Your Zeppelin Salesforce-Team
+
+
+
+This is an automatically created Email. Please do not reply.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>ActivationEmailSubjectDE</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Du wurdest einem Projekt Team hinzugefügt!</text>
+    </textTemplates>
+    <textTemplates>
+        <name>ActivationEmailSubjectEN</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>You have been added to a Project Team!</text>
+    </textTemplates>
+    <textTemplates>
+        <name>DeactivationEmailBodyDE</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hallo {!$Record.Team_Member__r.FirstName} {!$Record.Team_Member__r.LastName},
+
+du wurdest von {!$User.FirstName} {!$User.LastName} aus dem Projekt Team von {!$Record.Project__r.Name} (BIS-ID: {!$Record.Project__r.Project_ID_BIS__c}) entfernt.
+Logge dich bei Salesforce ein, um mehr über das Projekt zu erfahren.
+
+{!ProjectLink}
+
+Dein Zeppelin Salesforce-Team
+
+Dies ist eine automatische generierte E-Mail, bitte nicht antworten.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>DeactivationEmailBodyEN</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hello {!$Record.Team_Member__r.FirstName} {!$Record.Team_Member__r.LastName},
+
+You have been removed from the Project Team for {!$Record.Project__r.Name} (BIS-ID: {!$Record.Project__r.Project_ID_BIS__c}) by {!$User.FirstName} {!$User.LastName}. 
+Log in to Salesforce see the details of the Project.
+
+Best regards,
+Your Zeppelin Salesforce-Team
+
+This is an automatically created Email. Please do not reply.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>DeactivationEmailSubjectDE</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Du wurdest aus einem Projekt Team entfernt</text>
+    </textTemplates>
+    <textTemplates>
+        <name>DeactivationEmailSubjectEN</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>You have been removed from a Project Team</text>
+    </textTemplates>
+    <variables>
+        <name>ProjectShareRecords</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Project__Share</objectType>
+    </variables>
+    <variables>
+        <name>TeamMemberADNames</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>TeamMembers</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Project_Team__c</objectType>
+    </variables>
+    <variables>
+        <name>UserRecords</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>User</objectType>
+    </variables>
+</Flow>

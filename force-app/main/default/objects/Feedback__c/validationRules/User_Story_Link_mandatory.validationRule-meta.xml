@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Story_Link_mandatory</fullName>
+    <active>true</active>
+    <description>SF-1083. Makes sure that the User Story Link is provided in case of Status &quot;Planned for Implementation&quot;.</description>
+    <errorConditionFormula>ISPICKVAL( Status__c , &quot;Planned for Implementation&quot;) &amp;&amp; ISBLANK( User_Story_Link__c )</errorConditionFormula>
+    <errorDisplayField>User_Story_Link__c</errorDisplayField>
+    <errorMessage>Please provide the User Story Link.</errorMessage>
+</ValidationRule>

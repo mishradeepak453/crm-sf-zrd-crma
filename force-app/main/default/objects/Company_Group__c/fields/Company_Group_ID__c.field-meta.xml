@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Company_Group_ID__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>1. Integration relevant - GRACE
+2. ZRD
+3. External ID for integration of Company Groups with GRACE</description>
+    <externalId>true</externalId>
+    <label>Company Group ID</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

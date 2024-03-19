@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transaction_Type__c</fullName>
+    <description>1. Integration relevant (GRACE)
+2. SF-717
+3.</description>
+    <externalId>false</externalId>
+    <label>Transaction Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>QB</fullName>
+                <default>false</default>
+                <label>Quote Stock Sales</label>
+            </value>
+            <value>
+                <fullName>QC</fullName>
+                <default>false</default>
+                <label>Quote Contract Operator Model</label>
+            </value>
+            <value>
+                <fullName>QG</fullName>
+                <default>false</default>
+                <label>Quote Used Sale</label>
+            </value>
+            <value>
+                <fullName>QR</fullName>
+                <default>false</default>
+                <label>Quote Rental</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

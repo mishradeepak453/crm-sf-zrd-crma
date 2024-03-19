@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Start_New_Change__c</fullName>
+    <description>1. Not integration relevant
+2. ZRD
+3. Helper Field to report on changes to the project start. This field indicates, whether a project start has been changed within the last 7 days.</description>
+    <externalId>false</externalId>
+    <formula>IF((TODAY()- Date_of_Change_Project_Start__c) &lt;= 7, TRUE, FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Project Start New Change</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

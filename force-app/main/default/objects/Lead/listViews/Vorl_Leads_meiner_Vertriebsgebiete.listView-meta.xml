@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vorl_Leads_meiner_Vertriebsgebiete</fullName>
+    <booleanFilter>1 OR 2 OR 3</booleanFilter>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>LEAD.RATING</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.MOBILE_PHONE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>Potential__c</columns>
+    <columns>Territory__c</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>Owner_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Territory__c</field>
+        <operation>contains</operation>
+        <value>Jena</value>
+    </filters>
+    <filters>
+        <field>Territory__c</field>
+        <operation>contains</operation>
+        <value>Erfurt</value>
+    </filters>
+    <filters>
+        <field>Territory_Level_2__c</field>
+        <operation>contains</operation>
+        <value>Thüringen</value>
+    </filters>
+    <label>Vorl. *Leads meiner Vertriebsgebiete*</label>
+</ListView>

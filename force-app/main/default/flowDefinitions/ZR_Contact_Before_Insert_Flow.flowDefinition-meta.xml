@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>1</activeVersionNumber>
+    <description>- Adds the AD-Name of the Creation User if the Account is created in Salesforce
+- Sets and removes the timestamp in the ‘Save without Email’-Logic
+- Sets the record type based on Deletion Code</description>
+    <masterLabel>Contact Before Insert Flow</masterLabel>
+</FlowDefinition>

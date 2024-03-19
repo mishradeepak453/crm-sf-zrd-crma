@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Email_Status_Change_DE</name>
+        <label>Email Status Change DE</label>
+        <locationX>50</locationX>
+        <locationY>815</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>EmailBodyDE</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Reporter__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>EmailSubjectDE</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Email_Status_Change_EN</name>
+        <label>Email Status Change EN</label>
+        <locationX>314</locationX>
+        <locationY>815</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>EmailBodyEN</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Reporter__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>EmailSubjectEN</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <description>Checks whether the Reporter User is active or not.</description>
+        <name>Is_Reporter_active_User</name>
+        <label>Is Reporter active User</label>
+        <locationX>380</locationX>
+        <locationY>575</locationY>
+        <defaultConnectorLabel>User is NOT active</defaultConnectorLabel>
+        <rules>
+            <name>User_is_active</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Reporter__r.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>User_Language</targetReference>
+            </connector>
+            <label>User is active</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks whether the Status of the Feedback has been updated.</description>
+        <name>Is_Status_updated</name>
+        <label>Is Status updated?</label>
+        <locationX>792</locationX>
+        <locationY>335</locationY>
+        <defaultConnectorLabel>Status NOT updated</defaultConnectorLabel>
+        <rules>
+            <name>Status_updated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Status__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Updater_and_Reporter_equal</targetReference>
+            </connector>
+            <label>Status updated</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks whether the User that has done the update is the same as the Reporter of the Feedback.</description>
+        <name>Updater_and_Reporter_equal</name>
+        <label>Updater and Reporter equal?</label>
+        <locationX>567</locationX>
+        <locationY>455</locationY>
+        <defaultConnectorLabel>Updater equal Reporter</defaultConnectorLabel>
+        <rules>
+            <name>Updater_NOT_equal_Reporter</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$User.Id</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Reporter__r.Id</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Is_Reporter_active_User</targetReference>
+            </connector>
+            <label>Updater NOT equal Reporter</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>User_Language</name>
+        <label>User Language?</label>
+        <locationX>182</locationX>
+        <locationY>695</locationY>
+        <defaultConnector>
+            <targetReference>Email_Status_Change_EN</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Other</defaultConnectorLabel>
+        <rules>
+            <name>DE</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Reporter__r.LanguageLocaleKey</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>de</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Email_Status_Change_DE</targetReference>
+            </connector>
+            <label>DE</label>
+        </rules>
+    </decisions>
+    <description>:: Sends Email to Reporter in case of Status change</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>FeedbackLink</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Enterprise_Server_URL_100}, FIND(&apos;/services&apos;, {!$Api.Enterprise_Server_URL_100})) &amp; {!$Record.Id}</expression>
+    </formulas>
+    <interviewLabel>Feedback After Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Feedback After Update Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>666</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_Status_updated</targetReference>
+        </connector>
+        <object>Feedback__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>EmailBodyDE</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hallo {!$Record.Reporter__r.FirstName} {!$Record.Reporter__r.LastName},
+
+der Status deines Salesforce-Feedbacks hat sich geändert.
+Nutze diesen Link, um die Details einzusehen:
+{!FeedbackLink}
+
+Viele Grüße,
+dein Zeppelin Salesforce-Team
+
+Dies ist eine automatisch generierte E-Mail, bitte nicht antworten.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>EmailBodyEN</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hello {!$Record.Reporter__r.FirstName} {!$Record.Reporter__r.LastName},
+
+The Status of your Salesforce Feedback {!$Record.Subject__c} has changed to {!$Record.Status__c}. 
+Please use this link to see the details:
+{!FeedbackLink}
+
+Best regards,
+Your Zeppelin Salesforce-Team
+
+This is an automatically created Email. Please do not reply.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>EmailSubjectDE</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Dein Feedback-Status hat sich geändert</text>
+    </textTemplates>
+    <textTemplates>
+        <name>EmailSubjectEN</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Your Feedback Status changed</text>
+    </textTemplates>
+</Flow>

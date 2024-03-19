@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Revocation_Direct_Mailing_Letter_Post__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>1. Integration relevant (Grace)
+2. ZR
+3.</description>
+    <externalId>false</externalId>
+    <label>Revocation Direct Mailing/ Letter Post</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

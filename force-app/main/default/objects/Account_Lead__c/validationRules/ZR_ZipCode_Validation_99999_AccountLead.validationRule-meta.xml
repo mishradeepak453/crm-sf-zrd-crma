@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_99999_AccountLead</fullName>
+    <active>true</active>
+    <description>SF-1155 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country. Format (&quot;\\d{5}&quot;). Example: 99999.</description>
+    <errorConditionFormula>IF(
+AND(
+NOT(ISBLANK( Address__PostalCode__s)),
+OR(
+ISPICKVAL(Address__CountryCode__s, &quot;DZ&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;AS&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;BA&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;BR&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;IC&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;MP&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;HR&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;CU&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;EE&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;FI&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;FR&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;GF&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;DE&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;GP&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;GU&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;ID&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;IT&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;LT&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;MY&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;MH&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;MQ&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;YT&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;FM&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;MC&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;ME&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;MA&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;NC&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;PK&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;PW&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;RE&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;SM&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;RS&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;ES&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;TH&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;TR&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;UA&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;US&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;VI&quot;)
+)),
+NOT(REGEX(Address__PostalCode__s, (&quot;\\d{5}&quot;))), FALSE)
+&amp;&amp; ISPICKVAL(Status__c, &quot;Qualification&quot;)</errorConditionFormula>
+    <errorMessage>Please enter a valid format for the Zip Code! This should consist of five numbers. Example: 99999</errorMessage>
+</ValidationRule>

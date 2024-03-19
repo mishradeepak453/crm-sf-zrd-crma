@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_TW_Opportunity</fullName>
+    <active>true</active>
+    <description>SF-93 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country. Format (&quot;\\d{3}&quot;) or (&quot;\\d{5}&quot;). Example: 999 or 99999.</description>
+    <errorConditionFormula>IF(
+AND(
+NOT(ISBLANK( Construction_Site_Address__PostalCode__s )),
+ISPICKVAL( Construction_Site_Address__CountryCode__s , &quot;TW&quot;)
+),
+NOT(
+OR(
+REGEX(Construction_Site_Address__PostalCode__s , (&quot;\\d{3}&quot;)),
+REGEX(Construction_Site_Address__PostalCode__s , (&quot;\\d{5}&quot;))
+)
+),
+FALSE)
+&amp;&amp;  $Permission.Core_Opportunity_Bypass_Validation_Rules  = FALSE</errorConditionFormula>
+    <errorDisplayField>Construction_Site_Address__PostalCode__s</errorDisplayField>
+    <errorMessage>Please enter a valid format for the Zip Code! This should consist of three or five numbers. Example: 999 or 99999</errorMessage>
+</ValidationRule>

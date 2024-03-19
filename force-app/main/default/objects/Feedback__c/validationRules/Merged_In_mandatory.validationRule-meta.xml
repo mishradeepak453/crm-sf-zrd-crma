@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Merged_In_mandatory</fullName>
+    <active>true</active>
+    <description>SF-1083. Makes sure that the respective Feedback is linked in case Status is &quot;Merged&quot;.</description>
+    <errorConditionFormula>ISPICKVAL( Status__c , &quot;Merged&quot;) &amp;&amp; ISBLANK( Merged_In__c)</errorConditionFormula>
+    <errorDisplayField>Merged_In__c</errorDisplayField>
+    <errorMessage>Please link to the respective Feedback.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Core_Enterprise__c</fullName>
+    <description>1. Not integration relevant
+2. Core
+3. Set by Flow &quot;Core_Grant_Screen_Flow&quot; with the information entered by the User.</description>
+    <externalId>false</externalId>
+    <label>Enterprise</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Core_Strategic_Business_Unit__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Zeppelin_Baumaschinen_GmbH</fullName>
+                <default>false</default>
+                <label>Zeppelin Baumaschinen GmbH</label>
+            </value>
+            <value>
+                <fullName>Zeppelin_Österreich_GmbH</fullName>
+                <default>false</default>
+                <label>Zeppelin Österreich GmbH</label>
+            </value>
+            <value>
+                <fullName>Zeppelin_CZ_sro</fullName>
+                <default>false</default>
+                <label>Zeppelin CZ s.r.o.</label>
+            </value>
+            <value>
+                <fullName>Zeppelin_Rental_GmbH</fullName>
+                <default>false</default>
+                <label>Zeppelin Rental GmbH</label>
+            </value>
+            <value>
+                <fullName>Zeppelin_Rental_Österreich</fullName>
+                <default>false</default>
+                <label>Zeppelin Rental Österreich</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Baumaschine Zentraleuropa</controllingFieldValue>
+            <valueName>Zeppelin_Baumaschinen_GmbH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Baumaschine Zentraleuropa</controllingFieldValue>
+            <valueName>Zeppelin_Österreich_GmbH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Baumaschine Zentraleuropa</controllingFieldValue>
+            <valueName>Zeppelin_CZ_sro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rental</controllingFieldValue>
+            <valueName>Zeppelin_Rental_GmbH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rental</controllingFieldValue>
+            <valueName>Zeppelin_Rental_Österreich</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

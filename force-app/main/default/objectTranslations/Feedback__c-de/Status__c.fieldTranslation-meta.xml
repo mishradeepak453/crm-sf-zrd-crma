@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>Delivered</masterLabel>
+        <translation>Umgesetzt</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Review</masterLabel>
+        <translation>In Prüfung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Merged</masterLabel>
+        <translation>Zusammengeführt</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New</masterLabel>
+        <translation>Neu</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Planned for Implementation</masterLabel>
+        <translation>Für Umsetzung geplant</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rejected</masterLabel>
+        <translation>Abgelehnt</translation>
+    </picklistValues>
+</CustomFieldTranslation>

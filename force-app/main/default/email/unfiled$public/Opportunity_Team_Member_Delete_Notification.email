@@ -1,0 +1,15 @@
+Hallo {!OpportunityTeamMember.Member_Name__c},
+
+du wurdest von {!OpportunityTeamMember.LastModifiedBy} aus dem Opportunity Team von {!OpportunityTeamMember.Opportunity_Name__c} entfernt.
+
+Logge dich ein um mehr über die Opportunity zu erfahren.
+{!OpportunityTeamMember.Opportunity_Link__c}
+
+
+
+Viele Grüße
+dein Zeppelin Salesforce-Team
+
+
+
+Dies ist eine automatische generierte E-Mail, bitte nicht antworten.

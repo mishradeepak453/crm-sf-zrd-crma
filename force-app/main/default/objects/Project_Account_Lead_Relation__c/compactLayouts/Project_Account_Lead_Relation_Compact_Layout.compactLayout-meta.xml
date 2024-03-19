@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Account_Lead_Relation_Compact_Layout</fullName>
+    <fields>Account_Lead__c</fields>
+    <fields>Account_Role__c</fields>
+    <fields>Project__c</fields>
+    <label>Project Account Lead Relation Compact Layout</label>
+</CompactLayout>

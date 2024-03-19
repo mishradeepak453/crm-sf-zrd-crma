@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Area__c</fullName>
+    <description>1. Integration relevant (GRACE)
+2. ZR
+3. Specifies which Business Area the Territory belongs to</description>
+    <externalId>false</externalId>
+    <label>Business Area</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>Potential</valueSetName>
+    </valueSet>
+</CustomField>

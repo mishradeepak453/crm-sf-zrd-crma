@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Company_Group__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>1. Integration relevant - GRACE
+2. ZRD
+3. Relation to Company Group</description>
+    <externalId>false</externalId>
+    <label>Company Group</label>
+    <referenceTo>Company_Group__c</referenceTo>
+    <relationshipLabel>Konzernschlüssel</relationshipLabel>
+    <relationshipName>Konzernschl_ssel</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

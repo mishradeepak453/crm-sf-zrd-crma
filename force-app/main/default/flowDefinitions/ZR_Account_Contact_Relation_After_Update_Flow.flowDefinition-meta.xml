@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>3</activeVersionNumber>
+    <description>- Sets Deletion Code on Contact if this and all other Account Contact Relationships have a Deletion Code or removes Deletion Code from Contact, if the record does not have a Deletion Code set
+- Send Platform Event to Grace, if update was done by anyone other than the Integration User
+- Updates the Job Title on the Contact if the relation is direct and the Role on the record has been changed</description>
+    <masterLabel>Account Contact Relation After Update Flow</masterLabel>
+</FlowDefinition>

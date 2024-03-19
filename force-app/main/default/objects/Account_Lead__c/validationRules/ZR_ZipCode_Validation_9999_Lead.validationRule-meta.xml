@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_9999_Lead</fullName>
+    <active>true</active>
+    <description>SF-1155 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country. Format (&quot;\\d{4}&quot;). Example: 9999.</description>
+    <errorConditionFormula>IF(
+AND(
+NOT(ISBLANK( Address__PostalCode__s)),
+OR(
+ISPICKVAL(Address__CountryCode__s, &quot;AR&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;AM&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;AU&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;AT&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;BD&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;BE&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;BG&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;CY&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;DK&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;GE&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;GL&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;HU&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;LV&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;LI&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;LU&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;MK&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;MD&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;NZ&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;NO&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;PH&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;PT&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;SI&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;ZA&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;CH&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;TN&quot;)
+)),
+NOT(REGEX(Address__PostalCode__s, (&quot;\\d{4}&quot;))),FALSE)
+&amp;&amp; ISPICKVAL(Status__c, &quot;Qualification&quot;)</errorConditionFormula>
+    <errorMessage>Please enter a valid format for the Zip Code! This should consist of four numbers. Example: 9999</errorMessage>
+</ValidationRule>

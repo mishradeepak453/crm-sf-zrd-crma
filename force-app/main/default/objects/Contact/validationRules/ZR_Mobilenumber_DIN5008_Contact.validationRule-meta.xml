@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_Mobilenumber_DIN5008_Contact</fullName>
+    <active>true</active>
+    <description>SF-66 This validation ensures that mobilenumbers are entered in a valid format according to DIN5008. They should always start with a &apos;+&apos; followed by a country code and the mobilenumber. They should not include any letters or special characters.</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(MobilePhone)),
+(LEN(MobilePhone) &lt; 10 ||
+LEN(MobilePhone) &gt; 25||
+NOT(REGEX(MobilePhone,&quot;\\+([0-9 -]+)*&quot;))))
+&amp;&amp; $Permission.Core_Contact_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>MobilePhone</errorDisplayField>
+    <errorMessage>Please enter a valid mobile number, starting with a plus sign, followed by a country code. Do not include letters or special characters, use at least 10 and max. 25 characters. Valid example: +49123456789</errorMessage>
+</ValidationRule>

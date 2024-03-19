@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Project__c</entityName>
+    <fieldName>Internal_Project_Construction_Progress__c</fieldName>
+    <masterLabel>Salesforce Project</masterLabel>
+    <recordTypeName>Salesforce_Project</recordTypeName>
+</PathAssistant>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Company_Group_Name_not_editable</fullName>
+    <active>true</active>
+    <description>SF-1038. Makes sure that the Company Group name cannot be edited.</description>
+    <errorConditionFormula>( $User.FirstName  &lt;&gt; &quot;Integration&quot;) &amp;&amp; ISCHANGED ( Name )</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>You are to allowed to change the Company Group Name.</errorMessage>
+</ValidationRule>

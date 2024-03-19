@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>2</activeVersionNumber>
+    <description>- Collects information on the contact for which a Grant is created and the worth and date of the Grant
+- Checks, how many Grants have already been given to the contact
+- Guide the user via Screens to the correct Approval process for the Grant</description>
+    <masterLabel>Grant Screen Flow</masterLabel>
+</FlowDefinition>

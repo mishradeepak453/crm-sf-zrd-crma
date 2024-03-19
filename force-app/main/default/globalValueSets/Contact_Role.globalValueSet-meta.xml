@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>BUCH</fullName>
+        <default>false</default>
+        <label>Accountant</label>
+    </customValue>
+    <customValue>
+        <fullName>REFB</fullName>
+        <default>false</default>
+        <label>Advisor for Civic Participation</label>
+    </customValue>
+    <customValue>
+        <fullName>ARCH</fullName>
+        <default>false</default>
+        <label>Architect</label>
+    </customValue>
+    <customValue>
+        <fullName>MNTL</fullName>
+        <default>false</default>
+        <label>Assembly Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>ASS</fullName>
+        <default>false</default>
+        <label>Assistant / Secretary</label>
+    </customValue>
+    <customValue>
+        <fullName>LV</fullName>
+        <default>false</default>
+        <label>Association Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>SBB</fullName>
+        <default>false</default>
+        <label>Authority Clerk</label>
+    </customValue>
+    <customValue>
+        <fullName>BHLT</fullName>
+        <default>false</default>
+        <label>Authority Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>BIMK</fullName>
+        <default>false</default>
+        <label>BIM Coordinator</label>
+    </customValue>
+    <customValue>
+        <fullName>BIMO</fullName>
+        <default>false</default>
+        <label>BIM Modeler</label>
+    </customValue>
+    <customValue>
+        <fullName>BIMV</fullName>
+        <default>false</default>
+        <label>BIM Responsible</label>
+    </customValue>
+    <customValue>
+        <fullName>NLL</fullName>
+        <default>false</default>
+        <label>Branch Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>BAUH</fullName>
+        <default>false</default>
+        <label>Building Owner</label>
+    </customValue>
+    <customValue>
+        <fullName>KFML</fullName>
+        <default>false</default>
+        <label>Commercial Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>BAUL</fullName>
+        <default>false</default>
+        <label>Construction Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>DL</fullName>
+        <default>false</default>
+        <label>Consultant</label>
+    </customValue>
+    <customValue>
+        <fullName>KALK</fullName>
+        <default>false</default>
+        <label>Cost Accountant</label>
+    </customValue>
+    <customValue>
+        <fullName>LKS</fullName>
+        <default>false</default>
+        <label>Customer Service Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>DISP</fullName>
+        <default>false</default>
+        <label>Dispatcher</label>
+    </customValue>
+    <customValue>
+        <fullName>BAUZ</fullName>
+        <default>false</default>
+        <label>Draftsman</label>
+    </customValue>
+    <customValue>
+        <fullName>FAHR</fullName>
+        <default>false</default>
+        <label>Driver</label>
+    </customValue>
+    <customValue>
+        <fullName>EEB</fullName>
+        <default>false</default>
+        <label>Energy Consultant</label>
+    </customValue>
+    <customValue>
+        <fullName>ING</fullName>
+        <default>false</default>
+        <label>Engineer</label>
+    </customValue>
+    <customValue>
+        <fullName>LVE</fullName>
+        <default>false</default>
+        <label>Event Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>EENT</fullName>
+        <default>false</default>
+        <label>First Decision Maker</label>
+    </customValue>
+    <customValue>
+        <fullName>LFM</fullName>
+        <default>false</default>
+        <label>Fleet Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>POL</fullName>
+        <default>false</default>
+        <label>Foreman</label>
+    </customValue>
+    <customValue>
+        <fullName>LSTIF</fullName>
+        <default>false</default>
+        <label>Foundation Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>GESL</fullName>
+        <default>false</default>
+        <label>General Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>BIMM</fullName>
+        <default>false</default>
+        <label>Head of BIM</label>
+    </customValue>
+    <customValue>
+        <fullName>CSRL</fullName>
+        <default>false</default>
+        <label>Head of CSR /Corporate Social Responsibility</label>
+    </customValue>
+    <customValue>
+        <fullName>DIGL</fullName>
+        <default>false</default>
+        <label>Head of Digitalization</label>
+    </customValue>
+    <customValue>
+        <fullName>NHKL</fullName>
+        <default>false</default>
+        <label>Head of Sustainability</label>
+    </customValue>
+    <customValue>
+        <fullName>IT</fullName>
+        <default>false</default>
+        <label>IT Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>KAM</fullName>
+        <default>false</default>
+        <label>Key Account Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>LOG</fullName>
+        <default>false</default>
+        <label>Logistics Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>MTA</fullName>
+        <default>false</default>
+        <label>Machine Technical Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>LFRW</fullName>
+        <default>false</default>
+        <label>Manager - Financial Accounting</label>
+    </customValue>
+    <customValue>
+        <fullName>MKTG</fullName>
+        <default>false</default>
+        <label>Marketing Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>BAUM</fullName>
+        <default>false</default>
+        <label>Master Builder</label>
+    </customValue>
+    <customValue>
+        <fullName>BETR</fullName>
+        <default>false</default>
+        <label>Operations Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>INHA</fullName>
+        <default>false</default>
+        <label>Owner</label>
+    </customValue>
+    <customValue>
+        <fullName>PLAN</fullName>
+        <default>false</default>
+        <label>Planer</label>
+    </customValue>
+    <customValue>
+        <fullName>WL</fullName>
+        <default>false</default>
+        <label>Plant Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>PRSS</fullName>
+        <default>false</default>
+        <label>Press Spokesman</label>
+    </customValue>
+    <customValue>
+        <fullName>PRODL</fullName>
+        <default>false</default>
+        <label>Production Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>PM</fullName>
+        <default>false</default>
+        <label>Program Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>PROJ</fullName>
+        <default>false</default>
+        <label>Project Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>PS</fullName>
+        <default>false</default>
+        <label>Project Steerer</label>
+    </customValue>
+    <customValue>
+        <fullName>LAÖR</fullName>
+        <default>false</default>
+        <label>Public Agency Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>EINK</fullName>
+        <default>false</default>
+        <label>Purchaser</label>
+    </customValue>
+    <customValue>
+        <fullName>LEK</fullName>
+        <default>false</default>
+        <label>Purchasing Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>IML</fullName>
+        <default>false</default>
+        <label>Real Estate Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>SBV</fullName>
+        <default>false</default>
+        <label>Sales Clerk</label>
+    </customValue>
+    <customValue>
+        <fullName>VKL</fullName>
+        <default>false</default>
+        <label>Sales Director</label>
+    </customValue>
+    <customValue>
+        <fullName>OBL</fullName>
+        <default>false</default>
+        <label>Senior Construction Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>OPOL</fullName>
+        <default>false</default>
+        <label>Senior Foreman</label>
+    </customValue>
+    <customValue>
+        <fullName>SERV</fullName>
+        <default>false</default>
+        <label>Service Technician</label>
+    </customValue>
+    <customValue>
+        <fullName>SEW</fullName>
+        <default>false</default>
+        <label>Software Developer</label>
+    </customValue>
+    <customValue>
+        <fullName>TCHL</fullName>
+        <default>false</default>
+        <label>Technical Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>TECH</fullName>
+        <default>false</default>
+        <label>Technician / Machinist</label>
+    </customValue>
+    <customValue>
+        <fullName>LTK</fullName>
+        <default>false</default>
+        <label>Technology Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>VZP</fullName>
+        <default>false</default>
+        <label>Traffic Sign Planer</label>
+    </customValue>
+    <customValue>
+        <fullName>WERK</fullName>
+        <default>false</default>
+        <label>Workshop Manager</label>
+    </customValue>
+    <masterLabel>Contact Role</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

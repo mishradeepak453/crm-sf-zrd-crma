@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This Permission Set Group can be assigned, to allow Users to bypass all Validation Rules</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Core Bypass Validation Rules</label>
+    <permissionSets>Core_Account_Bypass_Validation_Rules</permissionSets>
+    <permissionSets>Core_Contact_Bypass_Validation_Rules</permissionSets>
+    <permissionSets>Core_Grant_Bypass_Validation_Rules</permissionSets>
+    <permissionSets>Core_Lead_Bypass_Validation_Rules</permissionSets>
+    <permissionSets>Core_Opportunity_Bypass_Validation_Rules</permissionSets>
+    <permissionSets>Core_Project_Bypass_Validation_Rules</permissionSets>
+    <permissionSets>Core_Project_Team_Bypass_Validation_Rules</permissionSets>
+    <permissionSets>Core_Quote_Bypass_Validation_Rules</permissionSets>
+    <permissionSets>Core_Submission_Result_Bypass_Validation_Rules</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

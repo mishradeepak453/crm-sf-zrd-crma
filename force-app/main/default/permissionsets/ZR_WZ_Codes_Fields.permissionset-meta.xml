@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>FLS for WZ Code Fields</description>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Core_WZ_Code__c.Core_WZ_Code_Group__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Core_WZ_Code__c.Core_WZ_Code_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>ZR_WZ Codes Fields</label>
+</PermissionSet>

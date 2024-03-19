@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_99999</fullName>
+    <active>true</active>
+    <description>SF-64 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country. Format (&quot;\\d{5}&quot;). Example: 99999.</description>
+    <errorConditionFormula>OR(
+IF(
+OR(
+BillingCountry == &quot;DZ&quot;,
+BillingCountry == &quot;AS&quot;,
+BillingCountry == &quot;BA&quot;,
+BillingCountry == &quot;BR&quot;,
+BillingCountry == &quot;IC&quot;,
+BillingCountry == &quot;MP&quot;,
+BillingCountry == &quot;HR&quot;,
+BillingCountry == &quot;CU&quot;,
+BillingCountry == &quot;EE&quot;,
+BillingCountry == &quot;FI&quot;,
+BillingCountry == &quot;FR&quot;,
+BillingCountry == &quot;GF&quot;,
+BillingCountry == &quot;DE&quot;,
+BillingCountry == &quot;GP&quot;,
+BillingCountry == &quot;GU&quot;,
+BillingCountry == &quot;ID&quot;,
+BillingCountry == &quot;IT&quot;,
+BillingCountry == &quot;LT&quot;,
+BillingCountry == &quot;MY&quot;,
+BillingCountry == &quot;MH&quot;,
+BillingCountry == &quot;MQ&quot;,
+BillingCountry == &quot;YT&quot;,
+BillingCountry == &quot;FM&quot;,
+BillingCountry == &quot;MC&quot;,
+BillingCountry == &quot;ME&quot;,
+BillingCountry == &quot;MA&quot;,
+BillingCountry == &quot;NC&quot;,
+BillingCountry == &quot;PK&quot;,
+BillingCountry == &quot;PW&quot;,
+BillingCountry == &quot;RE&quot;,
+BillingCountry == &quot;SM&quot;,
+BillingCountry == &quot;RS&quot;,
+BillingCountry == &quot;ES&quot;,
+BillingCountry == &quot;TH&quot;,
+BillingCountry == &quot;TR&quot;,
+BillingCountry == &quot;UA&quot;,
+BillingCountry == &quot;US&quot;,
+BillingCountry == &quot;VI&quot;
+),
+NOT(REGEX(BillingPostalCode, (&quot;\\d{5}&quot;))), FALSE),
+IF(AND(
+NOT(ISBLANK(ShippingPostalCode)),
+OR(
+ShippingCountry == &quot;DZ&quot;,
+ShippingCountry == &quot;AS&quot;,
+ShippingCountry == &quot;BA&quot;,
+ShippingCountry == &quot;BR&quot;,
+ShippingCountry == &quot;IC&quot;,
+ShippingCountry == &quot;MP&quot;,
+ShippingCountry == &quot;HR&quot;,
+ShippingCountry == &quot;CU&quot;,
+ShippingCountry == &quot;EE&quot;,
+ShippingCountry == &quot;FI&quot;,
+ShippingCountry == &quot;FR&quot;,
+ShippingCountry == &quot;GF&quot;,
+ShippingCountry == &quot;DE&quot;,
+ShippingCountry == &quot;GP&quot;,
+ShippingCountry == &quot;GU&quot;,
+ShippingCountry == &quot;ID&quot;,
+ShippingCountry == &quot;IT&quot;,
+ShippingCountry == &quot;LT&quot;,
+ShippingCountry == &quot;MY&quot;,
+ShippingCountry == &quot;MH&quot;,
+ShippingCountry == &quot;MQ&quot;,
+ShippingCountry == &quot;YT&quot;,
+ShippingCountry == &quot;FM&quot;,
+ShippingCountry == &quot;MC&quot;,
+ShippingCountry == &quot;ME&quot;,
+ShippingCountry == &quot;MA&quot;,
+ShippingCountry == &quot;NC&quot;,
+ShippingCountry == &quot;PK&quot;,
+ShippingCountry == &quot;PW&quot;,
+ShippingCountry == &quot;RE&quot;,
+ShippingCountry == &quot;SM&quot;,
+ShippingCountry == &quot;RS&quot;,
+ShippingCountry == &quot;ES&quot;,
+ShippingCountry == &quot;TH&quot;,
+ShippingCountry == &quot;TR&quot;,
+ShippingCountry == &quot;UA&quot;,
+ShippingCountry == &quot;US&quot;,
+ShippingCountry == &quot;VI&quot;
+)),
+NOT(REGEX(ShippingPostalCode, (&quot;\\d{5}&quot;))),FALSE)
+)
+&amp;&amp; ISPICKVAL( Core_Customer_Type__c, &quot;7&quot;)
+&amp;&amp; $Permission.Core_Account_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorMessage>Please enter a valid format for the Zip Code! This should consist of five numbers. Example: 99999</errorMessage>
+</ValidationRule>

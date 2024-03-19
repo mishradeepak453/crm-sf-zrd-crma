@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <description>Checks whether the Company Group Info field has been filled or updated.</description>
+        <name>CG_Info_entered_or_updated</name>
+        <label>CG Info entered or updated?</label>
+        <locationX>182</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>CG Info NOT updated</defaultConnectorLabel>
+        <rules>
+            <name>CG_Info_Updated</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Company_Group_Info__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record__Prior.Company_Group_Info__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Company_Group_Info__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Fill_Creator_CG_Info</targetReference>
+            </connector>
+            <label>CG Info Updated</label>
+        </rules>
+    </decisions>
+    <description>:: Fills the Creator and the Creation Date of the Company Group Info</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>DateToday</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <interviewLabel>Company Group Before Update Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Company Group Before Update Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Fills the CG Info Creation Date with the date of the Update to CG Info field.</description>
+        <name>Fill_CG_Info_Creation_Date</name>
+        <label>Fill CG Info Creation Date</label>
+        <locationX>50</locationX>
+        <locationY>551</locationY>
+        <inputAssignments>
+            <field>Info_Creation_Date__c</field>
+            <value>
+                <elementReference>DateToday</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <description>Fills the Creator of the Company Group Info.</description>
+        <name>Fill_Creator_CG_Info</name>
+        <label>Fill Creator CG Info</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>Fill_CG_Info_Creation_Date</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Info_Creator__c</field>
+            <value>
+                <elementReference>$User.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>CG_Info_entered_or_updated</targetReference>
+        </connector>
+        <object>Company_Group__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

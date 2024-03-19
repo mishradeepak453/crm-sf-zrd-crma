@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Core_Object__c</fullName>
+    <description>1. Not integration relevant
+2. Core
+3. SF-782</description>
+    <externalId>false</externalId>
+    <formula>IF( LEFT(Core_Salesforce_Id__c, 3) = &quot;001&quot;, &quot;Account&quot;,
+IF( LEFT(Core_Salesforce_Id__c, 3) = &quot;003&quot;, &quot;Contact&quot;,
+IF( LEFT(Core_Salesforce_Id__c, 3) = &quot;00Q&quot;, &quot;Lead&quot;,
+IF( LEFT(Core_Salesforce_Id__c, 3) = &quot;006&quot;, &quot;Opportunity&quot;,
+IF( LEFT(Core_Salesforce_Id__c, 3) = &quot;005&quot;, &quot;User&quot;,
+IF( LEFT(Core_Salesforce_Id__c, 3) = &quot;07k&quot;, &quot;Account Contact Relation&quot;,
+IF( LEFT(Core_Salesforce_Id__c, 3) = &quot;0JB&quot;, &quot;ObjectTerritory2Association&quot;,
+&quot;Other&quot;)))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Returns to which object the record causing the error belongs to</inlineHelpText>
+    <label>Object</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Core_Process_User__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>1. Integration relevant (GRACE)
+2. Core
+3. SF-782</description>
+    <externalId>false</externalId>
+    <inlineHelpText>User who has started the process</inlineHelpText>
+    <label>Process User</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Error_Logs</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_9999</fullName>
+    <active>true</active>
+    <description>SF-64 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country. Format (&quot;\\d{4}&quot;). Example: 9999.</description>
+    <errorConditionFormula>OR(
+IF(
+OR(
+BillingCountry == &quot;AR&quot;,
+BillingCountry == &quot;AM&quot;,
+BillingCountry == &quot;AU&quot;,
+BillingCountry == &quot;AT&quot;,
+BillingCountry == &quot;BD&quot;,
+BillingCountry == &quot;BE&quot;,
+BillingCountry == &quot;BG&quot;,
+BillingCountry == &quot;CY&quot;,
+BillingCountry == &quot;DK&quot;,
+BillingCountry == &quot;GE&quot;,
+BillingCountry == &quot;GL&quot;,
+BillingCountry == &quot;HU&quot;,
+BillingCountry == &quot;LV&quot;,
+BillingCountry == &quot;LI&quot;,
+BillingCountry == &quot;LU&quot;,
+BillingCountry == &quot;MK&quot;,
+BillingCountry == &quot;MD&quot;,
+BillingCountry == &quot;NZ&quot;,
+BillingCountry == &quot;NO&quot;,
+BillingCountry == &quot;PH&quot;,
+BillingCountry == &quot;PT&quot;,
+BillingCountry == &quot;SI&quot;,
+BillingCountry == &quot;ZA&quot;,
+BillingCountry == &quot;CH&quot;,
+BillingCountry == &quot;TN&quot;
+),
+NOT(REGEX(BillingPostalCode, (&quot;\\d{4}&quot;))),FALSE),
+IF(AND(
+NOT(ISBLANK(ShippingPostalCode)),
+OR(
+ShippingCountry == &quot;AR&quot;,
+ShippingCountry == &quot;AM&quot;,
+ShippingCountry == &quot;AU&quot;,
+ShippingCountry == &quot;AT&quot;,
+ShippingCountry == &quot;BD&quot;,
+ShippingCountry == &quot;BE&quot;,
+ShippingCountry == &quot;BG&quot;,
+ShippingCountry == &quot;CY&quot;,
+ShippingCountry == &quot;DK&quot;,
+ShippingCountry == &quot;GE&quot;,
+ShippingCountry == &quot;GL&quot;,
+ShippingCountry == &quot;HU&quot;,
+ShippingCountry == &quot;LV&quot;,
+ShippingCountry == &quot;LI&quot;,
+ShippingCountry == &quot;LU&quot;,
+ShippingCountry == &quot;MK&quot;,
+ShippingCountry == &quot;MD&quot;,
+ShippingCountry == &quot;NZ&quot;,
+ShippingCountry == &quot;NO&quot;,
+ShippingCountry == &quot;PH&quot;,
+ShippingCountry == &quot;PT&quot;,
+ShippingCountry == &quot;SI&quot;,
+ShippingCountry == &quot;ZA&quot;,
+ShippingCountry == &quot;CH&quot;,
+ShippingCountry == &quot;TN&quot;
+)),
+NOT(REGEX(ShippingPostalCode, (&quot;\\d{4}&quot;))),FALSE)
+)
+&amp;&amp; ISPICKVAL( Core_Customer_Type__c, &quot;7&quot;)
+&amp;&amp; $Permission.Core_Account_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorMessage>Please enter a valid format for the Zip Code! This should consist of four numbers. Example: 9999</errorMessage>
+</ValidationRule>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Team_Member_AD_Login_Name__c</fullName>
+    <description>1. Not integration relevant
+2. ZBM
+3. SF-1235. Helper field for My Project Teams List View.</description>
+    <externalId>false</externalId>
+    <formula>Team_Member__r.AD_Login_Name__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Team Member AD Login Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

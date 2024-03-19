@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_Phonenumber_DIN5008_Lead</fullName>
+    <active>true</active>
+    <description>SF-130 This validation ensures that phonenumbers are entered in a valid format according to DIN5008. They should always start with a &apos;+&apos; followed by a country code and the phonenumber. They should not include any letters or special characters.</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(Phone)),
+(LEN(Phone) &lt; 10 ||
+LEN(Phone) &gt; 20||
+NOT(REGEX(Phone,&quot;\\+([0-9 -]+)*&quot;))))
+&amp;&amp;  $Permission.Core_Lead_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>Phone</errorDisplayField>
+    <errorMessage>Please enter a valid phone number, starting with a plus sign, followed by a country code. Do not include letters or special characters, use at least 10 and max. 20 characters. Valid example: +49123456789</errorMessage>
+</ValidationRule>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_999999_Opportunity</fullName>
+    <active>true</active>
+    <description>SF-93 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country. Format (&quot;\\d{6}&quot;). Example: 999999.</description>
+    <errorConditionFormula>IF(
+AND(
+NOT(ISBLANK( Construction_Site_Address__PostalCode__s )),
+OR(
+ISPICKVAL( Construction_Site_Address__CountryCode__s ,&quot;BY&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s ,&quot;CN&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s ,&quot;EC&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s ,&quot;IN&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s ,&quot;KZ&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s ,&quot;KG&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s ,&quot;RO&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s ,&quot;RU&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s ,&quot;SG&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s ,&quot;TJ&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s ,&quot;UZ&quot;)
+)),
+NOT(REGEX(Construction_Site_Address__PostalCode__s , (&quot;\\d{6}&quot;))),
+FALSE)
+&amp;&amp;  $Permission.Core_Opportunity_Bypass_Validation_Rules  = FALSE</errorConditionFormula>
+    <errorDisplayField>Construction_Site_Address__PostalCode__s</errorDisplayField>
+    <errorMessage>Please enter a valid format for the Zip Code! This should consist of six numbers. Example: 999999</errorMessage>
+</ValidationRule>

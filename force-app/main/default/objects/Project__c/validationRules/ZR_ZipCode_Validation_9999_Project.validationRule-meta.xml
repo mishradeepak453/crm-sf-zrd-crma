@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_9999_Project</fullName>
+    <active>true</active>
+    <description>SF-646 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country. Format (&quot;\\d{4}&quot;). Example: 9999.</description>
+    <errorConditionFormula>IF(
+AND(
+NOT(ISBLANK( Project_Address__PostalCode__s )),
+OR(
+ISPICKVAL( Project_Address__CountryCode__s , &quot;AR&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;AM&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;AU&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;AT&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;BD&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;BE&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;BG&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;CY&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;DK&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;GE&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;GL&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;HU&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;LV&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;LI&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;LU&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;MK&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;MD&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;NZ&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;NO&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;PH&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;PT&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;SI&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;ZA&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;CH&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;TN&quot;)
+)),
+NOT(REGEX(Project_Address__PostalCode__s, (&quot;\\d{4}&quot;))),
+FALSE)
+&amp;&amp; $Permission.Core_Project_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>Project_Address__PostalCode__s</errorDisplayField>
+    <errorMessage>Please enter a valid format for the Zip Code! This should consist of four numbers. Example: 9999</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_JobTitleMandatory_Lead</fullName>
+    <active>true</active>
+    <description>SF-158 This validation rule ensure, that a job title is added as soon as a lead reaches the stage &apos;Qualification&apos; or &apos;Converted&apos;.</description>
+    <errorConditionFormula>IF(ISPICKVAL(Status, &quot;Qualification&quot;)||ISPICKVAL(Status, &quot;Converted&quot;), ISPICKVAL(Job_Title__c, &quot;&quot;), FALSE)
+&amp;&amp;  $Permission.Core_Lead_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>Job_Title__c</errorDisplayField>
+    <errorMessage>Please enter a job title to successfully qualify this lead.</errorMessage>
+</ValidationRule>

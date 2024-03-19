@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Fachkompetenz</label>
+    <name>Expertise__c</name>
+    <picklistValues>
+        <masterLabel>Access Equipment (AE)</masterLabel>
+        <translation>Fördertechnik</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Accommodation Units (AU)</masterLabel>
+        <translation>Raumsysteme</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Agriculture machines (AM)</masterLabel>
+        <translation>Landschaftspflegetechnik</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Construction Equipment (CE)</masterLabel>
+        <translation>Baumaschinen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Construction Tools (CT)</masterLabel>
+        <translation>Baugeräte</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Electric &amp; Energy (EE)</masterLabel>
+        <translation>Elektro und Energie</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Industrial Equipment (IE)</masterLabel>
+        <translation>Industrielles Equipment</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Logistics Consulting &amp; Management (LC)</masterLabel>
+        <translation>LC&amp;M</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sanitary Systems (SA)</masterLabel>
+        <translation>Sanitärsysteme</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spare Parts (SP)</masterLabel>
+        <translation>Ersatzteile und Zubehör</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tower Cranes (TC)</masterLabel>
+        <translation>Hochbautechnik</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Traffic Safety (TS)</masterLabel>
+        <translation>Baustellen- und Verkehrssicherung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vehicles (VH)</masterLabel>
+        <translation>Fahrzeuge</translation>
+    </picklistValues>
+</CustomFieldTranslation>

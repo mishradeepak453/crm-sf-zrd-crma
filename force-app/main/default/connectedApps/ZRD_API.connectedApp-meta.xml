@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>rene.pienkoss@accenture.com</contactEmail>
+    <ipRanges>
+        <end>194.25.159.55</end>
+        <start>194.25.159.48</start>
+    </ipRanges>
+    <ipRanges>
+        <end>93.240.192.103</end>
+        <start>93.240.192.96</start>
+    </ipRanges>
+    <label>ZRD_API</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
+        <consumerKey>3MVG9hYFI5K4tx6Rji0DdwHNZZbqVTO5niSCfkoWsy0q6SJNUWO2JDq.nzWJl0cJ78l914WpYEBHnsJEqIpGO</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isNamedUserJwtEnabled>false</isNamedUserJwtEnabled>
+        <isPkceRequired>false</isPkceRequired>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Full</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>zero</refreshTokenPolicy>
+    </oauthPolicy>
+    <permissionSetName>ZR_GRACE</permissionSetName>
+</ConnectedApp>

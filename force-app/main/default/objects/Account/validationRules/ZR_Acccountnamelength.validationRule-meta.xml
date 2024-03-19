@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_Acccountnamelength</fullName>
+    <active>true</active>
+    <description>SF-51 This validation rule should verify, that the account name field has maximum of 40 characters as this is limited in GRACE.</description>
+    <errorConditionFormula>LEN(Name) &gt; 40 
+&amp;&amp; ISPICKVAL( Core_Customer_Type__c, &quot;7&quot;)
+&amp;&amp; $Permission.Core_Account_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Please enter only 40 characters into the Account Name field. Enter all additional characters into the fields Name 2, Name 3 and Name 4.</errorMessage>
+</ValidationRule>

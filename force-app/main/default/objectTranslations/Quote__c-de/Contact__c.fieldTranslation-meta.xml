@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Nur Kontakte die bereits mit dem Account dieses Angebots verbunden sind können hinzugefügt werden.</help>
+    <label>Kontakt</label>
+    <name>Contact__c</name>
+    <relationshipLabel>Angebote</relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_Requirement_Date_Opportunity</fullName>
+    <active>true</active>
+    <description>SF-772 This validation rule ensures, that the Requirement Start Date of an Opportunity is before the Requirement End Date.</description>
+    <errorConditionFormula>( Requirement_Period_Start__c &gt; Requirement_Period_End__c )
+&amp;&amp;  $Permission.Core_Opportunity_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>Requirement_Period_Start__c</errorDisplayField>
+    <errorMessage>The Requirement Start Date of an Opportunity must be earlier than the Requirement End Date!</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone</fullName>
+    <description>1. Integration relevant (XFAIR)
+2. ZR
+3.</description>
+    <inlineHelpText>Please enter a valid phonenumber, starting with a plus sign, followed by a country code. Do not include letters or special characters, use at least 10 and max. 20 characters. Valid example: +49123456789</inlineHelpText>
+    <trackFeedHistory>false</trackFeedHistory>
+</CustomField>

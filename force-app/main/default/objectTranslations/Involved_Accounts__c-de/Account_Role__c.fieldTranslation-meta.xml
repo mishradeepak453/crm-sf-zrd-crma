@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Account Rolle</label>
+    <name>Account_Role__c</name>
+    <picklistValues>
+        <masterLabel>ARGE-Partner</masterLabel>
+        <translation>ARGE-Partner</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Commercial Management</masterLabel>
+        <translation>Kaufmännische Geschäftsleitung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technical Management</masterLabel>
+        <translation>Technische Geschäftsleitung</translation>
+    </picklistValues>
+</CustomFieldTranslation>

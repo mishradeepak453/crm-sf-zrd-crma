@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Company Key</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Company Keys</value>
+    </caseValues>
+    <layouts>
+        <layout>Company Key-Layout</layout>
+        <sections>
+            <label>Custom Links</label>
+            <section>Benutzerdefinierte Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel></nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

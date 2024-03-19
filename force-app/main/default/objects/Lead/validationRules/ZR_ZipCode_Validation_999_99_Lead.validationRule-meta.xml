@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_999_99_Lead</fullName>
+    <active>true</active>
+    <description>SF-158 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country. Format (&quot;\\d{3}[ ]\\d{2}&quot;). Example: 999 99</description>
+    <errorConditionFormula>IF(
+AND(
+NOT(ISBLANK( PostalCode )),
+OR(
+Country == &quot;CZ&quot;,
+Country == &quot;GR&quot;,
+Country == &quot;SK&quot;,
+Country == &quot;SE&quot;
+)),
+NOT(REGEX(PostalCode, (&quot;\\d{3}[ ]\\d{2}&quot;))),FALSE)
+&amp;&amp;  $Permission.Core_Lead_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>PostalCode</errorDisplayField>
+    <errorMessage>Please enter a valid format for the Zip Code! This should start with three numbers, followed by a space and two numbers. Example: 999 99</errorMessage>
+</ValidationRule>

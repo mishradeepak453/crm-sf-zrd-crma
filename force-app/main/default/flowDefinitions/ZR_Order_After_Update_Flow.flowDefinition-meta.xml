@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>1</activeVersionNumber>
+    <description>- Updates the Stage of an Opportunity to Closed, if an Order was successful</description>
+    <masterLabel>Order After Update Flow</masterLabel>
+</FlowDefinition>

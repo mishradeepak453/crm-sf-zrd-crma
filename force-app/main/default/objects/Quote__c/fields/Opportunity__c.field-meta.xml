@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>1. Integration relevant (Grace)
+2. ZR
+3. SF-717</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Only Opportunities that are linked to the Account of this Quote, have the same Business Area as this Quote and are in the Quotation- or Closed-Stage can be connected.</inlineHelpText>
+    <label>Opportunity</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>(1 OR 2) AND 3 AND 4</booleanFilter>
+        <filterItems>
+            <field>Opportunity.StageName</field>
+            <operation>notEqual</operation>
+            <value>Neu</value>
+        </filterItems>
+        <filterItems>
+            <field>Opportunity.StageName</field>
+            <operation>notEqual</operation>
+            <value>Qualifizierungsphase</value>
+        </filterItems>
+        <filterItems>
+            <field>Opportunity.Account.Id</field>
+            <operation>equals</operation>
+            <valueField>$Source.Account__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Opportunity.Business_Area__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Business_Area__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Opportunity</referenceTo>
+    <relationshipName>Quotes</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

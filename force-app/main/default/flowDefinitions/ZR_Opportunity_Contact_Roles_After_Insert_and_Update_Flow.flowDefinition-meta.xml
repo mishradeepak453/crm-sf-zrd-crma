@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>1</activeVersionNumber>
+    <description>- Sets the Primary Contact on the Opportunity to the primary Opportunity Contact Role</description>
+    <masterLabel>Opportunity Contact Roles After Insert and Update Flow</masterLabel>
+</FlowDefinition>

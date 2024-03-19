@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <dataset>Projekte</dataset>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingBins>
+                <bin>1</bin>
+                <formatValue>#E6ECF2</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>0</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>2</bin>
+                <formatValue>#FFFF93</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>1</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>3</bin>
+                <formatValue>#FFCD95</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>2</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>4</bin>
+                <formatValue>#95FFB0</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>3</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>5</bin>
+                <formatValue>#00B531</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>4</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>6</bin>
+                <formatValue>#FFFFFF</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>5</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>7</bin>
+                <formatValue>#0D34B6</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>6</sortIndex>
+            </formattingBins>
+            <property>chartColor</property>
+            <referenceField>Project.Project_Construction_Progress__c</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>categories</type>
+        </conditionalFormatting>
+        <field>Project.Project_Construction_Progress__c</field>
+        <isDerived>false</isDerived>
+        <members>
+            <label>Discussion</label>
+            <member>1</member>
+            <sortIndex>0</sortIndex>
+        </members>
+        <members>
+            <label>Pre Planning</label>
+            <member>2</member>
+            <sortIndex>1</sortIndex>
+        </members>
+        <members>
+            <label>Planning</label>
+            <member>3</member>
+            <sortIndex>2</sortIndex>
+        </members>
+        <members>
+            <label>Shortly before Start</label>
+            <member>4</member>
+            <sortIndex>3</sortIndex>
+        </members>
+        <members>
+            <label>Implementation</label>
+            <member>5</member>
+            <sortIndex>4</sortIndex>
+        </members>
+        <members>
+            <label>Shortly before Completion/Completion</label>
+            <member>7</member>
+            <sortIndex>5</sortIndex>
+        </members>
+        <members>
+            <label>not in use anymore</label>
+            <member>6</member>
+            <sortIndex>6</sortIndex>
+        </members>
+        <sortIndex>0</sortIndex>
+    </dimensions>
+    <dimensions>
+        <conditionalFormatting>
+            <formattingBins>
+                <bin>1</bin>
+                <formatValue>#E6ECF2</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>0</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>2</bin>
+                <formatValue>#006714</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>1</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>3</bin>
+                <formatValue>#4269E9</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>2</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>4</bin>
+                <formatValue>#3AE867</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>3</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>5</bin>
+                <formatValue>#00B531</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>4</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>6</bin>
+                <formatValue>#CD96FF</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>5</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>7</bin>
+                <formatValue>#0D34B6</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>6</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>8</bin>
+                <formatValue>#98B1FF</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>7</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>9</bin>
+                <formatValue>#335779</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>8</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>10</bin>
+                <formatValue>#673300</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>9</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>11</bin>
+                <formatValue>#B56200</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>10</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>12</bin>
+                <formatValue>#330068</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>11</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>13</bin>
+                <formatValue>#6300B6</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>12</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>14</bin>
+                <formatValue>#FF9897</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>13</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>15</bin>
+                <formatValue>#FFCD95</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>14</sortIndex>
+            </formattingBins>
+            <formattingBins>
+                <bin>NV</bin>
+                <formatValue>#091A3E</formatValue>
+                <label xsi:nil="true"/>
+                <sortIndex>15</sortIndex>
+            </formattingBins>
+            <property>chartColor</property>
+            <referenceField>Account_Role__c</referenceField>
+            <sortIndex xsi:nil="true"/>
+            <type>categories</type>
+        </conditionalFormatting>
+        <field>Account_Role__c</field>
+        <isDerived>false</isDerived>
+        <members>
+            <label>Architect</label>
+            <member>1</member>
+            <sortIndex>0</sortIndex>
+        </members>
+        <members>
+            <label>Operating Firm</label>
+            <member>2</member>
+            <sortIndex>1</sortIndex>
+        </members>
+        <members>
+            <label>Building Owner</label>
+            <member>3</member>
+            <sortIndex>2</sortIndex>
+        </members>
+        <members>
+            <label>Building Contractor</label>
+            <member>4</member>
+            <sortIndex>3</sortIndex>
+        </members>
+        <members>
+            <label>Operator</label>
+            <member>5</member>
+            <sortIndex>4</sortIndex>
+        </members>
+        <members>
+            <label>Consultant</label>
+            <member>6</member>
+            <sortIndex>5</sortIndex>
+        </members>
+        <members>
+            <label>General Constructor</label>
+            <member>7</member>
+            <sortIndex>6</sortIndex>
+        </members>
+        <members>
+            <label>Tenant</label>
+            <member>8</member>
+            <sortIndex>7</sortIndex>
+        </members>
+        <members>
+            <label>Property Surveillance</label>
+            <member>9</member>
+            <sortIndex>8</sortIndex>
+        </members>
+        <members>
+            <label>Planner</label>
+            <member>10</member>
+            <sortIndex>9</sortIndex>
+        </members>
+        <members>
+            <label>Planer and Engineers</label>
+            <member>11</member>
+            <sortIndex>10</sortIndex>
+        </members>
+        <members>
+            <label>Project Developer</label>
+            <member>12</member>
+            <sortIndex>11</sortIndex>
+        </members>
+        <members>
+            <label>Project Controller</label>
+            <member>13</member>
+            <sortIndex>12</sortIndex>
+        </members>
+        <members>
+            <label>Bidder</label>
+            <member>15</member>
+            <sortIndex>13</sortIndex>
+        </members>
+        <members>
+            <label>Further Participants</label>
+            <member>14</member>
+            <sortIndex>14</sortIndex>
+        </members>
+        <sortIndex>1</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>Project.Name</field>
+        <isDerived>false</isDerived>
+        <linkTemplateEnabled>true</linkTemplateEnabled>
+        <recordDisplayFields>
+            <recordDisplayField>Project.Name</recordDisplayField>
+            <sortIndex>0</sortIndex>
+        </recordDisplayFields>
+        <recordDisplayFields>
+            <recordDisplayField>Project.City__c</recordDisplayField>
+            <sortIndex>1</sortIndex>
+        </recordDisplayFields>
+        <recordIdField>Project.Id</recordIdField>
+        <salesforceActionsEnabled>true</salesforceActionsEnabled>
+        <sortIndex>2</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>Project.Id</field>
+        <isDerived>false</isDerived>
+        <label>Project ID</label>
+        <sortIndex>3</sortIndex>
+    </dimensions>
+</WaveXmd>

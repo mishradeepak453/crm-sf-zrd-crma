@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_Other_Project_Sources</fullName>
+    <active>true</active>
+    <description>SF-646 This Validation Rule ensures, that if a User selects &quot;Other&quot; as a value in the &quot;Project Source&quot;-field, a value is entered into the field &quot;Other sources&quot;</description>
+    <errorConditionFormula>IF(ISPICKVAL(Project_Source__c, &quot;6&quot;), ISBLANK( Other_Sources__c), FALSE)
+&amp;&amp;  $Permission.Core_Project_Bypass_Validation_Rules  = FALSE</errorConditionFormula>
+    <errorDisplayField>Other_Sources__c</errorDisplayField>
+    <errorMessage>Please enter an exact source for the Project!</errorMessage>
+</ValidationRule>

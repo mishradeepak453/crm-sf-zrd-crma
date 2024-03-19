@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_Member_change_not_allowed_ProjectTeam</fullName>
+    <active>true</active>
+    <description>SF-667 This Validation Rule ensures, that a Team Member Name can not be changed. This is to make sure, the correct sharing is given to every Team Member</description>
+    <errorConditionFormula>ISCHANGED(Team_Member__c )
+&amp;&amp;  $Permission.Core_Project_Team_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>Team_Member__c</errorDisplayField>
+    <errorMessage>You can not update a Team Member Name. In order to change the Team Member, remove the User you are trying to replace from the team and add the new User afterwards.</errorMessage>
+</ValidationRule>

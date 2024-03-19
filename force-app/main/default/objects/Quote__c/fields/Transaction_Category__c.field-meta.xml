@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transaction_Category__c</fullName>
+    <description>1. Integration relevant (GRACE)
+2. ZRD
+3. SF-777</description>
+    <externalId>false</externalId>
+    <label>Transaction Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>VAB</fullName>
+                <default>false</default>
+                <label>Quote Existing Customer Commercial</label>
+            </value>
+            <value>
+                <fullName>VAR</fullName>
+                <default>false</default>
+                <label>Quote Existing Customer Private</label>
+            </value>
+            <value>
+                <fullName>VAG</fullName>
+                <default>false</default>
+                <label>Quote New Customer Commercial</label>
+            </value>
+            <value>
+                <fullName>VAP</fullName>
+                <default>false</default>
+                <label>Quote New Customer Private</label>
+            </value>
+            <value>
+                <fullName>VAO</fullName>
+                <default>false</default>
+                <label>Quote Rental Online</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_CA_Project</fullName>
+    <active>true</active>
+    <description>SF-646 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country. Format (&quot;[A-Z][0-9][A-Z][ ][0-9][A-Z][0-9]&quot;) or (&quot;[A-Z][0-9][A-Z][ ][0-9][A-Z]&quot;). Example: A9A 9A9 or A9A 9A</description>
+    <errorConditionFormula>IF(
+AND(
+NOT(ISBLANK( Project_Address__PostalCode__s )),
+ISPICKVAL( Project_Address__CountryCode__s , &quot;CA&quot;)
+),
+NOT(
+OR(
+REGEX( Project_Address__PostalCode__s , (&quot;[A-Z][0-9][A-Z][ ][0-9][A-Z][0-9]&quot;)),
+REGEX(Project_Address__PostalCode__s, (&quot;[A-Z][0-9][A-Z][ ][0-9][A-Z]&quot;))
+)
+),
+FALSE)
+&amp;&amp; $Permission.Core_Project_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>Project_Address__PostalCode__s</errorDisplayField>
+    <errorMessage>Please enter a valid format for the Zip Code! This should consist of an uppercase letter, a number, an uppercase letter followed by a space, a number, an uppercase letter and optional number. Example: A9A 9A9 or A9A 9A</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bypass_StartbeforeEnd_Validation__c</fullName>
+    <description>1. Integration relevant (BIS)
+2. ZRD
+3. Helper Field to bypass Validation Start before Date if start date was filled with placeholder</description>
+    <externalId>false</externalId>
+    <formula>Project_Construction_Start__c  ==  DATEVALUE($Setup.BIS_Project_Import_Config__c.Project_Construction_Start_Placeholder__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Bypass Start Before End Validation</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

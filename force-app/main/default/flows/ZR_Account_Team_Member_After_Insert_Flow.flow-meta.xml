@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Email_DE</name>
+        <label>Send Email DE</label>
+        <locationX>198</locationX>
+        <locationY>539</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Create_Chatter_Post</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>EmailBodyDE</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Member__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>EmailSubjectDE</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Email_EN</name>
+        <label>Send Email EN</label>
+        <locationX>462</locationX>
+        <locationY>539</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Create_Chatter_Post</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>EmailBodyEN</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Member__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>EmailSubjectEN</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>53.0</apiVersion>
+    <decisions>
+        <name>Is_User_KAM_oder_LAM</name>
+        <label>Is User KAM oder LAM</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Team_Member_Language</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Is not KAM or LAM</defaultConnectorLabel>
+        <rules>
+            <name>Is_KAM_or_LAM</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.TeamMemberRole</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Key_Account_Manager</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.TeamMemberRole</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Large_Account_Manager</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Chatter_Post</targetReference>
+            </connector>
+            <label>Is KAM or LAM</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks whether the Team Member has language de set or other.</description>
+        <name>Team_Member_Language</name>
+        <label>Team Member Language?</label>
+        <locationX>330</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Send_Email_EN</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Team Member is NOT DE</defaultConnectorLabel>
+        <rules>
+            <name>Team_Member_is_DE</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Member__r.LanguageLocaleKey</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>de</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email_DE</targetReference>
+            </connector>
+            <label>Team Member is DE</label>
+        </rules>
+    </decisions>
+    <description>- Sends an Email to the new Member of an Account Team
+- Does not send the Email to KAM or LAM Users</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>AccountLink</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Enterprise_Server_URL_100}, FIND(&apos;/services&apos;, {!$Api.Enterprise_Server_URL_100})) &amp; {!$Record.Account.Id}</expression>
+    </formulas>
+    <interviewLabel>Account Team Member After Insert Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account Team Member After Insert Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Chatter_Post</name>
+        <label>Create Chatter Post</label>
+        <locationX>176</locationX>
+        <locationY>815</locationY>
+        <inputAssignments>
+            <field>Body</field>
+            <value>
+                <elementReference>ChatterPostBody</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>IsRichText</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Published</stringValue>
+            </value>
+        </inputAssignments>
+        <object>FeedItem</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_User_KAM_oder_LAM</targetReference>
+        </connector>
+        <object>AccountTeamMember</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>ChatterPostBody</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>{!$User.FirstName} {!$User.LastName} hat {!$Record.Member_Name__c} dem Account Team hinzugefügt.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>EmailBodyDE</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hallo {!$Record.Member__r.FirstName} {!$Record.Member__r.LastName},
+
+du wurdest von {!$Record.CreatedBy.FirstName} {!$Record.CreatedBy.LastName} dem Account Team von {!$Record.Account.Name} hinzugefügt.
+
+Logge dich ein, um mehr über den Account zu erfahren:
+{!AccountLink}
+
+
+Viele Grüße,
+dein Zeppelin Salesforce-Team
+
+Dies ist eine automatisch generierte E-Mail, bitte nicht antworten.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>EmailBodyEN</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hello {!$Record.Member__r.FirstName} {!$Record.Member__r.LastName},
+
+You have been added to the Account Team of {!$Record.Account.Name} by {!$Record.CreatedBy.FirstName} {!$Record.CreatedBy.LastName}.
+
+Please log in to see the details of the Account: 
+{!AccountLink}
+
+
+Best regards,
+Your Zeppelin Salesforce-Team
+
+This is an automatically created Email. Please do not reply.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>EmailSubjectDE</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Du wurdest einem Account Team hinzugefügt!</text>
+    </textTemplates>
+    <textTemplates>
+        <name>EmailSubjectEN</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>You have been added to an Account Team!</text>
+    </textTemplates>
+</Flow>

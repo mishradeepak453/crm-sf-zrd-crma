@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name__c</fullName>
+    <description>1. Not integration relevant
+2. ZR
+3. Helper Field, to display the User Name instead of the Autonumber on related Lists</description>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&quot;/lightning/r/Expertise_Assignment__c/&quot;+ User__r.Id +&quot;/view&quot;,  User__r.FirstName  + &quot; &quot; +  User__r.LastName )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Name</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

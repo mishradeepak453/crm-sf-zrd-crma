@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>1. Integration relevant
+2. Core
+3. This Permission is used in Validation Rules on the Lead</description>
+    <isLicensed>false</isLicensed>
+    <label>Lead Bypass Validation Rules</label>
+</CustomPermission>

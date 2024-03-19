@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Wenn du &quot;Preis&quot;, &quot;Submissionsergebnis&quot; oder &quot;Andere&quot; gewählt hast, gib bitte eine nähere Erläuterung im Feld &quot;Begründung für verlorene Opportunity&quot; an.</help>
+    <label>Absagegründe</label>
+    <name>Loss_Reason__c</name>
+</CustomFieldTranslation>

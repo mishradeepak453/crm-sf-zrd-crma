@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_VAT_Format_Account_IE</fullName>
+    <active>true</active>
+    <description>SF-64 This validation rule should ensure, that all Sales Tax Id Numbers are in the correct format according to their respective country. Format (&quot;[IE]{2}\\d{1}[A-Z0-9]{1}\\d{5}[A-Z]{1}&quot;) or (&quot;[IE]{2}\\d{7}[A-W]{1}[A-I]{1}&quot;). Ex: IE9X99999X or IE9999999AA</description>
+    <errorConditionFormula>IF(
+AND(
+NOT(ISBLANK(Core_Sales_Tax_ID_No__c )),
+BillingCountry == &quot;IE&quot;
+),
+NOT(
+OR(
+REGEX(Core_Sales_Tax_ID_No__c , (&quot;[IE]{2}\\d{1}[A-Z0-9]{1}\\d{5}[A-Z]{1}&quot;)),
+REGEX(Core_Sales_Tax_ID_No__c , (&quot;[IE]{2}\\d{7}[A-W]{1}[A-I]{1}&quot;))
+)
+),
+False)
+&amp;&amp; ISPICKVAL( Core_Customer_Type__c, &quot;7&quot;)
+&amp;&amp; $Permission.Core_Account_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>Core_Sales_Tax_ID_No__c</errorDisplayField>
+    <errorMessage>Please enter a valid Sales Tax format! This should start with the two letter country code, followed by a capital letter, a number or a letter, five numbers and a letter or consist of seven numbers and two letters. Example: IE9X99999X or IE9999999AA</errorMessage>
+</ValidationRule>

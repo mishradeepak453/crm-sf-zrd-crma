@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Projekt Account Beziehung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Projekt Account Beziehungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Projekt Account Beziehung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Projekt Account Beziehungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Projekt Account Beziehung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Projekt Account Beziehungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Projekt Account Beziehung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Projekt Account Beziehungen</value>
+    </caseValues>
+    <gender>Neuter</gender>
+    <layouts>
+        <layout>Project Account Relation Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Projekt Account Beziehung</nameFieldLabel>
+    <validationRules>
+        <errorMessage>Es kann maximal ein Bauherr pro Projekt hinzugefügt werden.</errorMessage>
+        <name>Max_One_Building_Owner_Per_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Das Startdatum muss vor dem Enddatum liegen.</errorMessage>
+        <name>Start_Date_Before_End_Date</name>
+    </validationRules>
+</CustomObjectTranslation>

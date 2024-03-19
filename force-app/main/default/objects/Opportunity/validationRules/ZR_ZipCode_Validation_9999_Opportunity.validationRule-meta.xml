@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_9999_Opportunity</fullName>
+    <active>true</active>
+    <description>SF-93 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country. Format (&quot;\\d{4}&quot;). Example: 9999.</description>
+    <errorConditionFormula>IF(
+AND(
+NOT(ISBLANK( Construction_Site_Address__PostalCode__s )),
+OR(
+ISPICKVAL( Construction_Site_Address__CountryCode__s , &quot;AR&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;AM&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;AU&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;AT&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;BD&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;BE&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;BG&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;CY&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;DK&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;GE&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;GL&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;HU&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;LV&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;LI&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;LU&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;MK&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;MD&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;NZ&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;NO&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;PH&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;PT&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;SI&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;ZA&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;CH&quot;),
+ISPICKVAL(Construction_Site_Address__CountryCode__s , &quot;TN&quot;)
+)),
+NOT(REGEX(Construction_Site_Address__PostalCode__s , (&quot;\\d{4}&quot;))),
+FALSE)
+&amp;&amp;  $Permission.Core_Opportunity_Bypass_Validation_Rules  = FALSE</errorConditionFormula>
+    <errorDisplayField>Construction_Site_Address__PostalCode__s</errorDisplayField>
+    <errorMessage>Please enter a valid format for the Zip Code! This should consist of four numbers. Example: 9999</errorMessage>
+</ValidationRule>

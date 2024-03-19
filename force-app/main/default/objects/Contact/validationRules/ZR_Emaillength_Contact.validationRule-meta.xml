@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_Emaillength_Contact</fullName>
+    <active>true</active>
+    <description>SF-99 This validation rule should enforce a field lengths of maximum 60 characters for this Email-field.</description>
+    <errorConditionFormula>LEN(Email)&gt; 60
+&amp;&amp; $Permission.Core_Contact_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>Email</errorDisplayField>
+    <errorMessage>Please enter not more than 60 characters.</errorMessage>
+</ValidationRule>

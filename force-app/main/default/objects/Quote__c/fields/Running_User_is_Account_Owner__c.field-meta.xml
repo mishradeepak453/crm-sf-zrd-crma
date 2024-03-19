@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Running_User_is_Account_Owner__c</fullName>
+    <description>1. Not integration relevant
+2. ZR
+3. Helper Field to check if the Running User of a List View is the Account Owner of the Quote</description>
+    <externalId>false</externalId>
+    <formula>IF(  Account__r.Owner.Id   =   $User.Id , TRUE, FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Running User is Account Owner</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

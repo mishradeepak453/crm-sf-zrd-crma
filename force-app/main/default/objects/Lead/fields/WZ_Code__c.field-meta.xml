@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WZ_Code__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>1. Integration irrelevant
+2. ZR
+3.</description>
+    <externalId>false</externalId>
+    <label>WZ Code</label>
+    <referenceTo>Core_WZ_Code__c</referenceTo>
+    <relationshipLabel>Leads</relationshipLabel>
+    <relationshipName>Leads</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Lookup</type>
+</CustomField>

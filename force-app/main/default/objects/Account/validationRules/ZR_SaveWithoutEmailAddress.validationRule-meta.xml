@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_SaveWithoutEmailAddress</fullName>
+    <active>true</active>
+    <description>Inform user that if they want to save an account without an email address they need to check the checkbox &quot;Save without Email&quot;</description>
+    <errorConditionFormula>AND (ISBLANK( Core_Email__c ), Save_without_Email__c = false)
+&amp;&amp; ISPICKVAL( Core_Customer_Type__c, &quot;7&quot;)
+&amp;&amp; $Permission.Core_Account_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>Core_Email__c</errorDisplayField>
+    <errorMessage>You are about to save this Account without an email address. If this is correct please confirm with &quot;Save without Email&quot; and add the email address as soon as it is known.</errorMessage>
+</ValidationRule>

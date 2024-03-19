@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#BB2C05</headerColor>
+        <logo>ZRD_blocklogofarbigRGBwebsafe_01201</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Sell smarter and faster with the world&apos;s #1 CRM solution.</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Sales</label>
+    <navType>Standard</navType>
+    <setupExperience>all</setupExperience>
+    <tabs>standard-MobileHome</tabs>
+    <tabs>standard-home</tabs>
+    <tabs>standard-Lead</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>Project__c</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>Quote__c</tabs>
+    <tabs>Order__c</tabs>
+    <tabs>standard-Task</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>standard-Event</tabs>
+    <tabs>standard-Feed</tabs>
+    <tabs>Expertise__c</tabs>
+    <tabs>Core_Grant__c</tabs>
+    <tabs>Core_Error_Log__c</tabs>
+    <tabs>System_Limit__c</tabs>
+    <tabs>Salesforce_News__c</tabs>
+    <tabs>Submission_Result__c</tabs>
+    <tabs>Feedback__c</tabs>
+    <tabs>Account_Lead__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>LightningSales_UtilityBar</utilityBar>
+</CustomApplication>

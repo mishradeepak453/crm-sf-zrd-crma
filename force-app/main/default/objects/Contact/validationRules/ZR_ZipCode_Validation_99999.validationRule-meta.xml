@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_99999</fullName>
+    <active>true</active>
+    <description>SF-113 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country. Format (&quot;\\d{5}&quot;). Example: 99999.</description>
+    <errorConditionFormula>IF(
+AND(
+NOT(ISBLANK(MailingPostalCode)),
+OR(
+MailingCountry == &quot;DZ&quot;,
+MailingCountry == &quot;AS&quot;,
+MailingCountry == &quot;BA&quot;,
+MailingCountry == &quot;BR&quot;,
+MailingCountry == &quot;IC&quot;,
+MailingCountry == &quot;MP&quot;,
+MailingCountry == &quot;HR&quot;,
+MailingCountry == &quot;CU&quot;,
+MailingCountry == &quot;EE&quot;,
+MailingCountry == &quot;FI&quot;,
+MailingCountry == &quot;FR&quot;,
+MailingCountry == &quot;GF&quot;,
+MailingCountry == &quot;DE&quot;,
+MailingCountry == &quot;GP&quot;,
+MailingCountry == &quot;GU&quot;,
+MailingCountry == &quot;ID&quot;,
+MailingCountry == &quot;IT&quot;,
+MailingCountry == &quot;LT&quot;,
+MailingCountry == &quot;MY&quot;,
+MailingCountry == &quot;MH&quot;,
+MailingCountry == &quot;MQ&quot;,
+MailingCountry == &quot;YT&quot;,
+MailingCountry == &quot;FM&quot;,
+MailingCountry == &quot;MC&quot;,
+MailingCountry == &quot;ME&quot;,
+MailingCountry == &quot;MA&quot;,
+MailingCountry == &quot;NC&quot;,
+MailingCountry == &quot;PK&quot;,
+MailingCountry == &quot;PW&quot;,
+MailingCountry == &quot;RE&quot;,
+MailingCountry == &quot;SM&quot;,
+MailingCountry == &quot;RS&quot;,
+MailingCountry == &quot;ES&quot;,
+MailingCountry == &quot;TH&quot;,
+MailingCountry == &quot;TR&quot;,
+MailingCountry == &quot;UA&quot;,
+MailingCountry == &quot;US&quot;,
+MailingCountry == &quot;VI&quot;
+)),
+NOT(REGEX(MailingPostalCode, (&quot;\\d{5}&quot;))), FALSE)
+&amp;&amp; $Permission.Core_Contact_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorMessage>Please enter a valid format for the Zip Code! This should consist of five numbers. Example: 99999</errorMessage>
+</ValidationRule>

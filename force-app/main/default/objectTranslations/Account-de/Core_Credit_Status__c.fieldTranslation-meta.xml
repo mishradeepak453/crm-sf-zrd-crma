@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Kreditstatus</label>
+    <name>Core_Credit_Status__c</name>
+    <picklistValues>
+        <masterLabel>Attention</masterLabel>
+        <translation>Achtung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed</masterLabel>
+        <translation>Geschlossen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lawyer</masterLabel>
+        <translation>Rechtsanwalt</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Open</masterLabel>
+        <translation>Offen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stop</masterLabel>
+        <translation>Stop</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>To be Deleted</masterLabel>
+        <translation>Zum Löschen</translation>
+    </picklistValues>
+</CustomFieldTranslation>

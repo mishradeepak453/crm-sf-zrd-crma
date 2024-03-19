@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>2</activeVersionNumber>
+    <description>- Sends out a reminder every Monday to Owners of Opportunities that have not been worked on for (4) weeks</description>
+    <masterLabel>Opportunity Scheduled Overdue Reminder Flow</masterLabel>
+</FlowDefinition>

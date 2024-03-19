@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_PreventEditSubmissionResult_BIS</fullName>
+    <active>true</active>
+    <description>SF-828 This validation rule prevents editing of Submission Results for projects that have been imported from BIS.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Project__r.Core_Source_System__c, &quot;BIS&quot;), 
+NOT(ISNEW()), 
+$Permission.Core_Submission_Result_Bypass_Validation_Rules = FALSE
+&amp;&amp;
+$UserRole.Name &lt;&gt; &quot;Vertriebssteuerung&quot;
+&amp;&amp;
+NOT(CONTAINS($Profile.Name, &quot;dministrator&quot;)))
+&amp;&amp;
+NOT(CONTAINS($User.Username , &quot;bis@force.com&quot;))</errorConditionFormula>
+    <errorMessage>You can not change Submission Results on Projects that are synchronized with BIS.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_VAT_Format_Account_CH</fullName>
+    <active>true</active>
+    <description>SF-64 This validation rule should ensure, that all Sales Tax Id Numbers are in the correct format according to their respective country. Format (&quot;[CH]{2}\\d{8,10}&quot;). Example: CHE-999.999.999</description>
+    <errorConditionFormula>IF(
+AND(
+NOT(ISBLANK(Core_Sales_Tax_ID_No__c )),
+BillingCountry == &quot;CH&quot;
+),
+NOT(REGEX( Core_Sales_Tax_ID_No__c , (&quot;[CHE-]{4}\\d{3}[.]\\d{3}[.]\\d{3}&quot;))),
+False)
+&amp;&amp; ISPICKVAL( Core_Customer_Type__c, &quot;7&quot;)
+&amp;&amp;  $Permission.Core_Account_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>Core_Sales_Tax_ID_No__c</errorDisplayField>
+    <errorMessage>Please enter a valid Sales Tax format! This should start with the three letter country code, followed by a hyphen, three numbers, a period, three numbers a period and again three numbers. Example: CHE-999.999.999</errorMessage>
+</ValidationRule>

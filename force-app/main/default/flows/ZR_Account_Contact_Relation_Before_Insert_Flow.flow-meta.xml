@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <assignments>
+        <name>Assign_External_ID</name>
+        <label>Assign External ID</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.External_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ExternalID</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Is_Person_Id_filled</name>
+        <label>Is Person Id filled</label>
+        <locationX>182</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Person ID empty</defaultConnectorLabel>
+        <rules>
+            <name>Person_ID_filled</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Contact.PersonID__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_External_ID</targetReference>
+            </connector>
+            <label>Person ID filled</label>
+        </rules>
+    </decisions>
+    <description>- Fills the External ID on the record</description>
+    <formulas>
+        <description>Represents the external ID of the ACR by concatenating Account Customer Number and Person ID.</description>
+        <name>ExternalID</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Account.Core_Customer_Number__c}+&quot;_&quot;+{!$Record.Contact.PersonID__c}</expression>
+    </formulas>
+    <interviewLabel>Account Contact Relation Before Insert Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account Contact Relation Before Insert Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_Person_Id_filled</targetReference>
+        </connector>
+        <object>AccountContactRelation</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

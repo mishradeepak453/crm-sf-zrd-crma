@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Unternehmensgröße (Cluster)</label>
+    <name>Core_Company_Size_Cluster__c</name>
+    <picklistValues>
+        <masterLabel>1-4 Employees</masterLabel>
+        <translation>1-4 Beschäftigte</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>10-19 Employees</masterLabel>
+        <translation>10-19 Beschäftigte</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>100-199 Employees</masterLabel>
+        <translation>100-199 Beschäftigte</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1000-1999 Employees</masterLabel>
+        <translation>1000-1999 Beschäftigte</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>20-49 Employees</masterLabel>
+        <translation>20-49 Beschäftigte</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>200-499 Employees</masterLabel>
+        <translation>200-499 Beschäftigte</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5-9 Employees</masterLabel>
+        <translation>5-9 Beschäftigte</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>50-99 Employees</masterLabel>
+        <translation>50-99 Beschäftigte</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>500-999 Employees</masterLabel>
+        <translation>500-999 Beschäftigte</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>&gt; 2000  Employees</masterLabel>
+        <translation>&gt; 2000  Beschäftigte</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No information</masterLabel>
+        <translation>Keine Angabe</translation>
+    </picklistValues>
+</CustomFieldTranslation>

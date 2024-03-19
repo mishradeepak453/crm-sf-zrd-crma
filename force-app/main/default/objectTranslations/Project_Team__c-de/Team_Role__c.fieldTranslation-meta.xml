@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Team Rolle</label>
+    <name>Team_Role__c</name>
+    <picklistValues>
+        <masterLabel>Assistant</masterLabel>
+        <translation>Assistenz</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Calculator</masterLabel>
+        <translation>Kalkulator(in)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Commercial Manager</masterLabel>
+        <translation>KV - Kaufm. Leitung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consultant Logistic and Sales</masterLabel>
+        <translation>SUK- Sachbearbeitung Logistik und Vertrieb</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact - Business Administration</masterLabel>
+        <translation>KV - Ansprechpartner(in) kfm. Verwaltung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deputy Head of Region</masterLabel>
+        <translation>Stellv. Gebietsleitung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deputy Director of Rental Office</masterLabel>
+        <translation>Stellv. Mietstationsleitung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Director of Rental Office</masterLabel>
+        <translation>Mietstationsleitung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Head of Division</masterLabel>
+        <translation>PBL- Produktbereichsleitung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Head of Energy Trade</masterLabel>
+        <translation>Leiter(in) Energiehandel</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Head of Region</masterLabel>
+        <translation>Gebietsleitung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Head of Sales</masterLabel>
+        <translation>Leiter(in) Vertrieb</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Head of industrial equipment</masterLabel>
+        <translation>IE - Leitung Industrielles Equipment</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Head of operating platforms elevators and fork lift trucks</masterLabel>
+        <translation>Leiter(in) PAB, Aufzüge und Gabelstapler</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Head of vehicles</masterLabel>
+        <translation>Leiter(in) Fahrzeuge</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inside Sales/ Customer Consultant EEB (EKW)</masterLabel>
+        <translation>VID EEB (EKW) - Vertriebsinnendienst Energie, Klima, Wasser</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inside Sales/ Customer Consultant Electricity and Climate</masterLabel>
+        <translation>VID SUK - Vertriebsinnendienst Stromerzeugung und Klimatechnik</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inside Sales/ Customer Consultant LC&amp;M</masterLabel>
+        <translation>VID LC&amp;M - Vertriebsinnendienst Baulogistik</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inside Sales/ Customer Consultant RS</masterLabel>
+        <translation>VID RS - Vertriebsinnendienst  Raumsysteme</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inside Sales/ Customer Consultant Rental</masterLabel>
+        <translation>VID Miete - Vertriebsinnendienst  Miete</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Key Account Manager</masterLabel>
+        <translation>KAM - Key Account Management</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Large Account Manager</masterLabel>
+        <translation>LAM - Large Account Management</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Management Board</masterLabel>
+        <translation>Geschäftsleitung (GL)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manager Competence Center</masterLabel>
+        <translation>KC-Leiter(in) (KCL)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Manager</masterLabel>
+        <translation>Projektmanagement</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Manager Construction Site</masterLabel>
+        <translation>Projektleitung Baustelleneinrichtung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Manager Events</masterLabel>
+        <translation>Projektmanagement Events</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Excellence</masterLabel>
+        <translation>Sales Excellence</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Rep Accommodation Units - Project</masterLabel>
+        <translation>VAD RS Projekte - Vertriebsaußendienst Raumsysteme Projekte</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Rep Accommodation Units - Standard</masterLabel>
+        <translation>VAD RS Standard- Vertriebsaußendienst Raumsysteme Standard</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Rep Construction Logistic</masterLabel>
+        <translation>VAD LC&amp;M - Vertriebsaußendienst Baulogistik</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Rep Construction/ Traffic Safety</masterLabel>
+        <translation>VAD BVS - Vertriebsaußendienst Baustellen- und Verkehrssicherung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Rep Energy, Climate, Water EEB (EKW)</masterLabel>
+        <translation>VAD EEB (EKW)- Vertriebsaußendienst Energie, Klima, Wasser</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Rep Machine and Equipment Rental</masterLabel>
+        <translation>VAD Miete - Vertriebsaußendienst Miete</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Representative Electricity and Climate</masterLabel>
+        <translation>VAD SUK - Vertriebsaußendienst Stromerzeugung und Klimatechnik</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Teamleader Calculation</masterLabel>
+        <translation>Teamleitung Kalkulation</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Teamleader Commercial Project Management</masterLabel>
+        <translation>Teamleitung Kaufm. Projektmanagement</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Teamleader Commercial adminstration</masterLabel>
+        <translation>Teamleitung Kaufm. Verwaltung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Teamleader Logistics</masterLabel>
+        <translation>Teamleitung Baulogistik</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Teamleader Planing</masterLabel>
+        <translation>Teamleitung Planung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Teamleader Project Services</masterLabel>
+        <translation>Teamleitung Projektservice</translation>
+    </picklistValues>
+</CustomFieldTranslation>

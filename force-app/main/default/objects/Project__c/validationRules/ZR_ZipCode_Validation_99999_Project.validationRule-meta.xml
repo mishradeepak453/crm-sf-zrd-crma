@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_99999_Project</fullName>
+    <active>true</active>
+    <description>SF-646 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country. Format (&quot;\\d{5}&quot;). Example: 99999.</description>
+    <errorConditionFormula>IF(
+AND(
+NOT(ISBLANK( Project_Address__PostalCode__s )),
+OR(
+ISPICKVAL( Project_Address__CountryCode__s , &quot;DZ&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;AS&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;BA&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;BR&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;IC&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;MP&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;HR&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;CU&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;EE&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;FI&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;FR&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;GF&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;DE&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;GP&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;GU&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;ID&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;IT&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;LT&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;MY&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;MH&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;MQ&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;YT&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;FM&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;MC&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;ME&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;MA&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;NC&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;PK&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;PW&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;RE&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;SM&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;RS&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;ES&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;TH&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;TR&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;UA&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;US&quot;),
+ISPICKVAL(Project_Address__CountryCode__s, &quot;VI&quot;)
+)),
+NOT(REGEX(Project_Address__PostalCode__s, (&quot;\\d{5}&quot;))),
+FALSE)
+&amp;&amp; $Permission.Core_Project_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>Project_Address__PostalCode__s</errorDisplayField>
+    <errorMessage>Please enter a valid format for the Zip Code! This should consist of five numbers. Example: 99999</errorMessage>
+</ValidationRule>

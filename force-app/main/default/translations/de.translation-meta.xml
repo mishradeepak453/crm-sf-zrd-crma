@@ -1,0 +1,2445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <customApplications>
+        <description xsi:nil="true"/>
+        <label><!-- Lead Generation --></label>
+        <name>Lead_Generation</name>
+    </customApplications>
+    <customApplications>
+        <description xsi:nil="true"/>
+        <label><!-- Relationship Management --></label>
+        <name>Relationship_Management</name>
+    </customApplications>
+    <customApplications>
+        <description xsi:nil="true"/>
+        <label><!-- Sales Leadership --></label>
+        <name>Sales_Leadership</name>
+    </customApplications>
+    <customApplications>
+        <description xsi:nil="true"/>
+        <label><!-- Sales Operations --></label>
+        <name>Sales_Operations</name>
+    </customApplications>
+    <customLabels>
+        <label>Zurück</label>
+        <name>DUP_Button_1_Label</name>
+    </customLabels>
+    <customLabels>
+        <label>Kein Duplikat - Neues Projekt anlegen</label>
+        <name>DUP_Button_2_Label</name>
+    </customLabels>
+    <customLabels>
+        <label>Anlage abbrechen</label>
+        <name>DUP_Button_3_Label</name>
+    </customLabels>
+    <customLabels>
+        <label>Lädt...</label>
+        <name>DUP_Loading_Message</name>
+    </customLabels>
+    <customLabels>
+        <label>Neues Projekt</label>
+        <name>DUP_New_Project_Header</name>
+    </customLabels>
+    <customLabels>
+        <label>Datensatz öffnen</label>
+        <name>DUP_Open_Record</name>
+    </customLabels>
+    <customLabels>
+        <label>Bauherr</label>
+        <name>DUP_Project_Building_Owner</name>
+    </customLabels>
+    <customLabels>
+        <label>Stadt</label>
+        <name>DUP_Project_City</name>
+    </customLabels>
+    <customLabels>
+        <label>Name</label>
+        <name>DUP_Project_Name</name>
+    </customLabels>
+    <customLabels>
+        <label>Postleitzahl</label>
+        <name>DUP_Project_Postal_Code</name>
+    </customLabels>
+    <customLabels>
+        <label>Potenzial</label>
+        <name>DUP_Project_Potential</name>
+    </customLabels>
+    <customLabels>
+        <label>Start</label>
+        <name>DUP_Project_Start</name>
+    </customLabels>
+    <customLabels>
+        <label>Straße</label>
+        <name>DUP_Project_Street</name>
+    </customLabels>
+    <customLabels>
+        <label>Gesamtprojektvolumen</label>
+        <name>DUP_Project_Total_Volume</name>
+    </customLabels>
+    <customLabels>
+        <label>Mögliche Dubletten</label>
+        <name>DUP_Table_Header_Duplicates</name>
+    </customLabels>
+    <customLabels>
+        <label>Original (neu anzulegendes Projekt)</label>
+        <name>DUP_Table_Header_Original</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error Email Sender --></label>
+        <name>Error_Email_Sender</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error Email Subject --></label>
+        <name>Error_Email_Subject</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Error Email Text --></label>
+        <name>Error_Email_Text</name>
+    </customLabels>
+    <customLabels>
+        <label>Fehler bei der Link-Generierung. Bitte kontaktieren Sie Ihren  Salesforce Administrator.</label>
+        <name>Error_Ibau_Backlink</name>
+    </customLabels>
+    <customLabels>
+        <label>Accounts auf Karte anzeigen</label>
+        <name>Map_Comp_Account_Headline</name>
+    </customLabels>
+    <customLabels>
+        <label>Wähle Listenansicht</label>
+        <name>Map_Comp_Combobox_Default</name>
+    </customLabels>
+    <customLabels>
+        <label>Wähle eine Listenansicht, die auf der Karte angezeigt werden soll</label>
+        <name>Map_Comp_Combobox_Label</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Map Comp Location Button Headline --></label>
+        <name>Map_Comp_Location_Button_Headline</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Map Comp Location Button Label --></label>
+        <name>Map_Comp_Location_Button_Label</name>
+    </customLabels>
+    <customLabels>
+        <label>Öffne Kartenansicht</label>
+        <name>Map_Comp_Open_Map_Button_Label</name>
+    </customLabels>
+    <customLabels>
+        <label>Projekte auf Karte anzeigen</label>
+        <name>Map_Comp_Project_Headline</name>
+    </customLabels>
+    <customLabels>
+        <label>Du kannst Account Kontakt Beziehungen nicht löschen. Bitte benutze das Löschkennzeichen um eine Verbindung als inkorrekt zu kennzeichnen.</label>
+        <name>Prevent_Account_Contact_Deletion</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- SAML_JIT_Field_Map --></label>
+        <name>SAML_JIT_Field_Map</name>
+    </customLabels>
+    <customLabels>
+        <label>E-Mail</label>
+        <name>User_Display_Comp_Email_Column</name>
+    </customLabels>
+    <customLabels>
+        <label>Vollständiger Name</label>
+        <name>User_Display_Comp_Name_Column</name>
+    </customLabels>
+    <customLabels>
+        <label>Rolle in Vertriebsgebiet</label>
+        <name>User_Display_Comp_Role_Column</name>
+    </customLabels>
+    <customLabels>
+        <label>Benutzer in zugewiesenen Vetriebsgebieten</label>
+        <name>User_Display_Comp_Tab</name>
+    </customLabels>
+    <customLabels>
+        <label>Region</label>
+        <name>User_Display_Comp_Territory_Column</name>
+    </customLabels>
+    <customTabs>
+        <label>Kartendarstellung von Accounts</label>
+        <name>Account_Map_List_View_Screen</name>
+    </customTabs>
+    <customTabs>
+        <label>Kartendarstellung von Projekten</label>
+        <name>Project_Map_List_View_Screen</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Streaming Monitor --></label>
+        <name>Streaming_Monitor</name>
+    </customTabs>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <fieldText>Welcher Nutzer soll neuer Inhaber dieses Accounts werden?</fieldText>
+                    <name>DT_User_Assignment</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>fieldApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Neuer Inhaber</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>objectApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>required</name>
+                        <value/>
+                    </inputParameters>
+                    <name>LU_User</name>
+                </fields>
+                <name>Screen_Assign_Record_Questions</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;{!User_First_Name} {!User_Last_Name} &lt;/strong&gt;ist nun neuer Inhaber des Accounts &lt;strong&gt; {!Account_Name} &lt;/strong&gt; und wird via E-Mail informiert&lt;/p&gt;</fieldText>
+                    <name>DT_Owner_assigned</name>
+                </fields>
+                <name>Screen_New_Owner_assigned</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Der Inhaber von diesem Account kann nur vom aktuellen Inhaber geändert werden.</fieldText>
+                    <name>DT_Owner_Change_not_allowed</name>
+                </fields>
+                <name>Screen_Owner_Change_not_allowed</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Der Inhaber dieses Account kann nur von einem Gebietsbereichleiter oder Administrator geändert werden.</fieldText>
+                    <name>DT_Owner_Change_only_GBL</name>
+                </fields>
+                <name>Screen_Owner_Change_only_GBL</name>
+            </screens>
+            <textTemplates>
+                <name>Notification_Email_Body_English</name>
+            </textTemplates>
+            <textTemplates>
+                <name>Notification_Email_Subject_English</name>
+            </textTemplates>
+            <textTemplates>
+                <name>Notification_Email_Subject_German</name>
+            </textTemplates>
+            <textTemplates>
+                <name>Notification_Emal_Body_German</name>
+            </textTemplates>
+        </flows>
+        <fullName>Account_Owner_Assignment_Screen_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Company_Group_After_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Company_Group_Before_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <choices>
+                <choiceText>In einen Interessenten umwandeln</choiceText>
+                <name>Choice_Convert</name>
+            </choices>
+            <choices>
+                <choiceText>Mit einem bestehenden Account zusammenführen</choiceText>
+                <name>Choice_Merge</name>
+            </choices>
+            <screens>
+                <fields>
+                    <fieldText>Während des Erstellens des Accounts ist ein Problem aufgetreten. Bitte kontaktiere den Zeppelin Salesforce Support oder erstelle einen Feedback Bug.</fieldText>
+                    <name>DT_Account_Creation_Fault</name>
+                </fields>
+                <name>Screen_Account_Creation_Fault</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;Der Account Lead wurde erfolgreich konvertiert. &lt;/span&gt;&lt;a href=&quot;/{!Account_Id}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;Hier klicken&lt;/a&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt; um den neuen Account zu öffnen.&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <name>DT_Account_Lead_Converted</name>
+                </fields>
+                <name>Screen_Account_Lead_Convert</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Während des Updates des bestehenden Accounts ist ein Problem aufgetreten. Bitte kontaktiere den Zeppelin Salesforce Support oder erstelle einen Feedback Bug.</fieldText>
+                    <name>DT_Account_Update_Fault</name>
+                </fields>
+                <name>Screen_Account_Update_Fault</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Wenn du den Account Lead nicht umwandeln oder mit einem bestehenden Account zusammenführen möchstest, schließe dieses Fenster.</fieldText>
+                    <name>DT_Confirm_Conversion</name>
+                </fields>
+                <fields>
+                    <fieldText>Möchstest du aus diesem Account Lead in einen neuen Interessenten erstellen oder ihn mit einem bestehenden zusammenführen?</fieldText>
+                    <name>Would_you_like_to_convert_this_Account_Lead_to_a_new_Prospect_or_merge_it_into_a</name>
+                </fields>
+                <name>Screen_Confirm_Conversion</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Dieser Account hat bereits einen Ibau Account verbunden (ID: {!Merge_Account_Ibau}).</fieldText>
+                    <name>DT_Ibau_Id_filled</name>
+                </fields>
+                <name>Screen_Ibau_Id_already_filled</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Dieser Account hat bereits einen Infobau Account verbunden (ID: {!Merge_Account_Infobau}).</fieldText>
+                    <name>DT_Infobau_Id_filled</name>
+                </fields>
+                <name>Screen_Infobau_Id_already_filled</name>
+            </screens>
+            <screens>
+                <fields>
+                    <inputParameters>
+                        <name>fieldApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Account zum Verknüpfen</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>objectApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>required</name>
+                        <value/>
+                    </inputParameters>
+                    <name>LU_Merge_Account_3</name>
+                </fields>
+                <name>Screen_Merge_Account</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Kundenbeziehung</fieldText>
+                    <name>Customer_Relation</name>
+                </fields>
+                <fields>
+                    <fieldText>Bitte trage alle notwendigen Informationen für den neuen Account den zu Anlegen möchtest ein.</fieldText>
+                    <name>DT_Enter_new_Account_Information</name>
+                </fields>
+                <fields>
+                    <name>E_Email</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>fieldApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>objectApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <name>LU_WZ_Code_1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>fieldApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>objectApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <name>LU_WZ_Code_2</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>fieldApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>objectApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <name>LU_WZ_Code_3</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>fieldApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>objectApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <name>LU_WZ_Code_4</name>
+                </fields>
+                <fields>
+                    <fieldText>Land</fieldText>
+                    <name>PL_Country</name>
+                </fields>
+                <fields>
+                    <fieldText>Geschäftsform ID</fieldText>
+                    <name>PL_Legal_Status_ID</name>
+                </fields>
+                <fields>
+                    <name>Screen_New_Account_Section1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>Screen_New_Account_Section1_Column1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>Screen_New_Account_Section1_Column2</name>
+                </fields>
+                <fields>
+                    <name>Screen_New_Account_Section2</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>Screen_New_Account_Section2_Column1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>Screen_New_Account_Section2_Column2</name>
+                </fields>
+                <fields>
+                    <fieldText>Stadt</fieldText>
+                    <name>T_City</name>
+                    <validationRule>
+                        <errorMessage>Bitte trage weniger als 30 Zeichen in das Stadtfeld ein.</errorMessage>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <fieldText>Fax</fieldText>
+                    <name>T_Fax</name>
+                    <validationRule>
+                        <errorMessage>Bitte trage eine valide Faxnummer ein, diese sollte mit einem &apos;+&apos; und der Ländervorwahl beginnen, keine Buchstaben oder Sonderzeichen enthalten und mindestens 10, maximal 20 Zeichen lang sein. Beispiel: +49123456789</errorMessage>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <fieldText>Name</fieldText>
+                    <name>T_Name</name>
+                    <validationRule>
+                        <errorMessage>Bitte trage höchstens 40 Zeichen in das Feld Account Name ein.</errorMessage>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <fieldText>Telefon</fieldText>
+                    <name>T_Phone</name>
+                    <validationRule>
+                        <errorMessage>Bitte trage eine valide Telefonnummer ein, diese sollte mit einem &apos;+&apos; und der Ländervorwahl beginnen, keine Buchstaben oder Sonderzeichen enthalten und mindestens 10, maximal 20 Zeichen lang sein. Beispiel: +49123456789</errorMessage>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <fieldText>Postleitzahl</fieldText>
+                    <name>T_Postal_Code</name>
+                </fields>
+                <fields>
+                    <fieldText>Straße</fieldText>
+                    <name>T_Street</name>
+                    <validationRule>
+                        <errorMessage>Bitte trage weniger als 35 Zeichen in das Straßenfeld ein.</errorMessage>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <fieldText>Webseite</fieldText>
+                    <name>T_Website</name>
+                </fields>
+                <name>Screen_New_Account</name>
+            </screens>
+        </flows>
+        <fullName>Convert_Account_Lead_Screen_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Core_Grant_Before_Insert</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Core_Grant_Before_Update</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <fieldText>Die Summe der Zuwendungen in den letzten 12 Monaten übersteigt 150€. Daher muss eine Genehmigung durch die/ den Vorgesetzte/n eingeholt werden.  Bitte trage alle notwendigen Informationen für die Zuwendung ein!</fieldText>
+                    <name>Enter_Grant_Information_Text_above_150</name>
+                </fields>
+                <fields>
+                    <fieldText>Beschreibung</fieldText>
+                    <name>Grant_Description_above_150</name>
+                    <validationRule/>
+                </fields>
+                <fields>
+                    <fieldText>Grund für die Zuwendung</fieldText>
+                    <name>Reason_for_Grant_Picklist_above_150</name>
+                </fields>
+                <fields>
+                    <fieldText>Vorgesetzte/r</fieldText>
+                    <name>Supervisor_above_150</name>
+                </fields>
+                <fields>
+                    <fieldText>Art der Zuwendung</fieldText>
+                    <name>Type_of_Grant_for_above_150</name>
+                </fields>
+                <name>Collect_Grant_Information_above_150</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Compliance Manager/in</fieldText>
+                    <name>Approver_outside_SF_for_above_350</name>
+                </fields>
+                <fields>
+                    <fieldText>Da die Summe der kumulierten Zuwendungen in den letzten 12 Monaten höher als 350€ ist, hole bitte die Genehmigung von deiner/m Vorgesetzten/m und der/ dem jeweiligen/m Compliance Manager/in. Bitte trage alle notwendigen Informationen für die Zuwendung ein!</fieldText>
+                    <name>Enter_Grant_Information_Text_above_350</name>
+                </fields>
+                <fields>
+                    <fieldText>Beschreibung</fieldText>
+                    <name>Grant_Description_above_350</name>
+                    <validationRule/>
+                </fields>
+                <fields>
+                    <fieldText>Grund für die Zuwendung</fieldText>
+                    <name>Reason_for_Grant_Picklist_above_350</name>
+                </fields>
+                <fields>
+                    <fieldText>Vorgesetzte/r</fieldText>
+                    <name>Supervisor_above_350</name>
+                </fields>
+                <fields>
+                    <fieldText>Art der Zuwendung</fieldText>
+                    <name>Type_of_Grant_for_above_350</name>
+                </fields>
+                <name>Collect_Grant_Information_above_350</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Die Summe der Zuwendungen in den letzten 12 Monaten liegt unter 150€, daher wird die Zuwendung automatisch genehmigt.  Bitte trage alle notwendigen Informationen für die Zuwendung ein!</fieldText>
+                    <name>Enter_Grant_Information_Text_below_150</name>
+                </fields>
+                <fields>
+                    <fieldText>Beschreibung</fieldText>
+                    <name>Grant_Description_below_150</name>
+                    <validationRule/>
+                </fields>
+                <fields>
+                    <fieldText>Grund für die Zuwendung</fieldText>
+                    <name>Reason_for_Grant_Picklist_below_150</name>
+                </fields>
+                <fields>
+                    <fieldText>Art der Zuwendung</fieldText>
+                    <name>Type_of_Grant_for_below_150</name>
+                </fields>
+                <name>Collect_Grant_Information_below_150</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Compliance Manager/in</fieldText>
+                    <name>Approver_for_PEP_above_25</name>
+                    <validationRule/>
+                </fields>
+                <fields>
+                    <fieldText>Es handelt sich bei dem Empfänger um eine politisch exponierte Person. Die Gewährung von Zuwendungen mit einem Wert von über 25 € bedarf vorab einer Genehmigung von dem/der zuständingen Compliance Manager/in. Zudem ist der Amtsträger auf das Erfordernis einer Dienstherrengenehmigung durch seine Behörde hinzuweisen.</fieldText>
+                    <name>Enter_Grant_Information_Text_PEP_above_25</name>
+                </fields>
+                <fields>
+                    <fieldText>Beschreibung</fieldText>
+                    <name>Grant_Description_for_PEP_above_25</name>
+                    <validationRule/>
+                </fields>
+                <fields>
+                    <fieldText>Grund für die Zuwendung</fieldText>
+                    <name>Reason_for_Grant_Picklist_for_PEP_above_25</name>
+                </fields>
+                <fields>
+                    <fieldText>Art der Zuwendung</fieldText>
+                    <name>Type_of_Grant_for_PEP_above_25</name>
+                </fields>
+                <name>Collect_Grant_Information_for_PEP_above_25</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Datum der Zuwendung</fieldText>
+                    <name>Date_of_Grant</name>
+                </fields>
+                <fields>
+                    <fieldText>Wert der Zuwendung</fieldText>
+                    <name>Worth_of_Grant</name>
+                    <validationRule>
+                        <errorMessage>Bitte trage keine negativen Werte ein!</errorMessage>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>dependencyWrapperApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>middleLabel</name>
+                        <value>
+                            <stringValue>Gesellschaft</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>middlePicklistApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>middleRequired</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>topLabel</name>
+                        <value>
+                            <stringValue>Strategische Geschäftseinheit</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>topPicklistApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>topRequired</name>
+                        <value/>
+                    </inputParameters>
+                    <name>dp_Enterprise</name>
+                </fields>
+                <name>Collect_Worth_and_Date_Information</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Bitte hole eine Genehmigung bei deiner/m Vorgesetzten/m ein.  Stelle danach den Genehmigungsstatus der Antwort entsprechend um und lade die Genehmigung am Zuwendungsdatensatz hoch.</fieldText>
+                    <name>Grant_Success_Above_150_Message</name>
+                </fields>
+                <name>Grant_Success_Above_150</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Eine Zuwendung wurde angelegt! Da die Grenze der kumulierten Zuwendungen höher als 350€ ist, hole bitte die Genehmigung von deiner/m Vorgesetzten/m und der/ dem jeweiligen/m Compliance Manager/in. Stelle danach den Genehmigungsstatus der Antwort entsprechend um und lade die Genehmigung am Zuwendungsdatensatz hoch.</fieldText>
+                    <name>Grant_Success_Above_350_Message</name>
+                </fields>
+                <name>Grant_Success_Above_350</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Eine Zuwendung wurde angelegt!</fieldText>
+                    <name>Grant_Success_Below_150_Message</name>
+                </fields>
+                <name>Grant_Success_Below_150</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Eine Zuwendung wurde angelegt. Es handelt sich bei dem Empfänger um eine politisch exponierte Person. Die Gewährung von Zuwendungen mit einem Wert von über 25 € bedarf vorab einer Genehmigung von dem/der zuständingen Compliance Manager/in. Zudem ist der Amtsträger auf das Erfordernis einer Dienstherrengenehmigung durch seine Behörde hinzuweisen.</fieldText>
+                    <name>Grant_Success_for_PEP_Message</name>
+                </fields>
+                <name>Grant_Success_PEP_Screen_above_25</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Anderer Grund für die Zuwendung</fieldText>
+                    <name>Other_Reason_selected_above_150_Field</name>
+                    <validationRule/>
+                </fields>
+                <name>Other_Reason_for_Grant_above_150_Screen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Anderer Grund für die Zuwendung</fieldText>
+                    <name>Other_Reason_selected_above_350_Field</name>
+                    <validationRule/>
+                </fields>
+                <name>Other_Reason_for_Grant_above_350_Screen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Anderer Grund für die Zuwendung</fieldText>
+                    <name>Other_Reason_selected_below_150_Field</name>
+                    <validationRule/>
+                </fields>
+                <name>Other_Reason_for_Grant_below_150_Screen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Anderer Grund der Zuwendung</fieldText>
+                    <name>Other_Reason_selected_for_PEP_over_25_Field</name>
+                    <validationRule/>
+                </fields>
+                <name>Other_Reason_for_Grant_for_PEP_above_25_Screen_0</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Anderer Grund für die Zuwendung</fieldText>
+                    <name>Other_Type_selected_above_150_Field</name>
+                    <validationRule/>
+                </fields>
+                <name>Other_Type_of_Grant_above_150</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Andere Art der Zuwendung</fieldText>
+                    <name>Other_Type_selected_above_350_Field</name>
+                    <validationRule/>
+                </fields>
+                <name>Other_Type_of_Grant_above_350</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Anderer Grund für die Zuwendung</fieldText>
+                    <name>Other_Type_selected_below_150_Field</name>
+                    <validationRule/>
+                </fields>
+                <name>Other_Type_of_Grant_below_150</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Andere Art der Zuwendung</fieldText>
+                    <name>Other_Type_selected_for_PEP_over_25_Field</name>
+                    <validationRule/>
+                </fields>
+                <name>Other_Type_of_Grant_for_PEP_above_25_Screen</name>
+            </screens>
+        </flows>
+        <fullName>Core_Grant_Screen_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <choices>
+                <choiceText>Fehler</choiceText>
+                <name>Bug</name>
+            </choices>
+            <choices>
+                <name>Improvemen</name>
+            </choices>
+            <choices>
+                <choiceText>Neue Anforderung</choiceText>
+                <name>Improvement</name>
+            </choices>
+            <screens>
+                <fields>
+                    <fieldText>Vielen Dank für dein Feedback. Wir freuen uns, dass du uns dabei hilfst, das System zu verbessern. Es wurde ein Feedback mit der Nr. &lt;strong&gt;{!Get_Bug_No.Name}&lt;/strong&gt; angelegt.</fieldText>
+                    <name>ConfirmationTextBug</name>
+                </fields>
+                <name>Confirmation_Screen_Bug</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Vielen Dank für dein Feedback. Wir freuen uns, dass du uns dabei hilfst, das System zu verbessern. Es wurde ein Feedback mit der Nr. &lt;strong&gt;{!Get_Improvement_No.Name}&lt;/strong&gt; angelegt</fieldText>
+                    <name>Copy_1_of_ConfirmationTextBug</name>
+                </fields>
+                <name>Confirmation_Screen_Improvement</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Beschreibung</fieldText>
+                    <name>DescriptionBug</name>
+                </fields>
+                <fields>
+                    <fieldText>Objekt</fieldText>
+                    <name>ObjectBug</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Link zum Datensatz</stringValue>
+                        </value>
+                    </inputParameters>
+                    <name>RecordLinkBug</name>
+                </fields>
+                <fields>
+                    <fieldText>Thema</fieldText>
+                    <name>SubjectBug</name>
+                </fields>
+                <name>Create_Bug</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Beschreibung</fieldText>
+                    <name>DescriptionImprovement</name>
+                </fields>
+                <fields>
+                    <fieldText>Objekt</fieldText>
+                    <name>ObjectImprovement</name>
+                </fields>
+                <fields>
+                    <fieldText>Thema</fieldText>
+                    <name>SubjectImprovement</name>
+                </fields>
+                <name>Create_Improvement</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Welche Art von Feedback möchtest du erstellen?</fieldText>
+                    <name>What_kind_of_Feedback_do_you_want_to_create</name>
+                </fields>
+                <name>Type_of_Feedback</name>
+            </screens>
+            <screens>
+                <fields>
+                    <inputParameters>
+                        <name>multiple</name>
+                        <value/>
+                    </inputParameters>
+                    <name>FileUploadBug</name>
+                </fields>
+                <name>Upload_Bug_File</name>
+            </screens>
+            <screens>
+                <fields>
+                    <inputParameters>
+                        <name>multiple</name>
+                        <value/>
+                    </inputParameters>
+                    <name>FileUploadImprovement</name>
+                </fields>
+                <name>Upload_Improvement_File</name>
+            </screens>
+            <textTemplates>
+                <name>EmailBodyBug</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EmailBodyImprovement</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EmailSubjectBug</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EmailSubjectImprovement</name>
+            </textTemplates>
+        </flows>
+        <fullName>Create_Feeback_Screen_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <choices>
+                <choiceText>Nein</choiceText>
+                <name>No_Choice</name>
+            </choices>
+            <choices>
+                <choiceText>Ja</choiceText>
+                <name>Yes_Choice</name>
+            </choices>
+            <screens>
+                <fields>
+                    <fieldText>Der involvierte Account {!AccountName} wurde erstellt.</fieldText>
+                    <name>DT_Account_Created</name>
+                </fields>
+                <fields>
+                    <fieldText>Möchtest du einen weiteren involvierten Account anlegen?</fieldText>
+                    <name>RB_Add_additional_Account</name>
+                </fields>
+                <name>Screen_Account_created</name>
+                <nextOrFinishButtonLabel>Weiter</nextOrFinishButtonLabel>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Möchtest du diesem Projekt einen involvierten Account hinzufügen?</fieldText>
+                    <name>RB_Add_Account</name>
+                </fields>
+                <name>Screen_Add_Account_Relation</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>PLZ, Stadt und Land sind Pflichtfelder für ein Projekt.</fieldText>
+                    <name>DT_Address_missing</name>
+                </fields>
+                <name>Screen_Address_missing</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Der Account {!Building_Owner_Name} ist bereist als mit der Rolle Bauherr eingetragen. Es kann nur einen Bauherrn pro Projekt geben, bitte gehe zurück und passe die Account Daten entsprechend an.</fieldText>
+                    <name>DT_Buildin_Owner_already_filled</name>
+                </fields>
+                <name>Screen_Building_owner_already_filled</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Enddatum</fieldText>
+                    <name>D_End_Date</name>
+                    <validationRule>
+                        <errorMessage>Das Startdatum muss vor dem Enddatum liegen.</errorMessage>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <fieldText>Startdatum</fieldText>
+                    <name>D_Start_Date</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>fieldApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Account</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>objectApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>required</name>
+                        <value/>
+                    </inputParameters>
+                    <name>LU_Account</name>
+                </fields>
+                <fields>
+                    <fieldText>Account Rolle</fieldText>
+                    <name>MPL_Account_Role</name>
+                </fields>
+                <fields>
+                    <name>Screen_Collect_Account_Info_Section1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>Screen_Collect_Account_Info_Section1_Column1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>Screen_Collect_Account_Info_Section1_Column2</name>
+                </fields>
+                <name>Screen_Collect_Account_Info</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Zusätzliche Informationen</fieldText>
+                    <name>Additional_Information</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>Additional_Information_Column1</name>
+                </fields>
+                <fields>
+                    <fieldText>Addressinformationen</fieldText>
+                    <name>Address_Information</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>Address_Information_Column1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>Address_Information_Column2</name>
+                </fields>
+                <fields>
+                    <fieldText>Vergabe-/ Ausschreibungs ID</fieldText>
+                    <name>Announcement_ID</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>Announcement_ID_Column1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>Announcement_ID_Column2</name>
+                </fields>
+                <fields>
+                    <fieldText>Gesamtprojekt aktiv</fieldText>
+                    <name>CB_Overall_Project_Active</name>
+                    <validationRule>
+                        <errorMessage>Für aktive Projekte muss ein Potenzial angezeigt werden.</errorMessage>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <fieldText>Projekt-/ Bauende</fieldText>
+                    <name>D_Project_Construction_End</name>
+                    <validationRule>
+                        <errorMessage>Das Startdatum eines Projekts muss vor dem Enddatum eines
+                            Projekts liegen.</errorMessage>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <fieldText>Projekt-/ Baubeginn</fieldText>
+                    <name>D_Project_Construction_Start</name>
+                </fields>
+                <fields>
+                    <fieldText>Beschreibung</fieldText>
+                    <name>LTA_Description</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>fieldApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Hauptprojekt</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>maxValues</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>objectApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <name>LU_Main_Project</name>
+                </fields>
+                <fields>
+                    <fieldText>Potenzial</fieldText>
+                    <name>MP_Potential</name>
+                </fields>
+                <fields>
+                    <fieldText>Gesamtprojektvolumen</fieldText>
+                    <name>N_Total_Volume</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>dependencyWrapperApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>middleLabel</name>
+                        <value>
+                            <stringValue>Genaue Quelle</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>middlePicklistApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>middleRequired</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>topLabel</name>
+                        <value>
+                            <stringValue>Projektquelle</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>topPicklistApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>topRequired</name>
+                        <value/>
+                    </inputParameters>
+                    <name>P_Exact_Source</name>
+                </fields>
+                <fields>
+                    <fieldText>Projekt-/ Bauphase</fieldText>
+                    <name>P_Project_Construction_Progress</name>
+                </fields>
+                <fields>
+                    <fieldText>Projekt Typ</fieldText>
+                    <name>P_Project_Type</name>
+                </fields>
+                <fields>
+                    <name>Screen_Collect_Project_Information_Section1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>Screen_Collect_Project_Information_Section1_Column1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>Screen_Collect_Project_Information_Section1_Column2</name>
+                </fields>
+                <fields>
+                    <fieldText>Andere Quellen</fieldText>
+                    <name>T_Other_Sources</name>
+                    <validationRule>
+                        <errorMessage>Bitte trage die genaue Quelle des Projekts ein!</errorMessage>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <fieldText>Projektname</fieldText>
+                    <name>T_Project_Name</name>
+                    <validationRule>
+                        <errorMessage>Bitte trage maximal 80 Zeichen ein.</errorMessage>
+                    </validationRule>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Projekt-URL</stringValue>
+                        </value>
+                    </inputParameters>
+                    <name>URL_Project</name>
+                </fields>
+                <fields>
+                    <name>el_0</name>
+                </fields>
+                <fields>
+                    <name>el_1</name>
+                </fields>
+                <fields>
+                    <name>el_2</name>
+                </fields>
+                <fields>
+                    <name>el_3</name>
+                </fields>
+                <fields>
+                    <name>el_4</name>
+                </fields>
+                <name>Screen_Collect_Project_Information</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus vier Zahlen bestehen. Beispiel: 9999</fieldText>
+                    <name>DT_Postal_5555</name>
+                </fields>
+                <fields>
+                    <fieldText>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus fünf Zahlen bestehen. Beispiel: 99999</fieldText>
+                    <name>DT_Postal_55555</name>
+                </fields>
+                <name>Screen_Postal_Incorrect</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>potentialProjectDuplicateDatatable</name>
+                </fields>
+                <name>showPotentialProjectDuplicates</name>
+                <nextOrFinishButtonLabel>Kein Duplikat, neues Projekt anlegen</nextOrFinishButtonLabel>
+            </screens>
+        </flows>
+        <fullName>Create_Project_Screen_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Event_Before_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Lead_Delete_Scheduled_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <textTemplates>
+                <name>EmailBodyDE</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EmailBodyEN</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EmailSubjectDE</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EmailSubjectEN</name>
+            </textTemplates>
+        </flows>
+        <fullName>Lead_Send_Deletion_Email_Scheduled_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <customErrorMessages>
+                <developerName>Primary_Contact_Error</developerName>
+            </customErrorMessages>
+        </flows>
+        <fullName>Opportunity_Contact_Role_Before_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <customErrorMessages>
+                <developerName>Primary_Contact_Error</developerName>
+            </customErrorMessages>
+        </flows>
+        <fullName>Opportunity_Contact_Role_Before_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Project_Account_Relation_After_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Project_After_Update_Scheduled_Path</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Project_Internal_Progress_Scheduled_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <fieldText>Welcher Nutzer soll der neue Inhaber dieses Projekts werden?</fieldText>
+                    <name>DT_User_Assignment</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>fieldApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Neuer Inhaber</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>objectApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>required</name>
+                        <value/>
+                    </inputParameters>
+                    <name>LU_User</name>
+                </fields>
+                <name>Screen_Assign_Record_Questions</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;&lt;span class=&quot;ql-cursor&quot;&lt;/span&gt;{!User_First_Name} {!User_Last_Name} &lt;/strong&gt; ist nun neuer Inhaber des Projekts &lt;strong&gt; {!Project_Name} &lt;/strong&gt;und wird via E-Mail informiert&lt;/p&gt;</fieldText>
+                    <name>DT_Owner_assigned</name>
+                </fields>
+                <name>Screen_New_Owner_assigned</name>
+            </screens>
+            <textTemplates>
+                <name>Notification_Email_Body_English</name>
+            </textTemplates>
+            <textTemplates>
+                <name>Notification_Email_Body_German</name>
+            </textTemplates>
+            <textTemplates>
+                <name>Notification_Email_Subject_English</name>
+            </textTemplates>
+            <textTemplates>
+                <name>Notification_Email_Subject_German</name>
+            </textTemplates>
+        </flows>
+        <fullName>Project_Owner_Assignment_Screen_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <fieldText>Möchtest du dich selbst als Inhaber dieses Projektes eintragen? Falls ja, klicke &quot;Weiter&quot;, falls nicht, schließe dieses Fenster.</fieldText>
+                    <name>OwnerChangeQuestion</name>
+                </fields>
+                <name>Assign_Yourself_Screen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Du bist nun der Inhaber dieses Projektes</fieldText>
+                    <name>ProjectOwnerChanged</name>
+                </fields>
+                <name>Change_Confirmation_Screen</name>
+            </screens>
+        </flows>
+        <fullName>Project_Self_Assignment_Screen_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Quote_After_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <fieldText>VG-Suche</fieldText>
+                    <name>Search_for_Territory</name>
+                </fields>
+                <fields>
+                    <fieldText>Bitte gib einen Suchbegriff ein, um das richtige Vertriebsgebiet zu finden. Das kann ein Teil des Namens sowie die Vertriebsgebiets-Nummer sein.</fieldText>
+                    <name>SearchforTerritory</name>
+                </fields>
+                <name>Territory_Search</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Bitte wähle das korrekte Vertriebsgebiet:</fieldText>
+                    <name>SelectTerritory</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>columns</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>maxRowSelection</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>minRowSelection</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>selectionMode</name>
+                        <value/>
+                    </inputParameters>
+                    <name>TerritoriesFromSearch</name>
+                </fields>
+                <name>Territory_Selection</name>
+            </screens>
+        </flows>
+        <fullName>Quote_Territory_Change_Screen_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <textTemplates>
+                <name>EnglishBody</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EnglishSubject</name>
+            </textTemplates>
+            <textTemplates>
+                <name>GermanBody</name>
+            </textTemplates>
+            <textTemplates>
+                <name>GermanSubject</name>
+            </textTemplates>
+        </flows>
+        <fullName>Task_after_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>Update_Project_Helper_Fields</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <fieldText>Bitte wähle die jeweilige Phase aus:</fieldText>
+                    <name>DT_Manual_Project_Stage_Change</name>
+                </fields>
+                <fields>
+                    <fieldText>Interne Projekt-/ Bauphase</fieldText>
+                    <name>PL_Stage</name>
+                </fields>
+                <name>Screen_Update_Project_Progress</name>
+            </screens>
+        </flows>
+        <fullName>Update_Project_Progress_Screen_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Account_After_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Account_After_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Account_Before_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Account_Before_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Account_Contact_Relation_After_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Account_Contact_Relation_After_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Account_Contact_Relation_Before_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <fieldText>Du bist nun der Inhaber dieses Accounts.</fieldText>
+                    <name>AccountOwnerChanged</name>
+                </fields>
+                <name>AccountOwnerChangedScreen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Möchtest du dich selbst als Inhaber dieses Accounts eintragen? Falls ja, klicke &apos;Weiter&apos;, falls nicht, schließe dieses Fenster.</fieldText>
+                    <name>OwnerChangeQuestion</name>
+                </fields>
+                <name>OwnerChangeQuestionScreen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Der Inhaber dieses Accounts kann nur vom aktuellen Inhaber geändert werden.</fieldText>
+                    <name>DT_Owner_Change_not_allowed</name>
+                </fields>
+                <name>Screen_Owner_Change_not_allowed</name>
+            </screens>
+        </flows>
+        <fullName>ZR_Account_Owner_Change_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <fieldText>Du kannst kein Löschkennzeichen auf Accounts mit verbundenen Datensätzen setzen.</fieldText>
+                    <name>Account_has_connected_Records_Flow_End_Text</name>
+                </fields>
+                <name>Account_has_connected_Records_Flow_End</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Du kannst kein Löschhkennzeichen auf Debitoren setzen.</fieldText>
+                    <name>Customer_Flow_End_Text</name>
+                </fields>
+                <name>Customer_Flow_End</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Der Account ist bereits zum Löschen vorgemerkt.</fieldText>
+                    <name>DT_Deletion_Code_already_set</name>
+                </fields>
+                <name>Deletion_Code_Flow_End</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Das Löschkennzeichen wurde gesetzt.</fieldText>
+                    <name>Deletion_Code_Set_Flow_End_Text</name>
+                </fields>
+                <name>Deletion_Code_Set_Flow_End</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Du hast nicht die Rechte um auf diesem Account ein Löschkennzeichen zu setzen.</fieldText>
+                    <name>User_has_no_access_Flow_End_Text</name>
+                </fields>
+                <name>User_has_no_Access_Flow_End</name>
+            </screens>
+        </flows>
+        <fullName>ZR_Account_Set_Deletion_Code_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <textTemplates>
+                <name>ChatterPostBody</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EmailBodyDE</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EmailBodyEN</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EmailSubjectDE</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EmailSubjectEN</name>
+            </textTemplates>
+        </flows>
+        <fullName>ZR_Account_Team_Member_After_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <textTemplates>
+                <name>ChatterPostBody</name>
+            </textTemplates>
+            <textTemplates>
+                <name>DeletionEmailBodyDE</name>
+            </textTemplates>
+            <textTemplates>
+                <name>DeletionEmailBodyEN</name>
+            </textTemplates>
+            <textTemplates>
+                <name>DeletionEmailSubjectDE</name>
+            </textTemplates>
+            <textTemplates>
+                <name>DeletionEmailSubjectEN</name>
+            </textTemplates>
+        </flows>
+        <fullName>ZR_Account_Team_Member_Before_Delete_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Account_Team_Member_Before_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Contact_After_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Contact_After_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Contact_Before_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Contact_Before_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <choices>
+                <choiceText>Nein</choiceText>
+                <name>No</name>
+            </choices>
+            <choices>
+                <choiceText>Ja</choiceText>
+                <name>Yes</name>
+            </choices>
+            <screens>
+                <fields>
+                    <fieldText>Kontakte mit Löschkennzeichen werden nach einiger Zeit physisch gelöscht</fieldText>
+                    <name>DeletionCodeInfo_0</name>
+                </fields>
+                <name>Delete_Contact_0</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Du darfst diesen Kontakt nicht bearbeiten. Bitte wende dich an den Kontakt-/Accountinhaber oder an deinen Systemadministrator.</fieldText>
+                    <name>NoPermissionInfo_0</name>
+                </fields>
+                <name>No_Edit_Permissions_0</name>
+            </screens>
+        </flows>
+        <fullName>ZR_Contact_Set_Deletion_Code_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Error_Log_Before_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Event_Before_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <textTemplates>
+                <name>EmailBodyDE</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EmailBodyEN</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EmailSubjectDE</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EmailSubjectEN</name>
+            </textTemplates>
+        </flows>
+        <fullName>ZR_Feedback_After_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Feedback_Before_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Lead_After_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Lead_After_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Lead_Before_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Opportunity_After_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Opportunity_After_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Opportunity_Before_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Opportunity_Before_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Opportunity_Contact_Roles_After_Insert_and_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <choices>
+                <choiceText>Nein</choiceText>
+                <name>No_Delete_Opportunity_Choice</name>
+            </choices>
+            <choices>
+                <choiceText>Ja</choiceText>
+                <name>Yes_Delete_Opportunity_Choice</name>
+            </choices>
+            <screens>
+                <fields>
+                    <fieldText>Möchtest du diese Opportunity wirklich löschen?</fieldText>
+                    <name>Delete_Opportunity_Choice</name>
+                </fields>
+                <name>Are_you_sure_Screen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Es können nur Opportunities in den Stati &quot;Neu&quot; und &quot;Qualifizierungsphase&quot; gelöscht werden.</fieldText>
+                    <name>Flow_End_Incorrect_Status_Text</name>
+                </fields>
+                <name>Flow_End_Incorrect_Status</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Die Opportunity wurde erfolgreich gelöscht.</fieldText>
+                    <name>Flow_End_Opportunity_Deleted_Text</name>
+                </fields>
+                <name>Flow_End_Opportunity_Deleted</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Der Löschvorgang wurde abgebrochen.</fieldText>
+                    <name>Flow_End_Opportunity_not_Deleted_text</name>
+                </fields>
+                <name>Flow_End_Opportunity_not_Deleted</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Es können keine Opportunities gelöscht werden, die mit Aufträgen verbunden sind.</fieldText>
+                    <name>Flow_End_Order_Connected_Text</name>
+                </fields>
+                <name>Flow_End_Order_Connected</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Es können keine Opportunities gelöscht werden, die mit Angeboten verbunden sind.</fieldText>
+                    <name>Flow_End_Quotes_Connected_Text</name>
+                </fields>
+                <name>Flow_End_Quotes_Connected</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Du kannst diese Opportunity nicht löschen, da du keine Berechtigung dazu hast.</fieldText>
+                    <name>Flow_End_User_has_no_access_Text</name>
+                </fields>
+                <name>Flow_End_User_has_no_access</name>
+            </screens>
+        </flows>
+        <fullName>ZR_Opportunity_Delete_Screen_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Opportunity_Scheduled_Overdue_Reminder_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <textTemplates>
+                <name>EmailBodyDE</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EmailBodyEN</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EmailSubjectDE</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EmailSubjectEN</name>
+            </textTemplates>
+        </flows>
+        <fullName>ZR_Opportunity_Team_Member_After_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <textTemplates>
+                <name>DeletionEmailBodyDE</name>
+            </textTemplates>
+            <textTemplates>
+                <name>DeletionEmailBodyEN</name>
+            </textTemplates>
+            <textTemplates>
+                <name>DeletionEmailSubjectDE</name>
+            </textTemplates>
+            <textTemplates>
+                <name>DeletionEmailSubjectEN</name>
+            </textTemplates>
+        </flows>
+        <fullName>ZR_Opportunity_Team_Member_Before_Delete_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Opportunity_Team_Member_Before_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Order_After_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Order_After_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Project_Account_Lead_Relation_After_Insert</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Project_After_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Project_After_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Project_Before_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Project_Before_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <textTemplates>
+                <name>EmailBodyDE</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EmailBodyEN</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EmailSubjectDE</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EmailSubjectEN</name>
+            </textTemplates>
+        </flows>
+        <fullName>ZR_Project_Team_After_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <textTemplates>
+                <name>ActivationEmailBodyDE</name>
+            </textTemplates>
+            <textTemplates>
+                <name>ActivationEmailBodyEN</name>
+            </textTemplates>
+            <textTemplates>
+                <name>ActivationEmailSubjectDE</name>
+            </textTemplates>
+            <textTemplates>
+                <name>ActivationEmailSubjectEN</name>
+            </textTemplates>
+            <textTemplates>
+                <name>DeactivationEmailBodyDE</name>
+            </textTemplates>
+            <textTemplates>
+                <name>DeactivationEmailBodyEN</name>
+            </textTemplates>
+            <textTemplates>
+                <name>DeactivationEmailSubjectDE</name>
+            </textTemplates>
+            <textTemplates>
+                <name>DeactivationEmailSubjectEN</name>
+            </textTemplates>
+        </flows>
+        <fullName>ZR_Project_Team_After_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Project_Territory_After_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Project_Territory_Before_Delete_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Quote_After_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Quote_Before_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <screens>
+                <fields>
+                    <fieldText>&lt;p&gt;Das Angebot wurde erfolgreich erstellt. &lt;a href=&quot;/{!QuoteId}&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Hier klicken&lt;/a&gt; zum Öffnen. &lt;/p&gt;</fieldText>
+                    <name>ConfirmationText</name>
+                </fields>
+                <name>Confirmation_Quote_Creation</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Bei der Angebotsanlage ist ein Fehler aufgetreten. Bitte kontaktiere deinen Salesforce-Administrator.</fieldText>
+                    <name>ErrorText</name>
+                </fields>
+                <name>Error_Screen</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Der zugehörige Account hat ein Löschkennzeichen. Deswegen ist die Erstellung eines Angebotes nicht möglich.</fieldText>
+                    <name>DisplayTextAccountDC</name>
+                </fields>
+                <name>Screen_Account_Deletion_Code</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Kontakt</fieldText>
+                    <name>Contact</name>
+                </fields>
+                <fields>
+                    <name>DT_Account_Name</name>
+                </fields>
+                <fields>
+                    <fieldText>Bitte gib einen Suchbegriff ein, um das richtige Vertriebsgebiet zu finden. Dieser kann ein Teil des Namens sowie die Vertriebsgebiets-Nummer sein.</fieldText>
+                    <name>DT_Search_for_Territory</name>
+                </fields>
+                <fields>
+                    <fieldText>Beschreibung</fieldText>
+                    <name>Description</name>
+                    <validationRule/>
+                </fields>
+                <fields>
+                    <fieldText>Bedarfszeitraum - Ende</fieldText>
+                    <name>End_Date</name>
+                    <validationRule/>
+                </fields>
+                <fields>
+                    <name>Opportunity</name>
+                </fields>
+                <fields>
+                    <fieldText>Bestellreferenz</fieldText>
+                    <name>Order_Reference</name>
+                    <validationRule/>
+                </fields>
+                <fields>
+                    <fieldText>&lt;p&gt;&lt;strong&gt;Inhaber: {!$User.FirstName} {!$User.LastName}&lt;/strong&gt;&lt;/p&gt;</fieldText>
+                    <name>Owner</name>
+                </fields>
+                <fields>
+                    <fieldText>Transaktionstyp</fieldText>
+                    <name>PL_Transaction_Type</name>
+                </fields>
+                <fields>
+                    <fieldText>Soll das Vertriebsgebiet der Opportunity genutzt werden?</fieldText>
+                    <name>PL_Use_Territory_from_Opportunity</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>fieldApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Projekt</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>objectApiName</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>recordId</name>
+                        <value/>
+                    </inputParameters>
+                    <name>Project</name>
+                </fields>
+                <fields>
+                    <name>Screen_Collect_Quote_Information_Section1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>Screen_Collect_Quote_Information_Section1_Column1</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>Screen_Collect_Quote_Information_Section1_Column2</name>
+                </fields>
+                <fields>
+                    <name>Screen_Collect_Quote_Information_Section2</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>width</name>
+                        <value/>
+                    </inputParameters>
+                    <name>Screen_Collect_Quote_Information_Section2_Column1</name>
+                </fields>
+                <fields>
+                    <fieldText>Bedarfszeitraum - Beginn</fieldText>
+                    <name>Start_Date</name>
+                </fields>
+                <fields>
+                    <fieldText>Suche nach einem Vertriebsgebiet</fieldText>
+                    <name>T_Search_for_Territory</name>
+                </fields>
+                <name>Screen_Collect_Quote_Information</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Neue Angebote können nur in der Angebotsphase angelegt werden.</fieldText>
+                    <name>ST_Not_in_Quote_Phase</name>
+                </fields>
+                <name>Screen_Not_in_Quote_Phase</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Du kannst darfst kein Angebot für diese Opportunity erstellen.</fieldText>
+                    <name>DT_Read_Only_User</name>
+                </fields>
+                <name>Screen_Read_Only_User</name>
+            </screens>
+            <screens>
+                <fields>
+                    <fieldText>Bitte wähle das korrekte Vertriebsgebiet:</fieldText>
+                    <name>DT_Select_Territory</name>
+                </fields>
+                <fields>
+                    <inputParameters>
+                        <name>columns</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>label</name>
+                        <value>
+                            <stringValue>Vetriebsgebiete aus der Suchanfrage</stringValue>
+                        </value>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>maxRowSelection</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>minRowSelection</name>
+                        <value/>
+                    </inputParameters>
+                    <inputParameters>
+                        <name>selectionMode</name>
+                        <value/>
+                    </inputParameters>
+                    <name>DaTa_Territories_from_Search</name>
+                </fields>
+                <name>Screen_Territory_Selection</name>
+            </screens>
+        </flows>
+        <fullName>ZR_Quote_Creation_Screen_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <textTemplates>
+                <name>EnglishEmailBody</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EnglishSubjectTitle</name>
+            </textTemplates>
+            <textTemplates>
+                <name>GermanEmailBody</name>
+            </textTemplates>
+            <textTemplates>
+                <name>GermanEmailSubject</name>
+            </textTemplates>
+        </flows>
+        <fullName>ZR_Submission_Result_After_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <textTemplates>
+                <name>EnglishEmailBody</name>
+            </textTemplates>
+            <textTemplates>
+                <name>EnglishSubjectTitle</name>
+            </textTemplates>
+            <textTemplates>
+                <name>GermanEmailBody</name>
+            </textTemplates>
+            <textTemplates>
+                <name>GermanEmailSubject</name>
+            </textTemplates>
+        </flows>
+        <fullName>ZR_Submission_Result_After_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Task_Before_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_Task_Before_Update_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_User_After_Insert_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>ZR_User_After_Update_Flow</fullName>
+    </flowDefinitions>
+    <quickActions>
+        <label><!-- Follow Up --></label>
+        <name>Follow_Up</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Contact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Event --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Task --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Opportunity --></label>
+        <name>ZR_New_Opportunity</name>
+    </quickActions>
+    <reportTypes>
+        <description>Dieser Berichtstyp zeigt alle Accounts mit potentiellen Duplikaten.</description>
+        <label>Account mit Duplikaten</label>
+        <name>Accounts_with_Duplicates</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Duplicate Record Items --></label>
+            <name>Duplicate Record Items</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Accounts mit mind. einer Opportunity.</description>
+        <label>Accounts mit Opportunities</label>
+        <name>Accounts_with_Opportunities</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Berichtet über Accounts mit Details zu den zugewiesenen Vertriebsgebieten.</description>
+        <label>Accounts mit Vertriebsgebieten</label>
+        <name>Accounts_with_Territories</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Territories --></label>
+            <name>Territories</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Dieser Berichtstyp zeigt Kontakte mit potentiellen Duplikaten.</description>
+        <label>Kontakte mit Duplikaten</label>
+        <name>Contact_with_Duplicates</name>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+        <sections>
+            <label><!-- Duplicate Record Items --></label>
+            <name>Duplicate Record Items</name>
+        </sections>
+        <sections>
+            <label><!-- Kontakte --></label>
+            <name>Kontakte</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Zeigt alle Lead-Duplikate an.</description>
+        <label>Leads mit Duplikaten</label>
+        <name>Lead_Duplikate</name>
+        <sections>
+            <label><!-- Doppelte Datensatzelemente --></label>
+            <name>Doppelte Datensatzelemente</name>
+        </sections>
+        <sections>
+            <label><!-- Leads --></label>
+            <name>Leads</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Opportunities mit verbundenen Aufträgen.</description>
+        <label>Opportunities mit Aufträgen.</label>
+        <name>Opportunities_with_Orders</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Orders. --></label>
+            <name>Orders.</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Opportunities mit verbundenen Angeboten.</description>
+        <label>Opportunities mit Angeboten.</label>
+        <name>Opportunities_with_Quotes</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Quotes. --></label>
+            <name>Quotes.</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Berichtet über Opportunities mit Details zum verwandten Vertriebsgebiet.</description>
+        <label>Opportunities mit Vertriebsgebieten</label>
+        <name>Opportunities_with_Territories</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Opportunities mit oder ohne Aufträge.</description>
+        <label>Opportunities mit oder ohne Aufträge</label>
+        <name>Opportunities_with_or_without_Orders</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label>Aufträge</label>
+            <name>Orders</name>
+        </sections>
+        <sections>
+            <label>Aufträge.</label>
+            <name>Orders.</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Opportunities mit oder ohne Angebote.</description>
+        <label>Opportunities mit oder ohne Angebote</label>
+        <name>Opportunities_with_or_without_Quotes</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label>Angebote</label>
+            <name>Quotes</name>
+        </sections>
+        <sections>
+            <label>Angebote.</label>
+            <name>Quotes.</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Projekte mit zugehörigen Accounts.</description>
+        <label>Projekte mit Projekt-Account-Beziehungen</label>
+        <name>Project_with_Project_Account_Relation</name>
+        <sections>
+            <label>Involvierte Accounts</label>
+            <name>Involved Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Project Account Relations --></label>
+            <name>Project Account Relations</name>
+        </sections>
+        <sections>
+            <label>Projekte</label>
+            <name>Projects</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Dieser Berichtstyp zeigt alle Projekte mit potentiellen Duplikaten.</description>
+        <label>Projekte mit Duplikaten</label>
+        <name>Projects_with_Duplicates</name>
+        <sections>
+            <label>Doppelte Datensatzelemente</label>
+            <name>Duplicate Record Items</name>
+        </sections>
+        <sections>
+            <label>Projekte</label>
+            <name>Projects</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Projekte mit Opportunities.</description>
+        <label>Projekte mit Opportunities</label>
+        <name>Projects_with_Opportunities</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label>Projekte</label>
+            <name>Projects</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Projekte mit Aufträgen.</description>
+        <label>Projekte mit Aufträgen.</label>
+        <name>Projects_with_Orders</name>
+        <sections>
+            <label>Aufträge</label>
+            <name>Orders</name>
+        </sections>
+        <sections>
+            <label><!-- Orders. --></label>
+            <name>Orders.</name>
+        </sections>
+        <sections>
+            <label>Projekte</label>
+            <name>Projects</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Dieser Berichtstyp beinhaltet alle Projekte mit zugehörigen Angeboten.</description>
+        <label>Projekte mit Angeboten.</label>
+        <name>Projects_with_Quotes</name>
+        <sections>
+            <label>Projekte</label>
+            <name>Projects</name>
+        </sections>
+        <sections>
+            <label>Angebote</label>
+            <name>Quotes</name>
+        </sections>
+        <sections>
+            <label>Angebote.</label>
+            <name>Quotes.</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Angebote mit Aufträgen.</description>
+        <label>Angebote. mit Aufträgen.</label>
+        <name>Quotes_with_Orders</name>
+        <sections>
+            <label>Aufträge</label>
+            <name>Orders</name>
+        </sections>
+        <sections>
+            <label>Aufträge.</label>
+            <name>Orders.</name>
+        </sections>
+        <sections>
+            <label>Angebote.</label>
+            <name>Quotes.</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Angebote mit oder ohne Aufträge.</description>
+        <label>Angebote. mit oder ohne Aufträge.</label>
+        <name>Quotes_with_or_without_Orders</name>
+        <sections>
+            <label>Aufträge</label>
+            <name>Orders</name>
+        </sections>
+        <sections>
+            <label>Aufträge.</label>
+            <name>Orders.</name>
+        </sections>
+        <sections>
+            <label>Angebote.</label>
+            <name>Quotes.</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Nutzer mit Profilinformationen.</description>
+        <label>Nutzer mit Profilen</label>
+        <name>Users_with_Profiles</name>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description>Zeigt alle Nutzer mit ihren zugewiesenen Vertriebsgebieten an.</description>
+        <label>Nutzer mit Gebieten</label>
+        <name>Users_with_Territories</name>
+        <sections>
+            <label>Gebiete</label>
+            <name>Territories</name>
+        </sections>
+        <sections>
+            <label>Benutzer</label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Orchestrierungsausführungsprotokolle --></description>
+        <label><!-- Orchestrierungsausführungsprotokolle --></label>
+        <name>flow_orchestration_log_ootb_crt_two_four_eight</name>
+        <sections>
+            <label><!-- Orchestrierungsausführungsprotokolle --></label>
+            <name>Orchestrierungsausführungsprotokolle</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Orchestrierungsausführungen --></description>
+        <label><!-- Orchestrierungsausführungen --></label>
+        <name>flow_orchestration_run_ootb_crt_two_four_eight</name>
+        <sections>
+            <label><!-- Orchestrierungsausführungen --></label>
+            <name>Orchestrierungsausführungen</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Orchestrierungsphasenausführungen --></description>
+        <label><!-- Orchestrierungsphasenausführungen --></label>
+        <name>flow_orchestration_stage_run_ootb_crt_two_four_eight</name>
+        <sections>
+            <label><!-- Orchestrierungsphasenausführungen --></label>
+            <name>Orchestrierungsphasenausführungen</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Orchestrierungsschrittausführungen --></description>
+        <label><!-- Orchestrierungsschrittausführungen --></label>
+        <name>flow_orchestration_step_run_ootb_crt_two_four_eight</name>
+        <sections>
+            <label><!-- Orchestrierungsschrittausführungen --></label>
+            <name>Orchestrierungsschrittausführungen</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Orchestrierungsarbeitselemente --></description>
+        <label><!-- Orchestrierungsarbeitselemente --></label>
+        <name>flow_orchestration_work_item_ootb_crt_two_four_eight</name>
+        <sections>
+            <columns>
+                <label><!-- Zugewiesen Gruppe oder Warteschlange --></label>
+                <name>Zugewiesen Gruppe oder Warteschlange</name>
+            </columns>
+            <columns>
+                <label><!-- Zugewiesen User --></label>
+                <name>Zugewiesen User</name>
+            </columns>
+            <label><!-- Orchestrierungsarbeitselemente --></label>
+            <name>Orchestrierungsarbeitselemente</name>
+        </sections>
+        <sections>
+            <columns>
+                <label><!-- Orchestrierungsschrittausführung: Label --></label>
+                <name>Orchestrierungsschrittausführung: Label</name>
+            </columns>
+            <columns>
+                <label><!-- Orchestrierungsschrittausführung: Name --></label>
+                <name>Orchestrierungsschrittausführung: Name</name>
+            </columns>
+            <columns>
+                <label><!-- Orchestrierungsschrittausführung: Status --></label>
+                <name>Orchestrierungsschrittausführung: Status</name>
+            </columns>
+            <label><!-- Orchestrierungsschrittausführungen --></label>
+            <name>Orchestrierungsschrittausführungen</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Bildschirm-Flows --></description>
+        <label><!-- Bildschirm-Flows --></label>
+        <name>screen_flows_prebuilt_crt</name>
+        <sections>
+            <label><!-- Flow-Interviewprotokolle --></label>
+            <name>Flow-Interviewprotokolle</name>
+        </sections>
+        <sections>
+            <label><!-- Flow-Interviewprotokolleinträge --></label>
+            <name>Flow-Interviewprotokolleinträge</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- test --></description>
+        <label><!-- test --></label>
+        <name>test</name>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+</Translations>

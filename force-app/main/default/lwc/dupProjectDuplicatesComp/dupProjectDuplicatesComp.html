@@ -1,0 +1,47 @@
+<template>
+    <template if:true={loader}>
+        <lightning-spinner alternative-text={labels.loadingMessage} size="small"></lightning-spinner>
+    </template>
+
+    <template if:true={showContent}>
+        <div style="width: 100%;">
+            <lightning-card title={labels.tableHeaderOriginal}>
+                <lightning-datatable
+                    class="wrapped-header-datatable"    
+                    key-field="id"
+                    data={formattedManualProjectList}
+                    columns={manualProjectColumns}
+                    hide-checkbox-column="true"
+                    column-widths-mode="fixed"
+                    resize-column-disabled="false"
+                    onrowaction={openDetailModal}
+                >
+                </lightning-datatable>
+            </lightning-card>
+        </div>
+
+        <div style="width: 100%;">
+            <lightning-card title={labels.tableHeaderDuplicates}>
+                <lightning-datatable
+                    class="wrapped-header-datatable"    
+                    key-field="id"
+                    data={formattedDuplicateProjectList}
+                    columns={duplicateProjectColumns}
+                    hide-checkbox-column="true"
+                    column-widths-mode="fixed"
+                    resize-column-disabled="false"
+                    onrowaction={openDetailModal}
+                >
+                </lightning-datatable>
+            </lightning-card>
+        </div>
+        
+        <footer class="slds-card__footer slds-text-align_right">
+            <div>
+                <button class="slds-button slds-button_neutral" style="margin-bottom: 1%;" onclick={handleButton1}>{labels.button1Label}</button>
+                <button class="slds-button slds-button_brand" style="margin-bottom: 1%;" onclick={handleButton2}>{labels.button2Label}</button>
+                <button class="slds-button slds-button_brand" style="margin-bottom: 1%;" onclick={handleButton3}>{labels.button3Label}</button>
+            </div>
+        </footer>
+    </template>
+</template>

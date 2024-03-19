@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_JP_Project</fullName>
+    <active>true</active>
+    <description>SF-646 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country. Format (&quot;\\d{3}[-]\\d{4}&quot;). Example: 999-9999.</description>
+    <errorConditionFormula>IF(
+AND(
+NOT(ISBLANK( Project_Address__PostalCode__s )),
+ISPICKVAL( Project_Address__CountryCode__s , &quot;JP&quot;)
+),
+NOT(REGEX(Project_Address__PostalCode__s, (&quot;\\d{3}[-]\\d{4}&quot;))),
+FALSE)
+&amp;&amp; $Permission.Core_Project_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>Project_Address__PostalCode__s</errorDisplayField>
+    <errorMessage>Please enter a valid format for the Zip Code! This should start with three numbers, followed by a hyphen and four numbers. Example: 999-9999</errorMessage>
+</ValidationRule>

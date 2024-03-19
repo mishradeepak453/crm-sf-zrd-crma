@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_MV_MX</fullName>
+    <active>true</active>
+    <description>SF-64 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country. Format (&quot;\\d{4}&quot;) or (&quot;\\d{5}&quot;). Example: 9999 or 99999.</description>
+    <errorConditionFormula>OR(
+IF(
+OR(
+BillingCountry == &quot;MV&quot;,
+BillingCountry == &quot;MX&quot;),
+NOT(
+OR(
+REGEX(BillingPostalCode, (&quot;\\d{4}&quot;)),
+REGEX(BillingPostalCode, (&quot;\\d{5}&quot;))
+)
+),FALSE),
+IF(AND(
+NOT(ISBLANK(ShippingPostalCode)),
+OR(
+ShippingCountry == &quot;MV&quot;,
+ShippingCountry == &quot;MX&quot;)),
+NOT(
+OR(
+REGEX(ShippingPostalCode, (&quot;\\d{4}&quot;)),
+REGEX(ShippingPostalCode, (&quot;\\d{5}&quot;))
+)
+),
+FALSE)
+)
+&amp;&amp; ISPICKVAL( Core_Customer_Type__c, &quot;7&quot;)
+&amp;&amp; $Permission.Core_Account_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorMessage>Please enter a valid format for the Zip Code! This should consist of four or five numbers. Example: 9999 or 99999</errorMessage>
+</ValidationRule>

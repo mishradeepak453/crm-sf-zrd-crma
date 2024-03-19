@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <assignments>
+        <name>Set_Account_and_Member_Name_fields</name>
+        <label>Set Account and Member Name fields</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Account_Name__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.Name</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Account_ID__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Member__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.UserId</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>- Assigns Account Team Member Name to the record so it can be used in Email notifications</description>
+    <formulas>
+        <name>KeyAccount</name>
+        <dataType>Boolean</dataType>
+        <expression>IF({!$Record.Account.Key_Account__c} == TRUE, True, False)</expression>
+    </formulas>
+    <interviewLabel>Account Team Member Before Insert Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account Team Member Before Insert Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Set_Account_and_Member_Name_fields</targetReference>
+        </connector>
+        <object>AccountTeamMember</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

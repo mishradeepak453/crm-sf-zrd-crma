@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveDataset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <application>Demo_ValueAnalytics</application>
+    <masterLabel>BVA Union Logs Adoption</masterLabel>
+    <templateAssetSourceName>BVA_UnionLogsAdoption_tp</templateAssetSourceName>
+    <type>default</type>
+</WaveDataset>

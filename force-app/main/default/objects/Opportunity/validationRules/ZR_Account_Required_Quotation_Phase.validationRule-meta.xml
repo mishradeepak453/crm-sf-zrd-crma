@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_Account_Required_Quotation_Phase</fullName>
+    <active>true</active>
+    <description>SF-652 This validation rule ensures, that an Account is connected to an Opportunity when the Quotation Phase is reached.</description>
+    <errorConditionFormula>IF(ISPICKVAL( StageName , &quot;Quotation Phase&quot;) &amp;&amp; ISBLANK( AccountId ), TRUE, FALSE)
+&amp;&amp;  $Permission.Core_Opportunity_Bypass_Validation_Rules  = FALSE</errorConditionFormula>
+    <errorDisplayField>AccountId</errorDisplayField>
+    <errorMessage>Please connect an Account to the Opportunity before you enter the Quotation Phase!</errorMessage>
+</ValidationRule>

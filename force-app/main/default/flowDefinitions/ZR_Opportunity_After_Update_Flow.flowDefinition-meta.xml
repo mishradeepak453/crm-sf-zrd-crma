@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>3</activeVersionNumber>
+    <description>- Sends Platform Event to Grace if Postal Code or Business Area have been changed to receive the territory of the record
+- Sends notification to Owner and Opportunity Team if changes have been made to the City, Postal Code, Amount or Stage of the record</description>
+    <masterLabel>Opportunity After Update Flow</masterLabel>
+</FlowDefinition>

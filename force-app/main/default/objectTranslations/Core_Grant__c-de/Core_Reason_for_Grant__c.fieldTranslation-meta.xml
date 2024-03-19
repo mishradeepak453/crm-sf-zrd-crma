@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Grund für die Zuwendung</label>
+    <name>Core_Reason_for_Grant__c</name>
+    <picklistValues>
+        <masterLabel>Client Visit</masterLabel>
+        <translation>Kundenbesuch</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deal</masterLabel>
+        <translation>Geschäftsabschluss</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jubilee</masterLabel>
+        <translation>Jubiläum</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Negotiations</masterLabel>
+        <translation>Verhandlungen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation>Sonstiges</translation>
+    </picklistValues>
+</CustomFieldTranslation>

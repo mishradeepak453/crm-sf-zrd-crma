@@ -1,0 +1,60 @@
+<template>
+    <div class="slds-text-align_center">
+        <span class="slds-text-heading_large">{headLineLabel}</span>
+    </div>
+
+    <br></br>
+
+    <!-- Static help text -->
+    <div class="slds-align_absolute-center slds-text-color_weak slds-m-vertical_medium">
+        <template if:true={loaded}>
+            <lightning-combobox
+                name="progress"
+                label={label.ComboboxLabel}
+                value={value}
+                placeholder={label.DefaultLabel}
+                options={fieldsInfo}
+                style="width:500px"
+                onchange={handleComboboxChange}>
+            </lightning-combobox>
+        </template>
+    </div>
+
+    <br></br>
+      
+    <div class="slds-align_absolute-center slds-m-vertical_large">
+        <div class=" slds-float_right">
+            <lightning-button 
+                variant="brand" 
+                disabled={valueChosen}
+                icon-name="utility:target" 
+                label={label.OpenMapButtonLabel} 
+                title="OpenMap" 
+                onclick={openModalMapComp} 
+                class="slds-m-around_medium"></lightning-button>
+        </div>
+    </div>
+
+    <template if:true={isModalMapCompOpen}>
+        <c-map-comp modalinputid='modal-content-id-1' onprogressvaluechange={handleModalMapCompChange} list-view-id={value} current-url={currentUrl}></c-map-comp>
+    </template>
+    
+    <!-- for later geolocation integration
+    <template if:true={isMobile}>
+        <div class="slds-text-align_center slds-text-color_weak slds-m-vertical_large">
+            <lightning-formatted-text value={label.LocationButtonHeadline} ></lightning-formatted-text></p>
+        </div>
+    
+        <div class="slds-align_absolute-center slds-m-vertical_large">
+            <lightning-button
+                variant="brand"
+                icon-name="utility:target"
+                label={label.LocationButtonLabel}
+                title={label.LocationButtonLabel}
+                onclick={fetchUserCurrentLocation}>
+            </lightning-button>
+        </div>
+
+        Current User Coordinates: latitude: {latitude}, longitude: {longitude}
+    </template>-->
+</template>

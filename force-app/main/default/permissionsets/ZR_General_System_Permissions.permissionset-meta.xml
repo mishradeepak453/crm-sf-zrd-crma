@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>LWCHandlerMapComp</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <description>Create and Customize List Views
+Edit Events
+Edit Tasks
+Hide Option to Switch to Salesforce Classic
+Lightning Experience User
+Run Reports
+Run Flows
+View Role Hierarchy
+Apex: LWCHandlerMapComp
+Visualforce: GetSessionId</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>ZR_General System Permissions</label>
+    <pageAccesses>
+        <apexPage>GetSessionId</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>CreateCustomizeFilters</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EditEvent</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>EditTask</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>LightningExperienceUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>PreventClassicExperience</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>RunFlow</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>RunReports</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewRoles</name>
+    </userPermissions>
+</PermissionSet>

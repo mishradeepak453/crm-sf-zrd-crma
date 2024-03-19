@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>Quote__c.Successful_Quote__c:SUM/RowCount</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Win Ratio</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <columns>
+        <field>Quote__c.Account__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Quote__c.Quote_Net_Amount__c</field>
+    </columns>
+    <columns>
+        <field>Quote__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>Quote__c.Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Quote__c.End_Date__c</field>
+    </columns>
+    <columns>
+        <field>Quote__c.Business_Area__c</field>
+    </columns>
+    <columns>
+        <field>CUST_OWNER_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <description>Dieser Bericht zeigt die gesamte prozentuale Konversionsrate von Angeboten zu Aufträgen, sortiert nach Angeboten.</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Quote__c.Successful_Quote__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Angebotsvolumen Win Ratio</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Quote__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Quote__c.End_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

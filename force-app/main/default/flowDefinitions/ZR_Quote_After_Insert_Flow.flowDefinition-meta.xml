@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>5</activeVersionNumber>
+    <description>- Sends Platform Event to Grace if the record has been created by anyone other than the Integration User</description>
+    <masterLabel>Quote After Insert Flow</masterLabel>
+</FlowDefinition>

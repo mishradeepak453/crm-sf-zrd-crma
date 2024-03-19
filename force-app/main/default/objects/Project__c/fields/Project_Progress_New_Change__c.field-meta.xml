@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Progress_New_Change__c</fullName>
+    <description>1. Not integration relevant
+2. ZRD
+3. Helper Field to report on changes to the project progress. This field indicates, whether the project progress has been changed in the last 7 days.</description>
+    <externalId>false</externalId>
+    <formula>IF((TODAY()- Date_of_Change_Project_Progress__c) &lt;= 7, TRUE, False)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Project Progress New Change</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

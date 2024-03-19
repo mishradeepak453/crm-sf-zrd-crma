@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Deletion_Code_on_Direct_ACR</fullName>
+    <active>true</active>
+    <description>SF-1185 The Deletion Code on the direct Account Contact Relation should not be set by a User.</description>
+    <errorConditionFormula>IsDirect = TRUE
+&amp;&amp;
+ISCHANGED(Deletion_Code__c)
+&amp;&amp;
+ Bypass_Validation_Rules__c = FALSE
+&amp;&amp;
+$Permission.Core_Account_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorMessage>You can not set the deletion code on a direct Account Contact relation. If you would like to set the deletion code for this Contact, do so on the Contact itself.</errorMessage>
+</ValidationRule>

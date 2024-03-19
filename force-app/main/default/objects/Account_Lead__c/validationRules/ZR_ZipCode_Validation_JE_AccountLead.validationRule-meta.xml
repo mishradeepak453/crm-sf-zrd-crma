@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_JE_AccountLead</fullName>
+    <active>true</active>
+    <description>SF-1155 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country. Format (&quot;[A-Z][A-Z][0-9][ ][0-9][A-Z][A-Z]&quot;). Example: AA9 9AA.</description>
+    <errorConditionFormula>IF(
+AND(
+NOT(ISBLANK(Address__PostalCode__s)),
+ISPICKVAL(Address__CountryCode__s, &quot;JE&quot;)),
+NOT(REGEX(Address__PostalCode__s, (&quot;[A-Z][A-Z][0-9][ ][0-9][A-Z][A-Z]&quot;))),FALSE)
+&amp;&amp; ISPICKVAL(Status__c, &quot;Qualification&quot;)</errorConditionFormula>
+    <errorMessage>Please enter a valid format for the Zip Code! This should consist of two uppercase letters, a number, followed by a space, a number and two uppercase letters. Example: AA9 9AA</errorMessage>
+</ValidationRule>

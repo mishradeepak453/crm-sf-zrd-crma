@@ -1,0 +1,10 @@
+<template>
+        <template if:true={usersInTerritory}>
+        <lightning-datatable
+                key-field="id"
+                data={usersInTerritory}
+                columns={columns}
+                hide-checkbox-column>
+        </lightning-datatable>
+        </template> 
+</template>

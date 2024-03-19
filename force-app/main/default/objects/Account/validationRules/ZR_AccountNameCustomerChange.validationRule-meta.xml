@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_AccountNameCustomerChange</fullName>
+    <active>true</active>
+    <description>SF-822 This validation rule ensures, that the name of a Customer-Account is not changed in Salesforce.</description>
+    <errorConditionFormula>ISCHANGED(Name)
+&amp;&amp; ISPICKVAL(Core_Customer_Type__c, &quot;1&quot;)
+&amp;&amp; $Permission.Core_Account_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>The Account name can not be changed on Customer Accounts. Please contact the KV to request a name change.</errorMessage>
+</ValidationRule>

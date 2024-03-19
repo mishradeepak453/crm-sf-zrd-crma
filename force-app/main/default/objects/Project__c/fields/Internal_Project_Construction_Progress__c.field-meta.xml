@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Internal_Project_Construction_Progress__c</fullName>
+    <description>1. Not integration relevant 
+2. ZRD
+3. SF-1261</description>
+    <externalId>false</externalId>
+    <label>Internal Project-/ Construction Progress</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Discussion</fullName>
+                <default>false</default>
+                <label>Discussion</label>
+            </value>
+            <value>
+                <fullName>Pre Planning</fullName>
+                <default>false</default>
+                <label>Pre Planning</label>
+            </value>
+            <value>
+                <fullName>Planning</fullName>
+                <default>false</default>
+                <label>Planning</label>
+            </value>
+            <value>
+                <fullName>Shortly before Start</fullName>
+                <default>false</default>
+                <label>Shortly before Start</label>
+            </value>
+            <value>
+                <fullName>Demolition</fullName>
+                <default>false</default>
+                <label>Demolition</label>
+            </value>
+            <value>
+                <fullName>Underground Construction</fullName>
+                <default>false</default>
+                <label>Underground Construction</label>
+            </value>
+            <value>
+                <fullName>Building Shell</fullName>
+                <default>false</default>
+                <label>Building Shell</label>
+            </value>
+            <value>
+                <fullName>Build-Up</fullName>
+                <default>false</default>
+                <label>Build-Up</label>
+            </value>
+            <value>
+                <fullName>Completion</fullName>
+                <default>false</default>
+                <label>Completion</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

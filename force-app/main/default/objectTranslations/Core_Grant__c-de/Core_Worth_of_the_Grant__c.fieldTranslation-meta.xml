@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Wert der Zuwendung</label>
+    <name>Core_Worth_of_the_Grant__c</name>
+</CustomFieldTranslation>

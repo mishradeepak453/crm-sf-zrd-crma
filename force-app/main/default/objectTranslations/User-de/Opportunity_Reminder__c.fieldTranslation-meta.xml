@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Bitte trage in dieses Feld die Anzahl an Wochen an, nach der du an eine ruhende Opporutnity erinnert werden möchtest.</help>
+    <label>Opportunity Erinnerung</label>
+    <name>Opportunity_Reminder__c</name>
+</CustomFieldTranslation>

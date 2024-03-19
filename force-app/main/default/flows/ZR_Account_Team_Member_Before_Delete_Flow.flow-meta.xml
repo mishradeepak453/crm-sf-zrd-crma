@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Deletion_Email_DE</name>
+        <label>Deletion Email DE</label>
+        <locationX>72</locationX>
+        <locationY>611</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Create_Chatter_Post</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>DeletionEmailBodyDE</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.User.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>DeletionEmailSubjectDE</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Deletion_Email_EN</name>
+        <label>Deletion Email EN</label>
+        <locationX>336</locationX>
+        <locationY>611</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Create_Chatter_Post</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>DeletionEmailBodyEN</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Member__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>DeletionEmailSubjectEN</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>53.0</apiVersion>
+    <decisions>
+        <name>Active_User</name>
+        <label>Active User</label>
+        <locationX>325</locationX>
+        <locationY>287</locationY>
+        <defaultConnectorLabel>Is not active User</defaultConnectorLabel>
+        <rules>
+            <name>Is_active_User</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.User.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.User.Id</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$User.Id</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>User_is_KAM_or_LAM_User</targetReference>
+            </connector>
+            <label>Is active User</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks whether the Team Member has de language set or other.</description>
+        <name>Is_Team_Member_DE</name>
+        <label>Is Team Member DE?</label>
+        <locationX>204</locationX>
+        <locationY>503</locationY>
+        <defaultConnector>
+            <targetReference>Deletion_Email_EN</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Team Member is NOT DE</defaultConnectorLabel>
+        <rules>
+            <name>Team_Member_is_DE</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Member__r.LanguageLocaleKey</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>de</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Deletion_Email_DE</targetReference>
+            </connector>
+            <label>Team Member is DE</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>User_is_KAM_or_LAM_User</name>
+        <label>User is KAM or LAM User</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <defaultConnector>
+            <targetReference>Is_Team_Member_DE</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Is not KAM or LAM</defaultConnectorLabel>
+        <rules>
+            <name>Is_KAM_or_LAM</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.TeamMemberRole</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Key_Account_Manager</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.TeamMemberRole</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Large_Account_Manager</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Chatter_Post</targetReference>
+            </connector>
+            <label>Is KAM or LAM</label>
+        </rules>
+    </decisions>
+    <description>- Sends an Email to the User that has been removed from an Account Team
+- Does not send the Email to KAM or LAM</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>AccountLink</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Enterprise_Server_URL_100}, FIND(&apos;/services&apos;, {!$Api.Enterprise_Server_URL_100})) &amp; {!$Record.Account.Id}</expression>
+    </formulas>
+    <interviewLabel>Account Team Member Before Delete Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account Team Member Before Delete Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Chatter_Post</name>
+        <label>Create Chatter Post</label>
+        <locationX>50</locationX>
+        <locationY>887</locationY>
+        <inputAssignments>
+            <field>Body</field>
+            <value>
+                <elementReference>ChatterPostBody</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>IsRichText</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Published</stringValue>
+            </value>
+        </inputAssignments>
+        <object>FeedItem</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>199</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Active_User</targetReference>
+        </connector>
+        <object>AccountTeamMember</object>
+        <recordTriggerType>Delete</recordTriggerType>
+        <triggerType>RecordBeforeDelete</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>ChatterPostBody</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>{!$User.FirstName} {!$User.LastName} hat {!$Record.Member_Name__c} aus dem Account Team entfernt.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>DeletionEmailBodyDE</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hallo {!$Record.Member_Name__c},
+
+du wurdest von {!$User.FirstName} {!$User.LastName} aus dem Account Team von {!$Record.Account.Name} entfernt.
+Logge dich bei Salesforce ein, um mehr über den Account zu erfahren:
+{!AccountLink}
+
+Viele Grüße,
+Dein Zeppelin Salesforce-Team
+
+Dies ist eine automatisch generierte E-Mail, bitte nicht antworten.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>DeletionEmailBodyEN</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hello {!$Record.Member_Name__c},
+
+You have been removed from the Account Team of {!$Record.Account.Name} by {!$User.FirstName} {!$User.LastName}.
+Please log in to see the details of the Account:
+{!AccountLink}
+
+Best regards,
+Your Zeppelin Salesforce-Team
+
+This is an automatically created Email. Please do not reply.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>DeletionEmailSubjectDE</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Du wurdest aus einem Account Team entfernt</text>
+    </textTemplates>
+    <textTemplates>
+        <name>DeletionEmailSubjectEN</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>You have been removed from an Account Team</text>
+    </textTemplates>
+</Flow>

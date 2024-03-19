@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Deletion_Email_DE</name>
+        <label>Deletion Email DE</label>
+        <locationX>50</locationX>
+        <locationY>396</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Set_Deletion_Email_Checkbox</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>EmailBodyDE</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Owner:User.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>EmailSubjectDE</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Deletion_Email_EN</name>
+        <label>Deletion Email EN</label>
+        <locationX>314</locationX>
+        <locationY>396</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Set_Deletion_Email_Checkbox</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>EmailBodyEN</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Owner:User.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>EmailSubjectEN</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <description>Checks whether the Lead Owner has German language selected or other.</description>
+        <name>Lead_Owner_DE_or_Other</name>
+        <label>Lead Owner DE or Other?</label>
+        <locationX>182</locationX>
+        <locationY>276</locationY>
+        <defaultConnector>
+            <targetReference>Deletion_Email_EN</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Owner Other</defaultConnectorLabel>
+        <rules>
+            <name>Owner_DE</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Owner:User.LanguageLocaleKey</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>de</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Deletion_Email_DE</targetReference>
+            </connector>
+            <label>Owner DE</label>
+        </rules>
+    </decisions>
+    <description>:: Sends a Notification Email that Lead will be deleted soon</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>EmailDeletionDate</name>
+        <dataType>String</dataType>
+        <expression>IF(LEN(TEXT(DAY({!$Record.Deletion_Date__c})))=1, &quot;0&quot;+TEXT(DAY({!$Record.Deletion_Date__c})),  TEXT(DAY({!$Record.Deletion_Date__c})))+&quot;.&quot;+IF(LEN(TEXT(MONTH({!$Record.Deletion_Date__c})))=1, &quot;0&quot;+TEXT(MONTH({!$Record.Deletion_Date__c})),  TEXT(MONTH({!$Record.Deletion_Date__c})))+&quot;.&quot;+TEXT(YEAR({!$Record.Deletion_Date__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>LeadLink</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Enterprise_Server_URL_100}, FIND(&apos;/services&apos;, {!$Api.Enterprise_Server_URL_100})) &amp; {!$Record.Id}</expression>
+    </formulas>
+    <interviewLabel>Lead Send Deletion Email Scheduled Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lead Send Deletion Email Scheduled Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Set_Deletion_Email_Checkbox</name>
+        <label>Set Deletion Email Checkbox</label>
+        <locationX>182</locationX>
+        <locationY>612</locationY>
+        <inputAssignments>
+            <field>Deletion_Email_Sent__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Lead_Owner_DE_or_Other</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Deletion_Email_Sent__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Lead_Age__c</field>
+            <operator>GreaterThanOrEqualTo</operator>
+            <value>
+                <numberValue>300.0</numberValue>
+            </value>
+        </filters>
+        <filters>
+            <field>IsConverted</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Lead</object>
+        <schedule>
+            <frequency>Daily</frequency>
+            <startDate>2023-02-24</startDate>
+            <startTime>22:00:00.000Z</startTime>
+        </schedule>
+        <triggerType>Scheduled</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>EmailBodyDE</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hallo {!$Record.Owner:User.FirstName} {!$Record.Owner:User.LastName}, 
+
+aus Datenschutzgründen wird dein Lead {!$Record.FirstName} {!$Record.LastName} am {!EmailDeletionDate} gelöscht.
+Sollte der Lead für Zeppelin und dem Ausbau der Geschäftsbeziehung Potenzial haben, konvertiere ihn bitte:
+{!LeadLink}
+
+Viele Grüße,
+dein Zeppelin Salesforce-Team
+
+Dies ist eine automatisch generierte E-Mail, bitte nicht antworten.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>EmailBodyEN</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hello {!$Record.Owner:User.FirstName} {!$Record.Owner:User.LastName}, 
+
+Because of data security your Lead {!$Record.FirstName} {!$Record.LastName} will be deleted on {!EmailDeletionDate}.
+In case the Lead has potential for Zeppelin, please convert it: 
+{!LeadLink}
+
+Best regards,
+Your Zeppelin Salesforce Team
+
+This is an automatically created Email. Please do not reply.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>EmailSubjectDE</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Dein Lead wird bald gelöscht</text>
+    </textTemplates>
+    <textTemplates>
+        <name>EmailSubjectEN</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Your Lead will be deleted soon</text>
+    </textTemplates>
+</Flow>

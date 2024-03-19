@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>5</activeVersionNumber>
+    <description>- Sends an Email to the User that has been removed from an Account Team</description>
+    <masterLabel>Account Team Member Before Delete Flow</masterLabel>
+</FlowDefinition>

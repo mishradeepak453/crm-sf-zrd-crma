@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_Company_Group_Compact</fullName>
+    <fields>Company_Group_ID__c</fields>
+    <fields>Name</fields>
+    <fields>Key_Account__c</fields>
+    <fields>Account_Manager__c</fields>
+    <fields>Payment_Terms__c</fields>
+    <label>ZR_Company Group_Compact</label>
+</CompactLayout>

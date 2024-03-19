@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Key_Account__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>1. Integration relevant - GRACE
+2. ZRD
+3.</description>
+    <externalId>false</externalId>
+    <label>Key Account</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Submissionsergebnis</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Submissionsergebnisse</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Submissionsergebnis</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Submissionsergebnissen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Submissionsergebnis</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Submissionsergebnisse</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Submissionsergebnis</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Submissionsergebnissen</value>
+    </caseValues>
+    <gender>Neuter</gender>
+    <layouts>
+        <layout>Submission Result Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Submissionsergebnis-Nr.</nameFieldLabel>
+    <validationRules>
+        <errorMessage>Du kannst keine Submissionsergebnisse von Projekten aus BIS bearbeiten.</errorMessage>
+        <name>ZR_PreventEditSubmissionResult_BIS</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Du kannst keine Submissionsergebnisse für Projekte aus BIS anlegen.</errorMessage>
+        <name>ZR_PreventNewSubmissionResult_BIS</name>
+    </validationRules>
+</CustomObjectTranslation>

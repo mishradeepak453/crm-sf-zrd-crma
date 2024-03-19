@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_Outpost_Office_Streetlenght_Account</fullName>
+    <active>true</active>
+    <description>SF-51 This validation rule should ensure, that the Outpost Office Street does not have more than 35 characters.</description>
+    <errorConditionFormula>LEN (ShippingStreet) &gt; 35
+&amp;&amp; ISPICKVAL( Core_Customer_Type__c, &quot;7&quot;)
+&amp;&amp; $Permission.Core_Account_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>ShippingStreet</errorDisplayField>
+    <errorMessage>Please enter less than 35 characters into the field Outpost Office Street.</errorMessage>
+</ValidationRule>

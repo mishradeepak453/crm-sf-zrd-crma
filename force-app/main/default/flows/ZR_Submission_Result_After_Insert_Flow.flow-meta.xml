@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>English_Email</name>
+        <label>English Email</label>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Project__r.Owner:User.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>EnglishSubjectTitle</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>EnglishEmailBody</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Project__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.Project__r.OwnerId</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>German_Email</name>
+        <label>German Email</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Project__r.Owner:User.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>GermanEmailSubject</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>GermanEmailBody</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>relatedRecordId</name>
+            <value>
+                <elementReference>$Record.Project__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recipientId</name>
+            <value>
+                <elementReference>$Record.Project__r.OwnerId</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>57.0</apiVersion>
+    <decisions>
+        <name>Is_the_Project_Owner_the_Sales_Excellence_Queue</name>
+        <label>Is the Project Owner the Sales Excellence Queue?</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Sales_Excellence_Queue</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Project__r.Owner:Group.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Sales Excellence</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Sales Excellence Queue Owner</label>
+        </rules>
+        <rules>
+            <name>User_is_Owner</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Project__r.Owner:Group.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Owner_Language</targetReference>
+            </connector>
+            <label>User is Owner</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_the_Submission_Result_the_Winner</name>
+        <label>Is the Submission Result the Winner?</label>
+        <locationX>710</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Submission_Result_is_Winner_and_infobau_is_Source</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Winner__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Project__r.Exact_Source__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>infoBau</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Is_the_Project_Owner_the_Sales_Excellence_Queue</targetReference>
+            </connector>
+            <label>Submission Result is Winner and infobau is Source</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Owner_Language</name>
+        <label>Owner Language</label>
+        <locationX>314</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>English_Owner</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Project__r.Owner:User.LanguageLocaleKey</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>en_US</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>English_Email</targetReference>
+            </connector>
+            <label>English Owner</label>
+        </rules>
+        <rules>
+            <name>German_Owner</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Project__r.Owner:User.LanguageLocaleKey</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>de</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>German_Email</targetReference>
+            </connector>
+            <label>German Owner</label>
+        </rules>
+    </decisions>
+    <description>:: Sends an Email to the Project Owner of the Submission Result if it is marked as winner</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>Project_Link</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Enterprise_Server_URL_100}, FIND(&apos;/services&apos;, {!$Api.Enterprise_Server_URL_100})) &amp; {!$Record.Project__c}</expression>
+    </formulas>
+    <interviewLabel>Submission Result After Insert Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Submission Result After Insert Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>584</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_the_Submission_Result_the_Winner</targetReference>
+        </connector>
+        <object>Submission_Result__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>EnglishEmailBody</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hello {!$Record.Project__r.Owner:User.FirstName} {!$Record.Project__r.Owner:User.LastName},
+
+for the Project {!$Record.Project__r.Name} submission results have been released. 
+The winner of the submission is {!$Record.Company__c}.
+Log in to learn about the details and to identify possible sales potential {!Project_Link} .
+For optimal transparency connect the winning Account to the Project.
+
+Best regards,
+your Zeppelin Salesforce Team
+
+This is an automatic Email, please do not respond.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>EnglishSubjectTitle</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>There is a submission winner for {!$Record.Project__r.Name}</text>
+    </textTemplates>
+    <textTemplates>
+        <name>GermanEmailBody</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hallo {!$Record.Project__r.Owner:User.FirstName} {!$Record.Project__r.Owner:User.LastName},
+
+bei dem Projekt {!$Record.Project__r.Name} wurden die Submissionsergebnisse veröffentlicht. 
+Gewinner der Submission ist das Unternehmen {!$Record.Company__c}.
+Logge dich bei Salesforce ein, um mehr Details zu erfahren und um Vertriebspotenziale zu identifizieren {!Project_Link} .
+Für optimale Transparenz verknüpfe den Account bei dem Projekt.
+
+Liebe Grüße
+dein Salesforce Team
+
+Dies ist eine automatische E-Mail. Bitte nicht antworten.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>GermanEmailSubject</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Bei Projekt {!$Record.Project__r.Name} gibt es einen Submissionsgewinner!</text>
+    </textTemplates>
+</Flow>

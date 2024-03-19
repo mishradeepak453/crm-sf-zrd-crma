@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Risikoklassenbezeichnung</label>
+    <name>Risk_Class_Denomination__c</name>
+    <picklistValues>
+        <masterLabel>Above average default risk</masterLabel>
+        <translation>Überdurchschnittliches Ausfallrisiko</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Average default risk</masterLabel>
+        <translation>Durchschnittliches Ausfallrisiko</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Below average default risk</masterLabel>
+        <translation>Unterdurchschnittliches Ausfallrisiko</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clearly above average default risk</masterLabel>
+        <translation>Deutlich überdurchschnittliches Ausfallrisiko</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Default</masterLabel>
+        <translation>Ausfall</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Far above average default risk</masterLabel>
+        <translation>Weit überdurchschnittliches Ausfallrisiko</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low default risk</masterLabel>
+        <translation>Geringes Ausfallrisiko</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Very high default risk</masterLabel>
+        <translation>Sehr hohes Ausfallrisiko</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Very low default risk</masterLabel>
+        <translation>Sehr geringes Ausfallrisiko</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Core_Politically_exposed_Person__c</fullName>
+    <description>1. Not integration relevant
+2. Core
+3.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>A politically exposed person is a person, who, due to their position in the government or in the public domain or their close connection to a person like that (spouse), could potentially be corruptible.</inlineHelpText>
+    <label>Politically exposed Person</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>No</fullName>
+                <default>false</default>
+                <label>No</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_FirstNameLenght</fullName>
+    <active>true</active>
+    <description>SF-844 This validation rule ensures, that the First Name of a Contact is not longer than 20 characters.</description>
+    <errorConditionFormula>LEN(FirstName)&gt; 20
+&amp;&amp; $Permission.Core_Contact_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>FirstName</errorDisplayField>
+    <errorMessage>Please do not enter more than 20 characters for the First Name of a Contact.</errorMessage>
+</ValidationRule>

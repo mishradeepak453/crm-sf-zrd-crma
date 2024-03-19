@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>1. Not integration relevant 2.ZRD 3. SF-809</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Account Team Member Notification</name>
+    <style>none</style>
+    <subject>Du wurdest einem Account Team hinzugefügt!</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

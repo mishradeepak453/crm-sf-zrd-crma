@@ -1,0 +1,12 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true
+    }
+  ],
+  "name": "CRMA",
+  "namespace": "",
+  "sfdcLoginUrl": "https://zeppelin-zr--zrfullcrma.sandbox.my.salesforce.com",
+  "sourceApiVersion": "58.0"
+}

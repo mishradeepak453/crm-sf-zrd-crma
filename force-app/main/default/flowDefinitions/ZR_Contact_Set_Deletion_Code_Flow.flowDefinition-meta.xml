@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>2</activeVersionNumber>
+    <description>- Started via Button on the Contact
+- Sets the Deletion Code on the Contact</description>
+    <masterLabel>Contact Set Deletion Code Flow</masterLabel>
+</FlowDefinition>

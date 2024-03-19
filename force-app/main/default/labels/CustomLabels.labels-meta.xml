@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>DUP_Button_1_Label</fullName>
+        <categories>DUP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DUP_Button_1_Label</shortDescription>
+        <value>Previous</value>
+    </labels>
+    <labels>
+        <fullName>DUP_Button_2_Label</fullName>
+        <categories>DUP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DUP_Button_2_Label</shortDescription>
+        <value>No Duplicate - Create New Project</value>
+    </labels>
+    <labels>
+        <fullName>DUP_Button_3_Label</fullName>
+        <categories>DUP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DUP_Button_3_Label</shortDescription>
+        <value>Cancel Creation</value>
+    </labels>
+    <labels>
+        <fullName>DUP_Loading_Message</fullName>
+        <categories>DUP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DUP_Loading_Message</shortDescription>
+        <value>Loading...</value>
+    </labels>
+    <labels>
+        <fullName>DUP_New_Project_Header</fullName>
+        <categories>DUP</categories>
+        <language>de</language>
+        <protected>false</protected>
+        <shortDescription>DUP_New_Project_Header</shortDescription>
+        <value>New Project</value>
+    </labels>
+    <labels>
+        <fullName>DUP_Open_Record</fullName>
+        <categories>DUP</categories>
+        <language>de</language>
+        <protected>false</protected>
+        <shortDescription>DUP_Open_Record</shortDescription>
+        <value>Open Record</value>
+    </labels>
+    <labels>
+        <fullName>DUP_Project_Building_Owner</fullName>
+        <categories>DUP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DUP_Project_Building_Owner</shortDescription>
+        <value>Building Owner</value>
+    </labels>
+    <labels>
+        <fullName>DUP_Project_City</fullName>
+        <categories>DUP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DUP_Project_City</shortDescription>
+        <value>City</value>
+    </labels>
+    <labels>
+        <fullName>DUP_Project_Name</fullName>
+        <categories>DUP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DUP_Project_Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>DUP_Project_Postal_Code</fullName>
+        <categories>DUP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DUP_Project_Postal_Code</shortDescription>
+        <value>Postal Code</value>
+    </labels>
+    <labels>
+        <fullName>DUP_Project_Potential</fullName>
+        <categories>DUP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DUP_Project_Potential</shortDescription>
+        <value>Potential</value>
+    </labels>
+    <labels>
+        <fullName>DUP_Project_Start</fullName>
+        <categories>DUP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DUP_Project_Start</shortDescription>
+        <value>Start</value>
+    </labels>
+    <labels>
+        <fullName>DUP_Project_Street</fullName>
+        <categories>DUP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DUP_Project_Street</shortDescription>
+        <value>Street</value>
+    </labels>
+    <labels>
+        <fullName>DUP_Project_Total_Volume</fullName>
+        <categories>DUP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DUP_Project_Total_Volume</shortDescription>
+        <value>Total Volume</value>
+    </labels>
+    <labels>
+        <fullName>DUP_Table_Header_Duplicates</fullName>
+        <categories>DUP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DUP_Table_Header_Duplicates</shortDescription>
+        <value>Possible Duplicates</value>
+    </labels>
+    <labels>
+        <fullName>DUP_Table_Header_Original</fullName>
+        <categories>DUP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DUP_Table_Header_Original</shortDescription>
+        <value>Original (new Project to be created)</value>
+    </labels>
+    <labels>
+        <fullName>Error_Email_Sender</fullName>
+        <categories>Error handling</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Email Sender</shortDescription>
+        <value>Salesforce Development</value>
+    </labels>
+    <labels>
+        <fullName>Error_Email_Subject</fullName>
+        <categories>Error handling</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Email Subject</shortDescription>
+        <value>Errors in</value>
+    </labels>
+    <labels>
+        <fullName>Error_Email_Text</fullName>
+        <categories>Error handling</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Email Text</shortDescription>
+        <value>The following errors occurred and were logged:</value>
+    </labels>
+    <labels>
+        <fullName>Error_Ibau_Backlink</fullName>
+        <categories>UI Error</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Ibau Backlink</shortDescription>
+        <value>Error on link generation. Please contact your Salesforce administrator.</value>
+    </labels>
+    <labels>
+        <fullName>Map_Comp_Account_Headline</fullName>
+        <categories>Map Component Labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Map Comp Account Headline</shortDescription>
+        <value>Display Accounts on Map</value>
+    </labels>
+    <labels>
+        <fullName>Map_Comp_Combobox_Default</fullName>
+        <categories>Map Component Labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Map Comp Combobox Default</shortDescription>
+        <value>Select List View</value>
+    </labels>
+    <labels>
+        <fullName>Map_Comp_Combobox_Label</fullName>
+        <categories>Map Component Labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Map Comp Combobox Label</shortDescription>
+        <value>Select List View to Display on Map</value>
+    </labels>
+    <labels>
+        <fullName>Map_Comp_Location_Button_Headline</fullName>
+        <categories>Map Component Labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Map Comp Location Button Headline</shortDescription>
+        <value>Or use your current location to display records in your area</value>
+    </labels>
+    <labels>
+        <fullName>Map_Comp_Location_Button_Label</fullName>
+        <categories>Map Component Labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Map Comp Location Button Label</shortDescription>
+        <value>Current Location</value>
+    </labels>
+    <labels>
+        <fullName>Map_Comp_Open_Map_Button_Label</fullName>
+        <categories>Map Component Labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Map Comp Open Map Button Label</shortDescription>
+        <value>Open Map</value>
+    </labels>
+    <labels>
+        <fullName>Map_Comp_Project_Headline</fullName>
+        <categories>Map Component Labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Map Comp Project Headling</shortDescription>
+        <value>Display Projects on Map</value>
+    </labels>
+    <labels>
+        <fullName>Prevent_Account_Contact_Deletion</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Prevent Account Contact Deletion</shortDescription>
+        <value>You can not delete an Account Contact Relationship. Please use the Deletion Code to mark a relation as incorrect.</value>
+    </labels>
+    <labels>
+        <fullName>SAML_JIT_Field_Map</fullName>
+        <categories>JITHandler</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SAML_JIT_Field_Map</shortDescription>
+        <value>{ &quot;givenname&quot;: &quot;FirstName&quot;, &quot;surname&quot;: &quot;LastName&quot;, &quot;emailaddress&quot;: &quot;Email&quot;, &quot;samaccountname&quot;: &quot;AD_Login_Name__c&quot; }</value>
+    </labels>
+    <labels>
+        <fullName>User_Display_Comp_Email_Column</fullName>
+        <categories>User Display Component Labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>User Display Comp Email Column</shortDescription>
+        <value>Email</value>
+    </labels>
+    <labels>
+        <fullName>User_Display_Comp_Name_Column</fullName>
+        <categories>User Display Component Labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>User Display Comp Name Column</shortDescription>
+        <value>Full Name</value>
+    </labels>
+    <labels>
+        <fullName>User_Display_Comp_Role_Column</fullName>
+        <categories>User Display Component Labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>User Display Comp Role Column</shortDescription>
+        <value>Role in Territory</value>
+    </labels>
+    <labels>
+        <fullName>User_Display_Comp_Tab</fullName>
+        <categories>User Display Component Labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>User Display Comp Tab</shortDescription>
+        <value>Users in Assigned Territories</value>
+    </labels>
+    <labels>
+        <fullName>User_Display_Comp_Territory_Column</fullName>
+        <categories>User Display Component Labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>User Display Comp Territory Column</shortDescription>
+        <value>Territory</value>
+    </labels>
+</CustomLabels>

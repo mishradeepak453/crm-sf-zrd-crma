@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Core_Account_Bypass_Validation_Rules</name>
+    </customPermissions>
+    <description>1. Integration relevant
+2. Core
+3. This Permission Set is used to bypass Validation Rules on the Account</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Core Account Bypass Validation Rules</label>
+</PermissionSet>

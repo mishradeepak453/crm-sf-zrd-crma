@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Max_One_Building_Owner_Per_Project</fullName>
+    <active>true</active>
+    <description>A maximum of one building owner is allowed per project.
+This applies to non-admin/integration users only.</description>
+    <errorConditionFormula>AND(
+  NOT(CONTAINS($Profile.Name, &apos;System Admin&apos;)),
+  NOT(CONTAINS($Profile.Name, &apos;Systemadmin&apos;)),
+  INCLUDES(Account_Role__c, &apos;3&apos;),
+  NOT(ISBLANK(Project__r.Building_Owner_cleaned__c)) 
+)</errorConditionFormula>
+    <errorMessage>A maximum of one building owner is allowed per project.</errorMessage>
+</ValidationRule>

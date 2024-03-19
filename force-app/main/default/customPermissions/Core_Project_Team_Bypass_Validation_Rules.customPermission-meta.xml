@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>1. Integration relevant
+2. Core
+3. This Permission is used to bypass Validation Rules on the Project Team</description>
+    <isLicensed>false</isLicensed>
+    <label>Project Team Bypass Validation Rules</label>
+</CustomPermission>

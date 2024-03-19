@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_Mandatory_Address_Fields</fullName>
+    <active>true</active>
+    <description>SF-742. Makes sure that Country, Postal Code and City are filled when creating a Project.</description>
+    <errorConditionFormula>(ISBLANK(TEXT( Project_Address__CountryCode__s )) || ISBLANK( Project_Address__PostalCode__s) || ISBLANK(Project_Address__City__s ))
+&amp;&amp;  $Permission.Core_Project_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorMessage>Project Postal Code, City and Country are mandatory fields.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Name Überbringer(in) Zeppelin</label>
+    <name>Core_Bearer_Name_Zeppelin__c</name>
+    <relationshipLabel>Zuwendungen (Überbringer(in) Zeppelin)</relationshipLabel>
+</CustomFieldTranslation>

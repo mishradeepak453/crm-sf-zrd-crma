@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>ARGE Customer</layout>
+        <sections>
+            <label>Vorgänge</label>
+            <section>Agreements</section>
+        </sections>
+        <sections>
+            <label>Verträge / Preislisten</label>
+            <section>Contracts / Price Lists</section>
+        </sections>
+        <sections>
+            <label>Kreditmanagement</label>
+            <section>Credit Management</section>
+        </sections>
+        <sections>
+            <label>Rechnung</label>
+            <section>Invoice</section>
+        </sections>
+        <sections>
+            <label>Fakturierung</label>
+            <section>Invoice Processing</section>
+        </sections>
+        <sections>
+            <label>Marketing</label>
+            <section>Marketing</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>ARGE Prospect</layout>
+        <sections>
+            <label>Vorgänge</label>
+            <section>Agreements</section>
+        </sections>
+        <sections>
+            <label>Verträge / Preislisten</label>
+            <section>Contracts / Price Lists</section>
+        </sections>
+        <sections>
+            <label>Kreditmanagement</label>
+            <section>Credit Management</section>
+        </sections>
+        <sections>
+            <label>Rechnung</label>
+            <section>Invoice</section>
+        </sections>
+        <sections>
+            <label>Fakturierung</label>
+            <section>Invoice Processing</section>
+        </sections>
+        <sections>
+            <label>Marketing</label>
+            <section>Marketing</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Standard Account Customer</layout>
+        <sections>
+            <label>Vorgänge</label>
+            <section>Agreements</section>
+        </sections>
+        <sections>
+            <label>Verträge / Preislisten</label>
+            <section>Contracts / Price Lists</section>
+        </sections>
+        <sections>
+            <label>Kreditmanagement</label>
+            <section>Credit Management</section>
+        </sections>
+        <sections>
+            <label>Rechnung</label>
+            <section>Invoice</section>
+        </sections>
+        <sections>
+            <label>Fakturierung</label>
+            <section>Invoice Processing</section>
+        </sections>
+        <sections>
+            <label>Marketing</label>
+            <section>Marketing</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Standard Account Prospect</layout>
+        <sections>
+            <label>Vorgänge</label>
+            <section>Agreements</section>
+        </sections>
+        <sections>
+            <label>Verträge / Preislisten</label>
+            <section>Contracts / Price Lists</section>
+        </sections>
+        <sections>
+            <label>Kreditmanagement</label>
+            <section>Credit Management</section>
+        </sections>
+        <sections>
+            <label>Rechnung</label>
+            <section>Invoice</section>
+        </sections>
+        <sections>
+            <label>Fakturierung</label>
+            <section>Invoice Processing</section>
+        </sections>
+        <sections>
+            <label>Marketing</label>
+            <section>Marketing</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Mir zuweisen</label>
+        <name>Assign_Myself</name>
+    </quickActions>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Neuen Inhaber zuweisen</label>
+        <name>Assign_new_Owner</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Child_Account</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Contact_from_Account</name>
+    </quickActions>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Account löschen</label>
+        <name>Delete_Account</name>
+    </quickActions>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Vertriebsinformation</label>
+        <name>Sales_Information</name>
+    </quickActions>
+    <recordTypes>
+        <description>Layout für ARGE-Debitoren-Accounts</description>
+        <label>ARGE Debitor</label>
+        <name>ZR_ARGE_Customer</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Layout für ARGE-Interessenten Accounts</description>
+        <label>ARGE Interessent</label>
+        <name>ZR_ARGE_Prospect</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Layout für Debitoren-Accounts</description>
+        <label>Account Debitor</label>
+        <name>ZR_Standard_Account_Customer</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Layout für Interessenten-Accounts</description>
+        <label>Account Interessent</label>
+        <name>ZR_Standard_Account_Prospect</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage>Bitte trage weniger als 30 Zeichen in das Stadtfeld der Firmenadresse ein.</errorMessage>
+        <name>Core_Company_Citylenght_Account</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage maximal 40 Zeichen in dieses Feld ein. Zusätzliche Zeichen können in den Feldern Name2, Name3 und Name4 ergänzt werden.</errorMessage>
+        <name>ZR_Acccountnamelength</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Der Accountname von Debitoren kann nicht geändert werden. Bitte kontaktiere die KV und frage dort eine Änderung an.,</errorMessage>
+        <name>ZR_AccountNameCustomerChange</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte füge folgende Werte für die Firmenanschrift hinzu: Straße, Postleitzahl, Stadt, Land</errorMessage>
+        <name>ZR_BillingAddressMandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage weniger als 35 Zeichen in das Straßenfeld der Firmenadresse ein.</errorMessage>
+        <name>ZR_Company_Streetlenght_Account</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage weniger als 60 Zeichen ein.</errorMessage>
+        <name>ZR_Emaillenght_Account</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage eine valide Faxnummer ein, diese sollte mit einem &apos;+&apos; und der Ländervorwahl beginnen, keine Buchstaben oder Sonderzeichen enthalten und mindestens 10, maximal 20 Zeichen lang sein. Beispiel: +49123456789</errorMessage>
+        <name>ZR_Faxnumber_DIN5008_Account</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage weniger als 30 Zeichen in das Stadtfeld der Außenstelle ein.</errorMessage>
+        <name>ZR_Outpost_Citylenght_Account</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage weniger als 35 Zeichen in das Straßenfeld der Außenstelle ein.</errorMessage>
+        <name>ZR_Outpost_Office_Streetlenght_Account</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage eine valide Telefonnummer ein, diese sollte mit einem &apos;+&apos; und der Ländervorwahl beginnen, keine Buchstaben oder Sonderzeichen enthalten und mindestens 10, maximal 20 Zeichen lang sein. Beispiel: +49123456789</errorMessage>
+        <name>ZR_Phonenumber_DIN5008_Account</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Möchtest du den Account wirklich ohne E-Mail speichern? Dann bitte mit „Speichern ohne E-Mail,“ bestätigen und bei Bekanntwerden nachtragen.</errorMessage>
+        <name>ZR_SaveWithoutEmailAddress</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte gebe das richtige Format für die Umsatzsteuer-ID ein. Diese sollte mit dem zweistelligen Ländercode „AT“ beginnen, gefolgt von dem Großbuchstaben „U“ und acht Zahlen. Beispiel: ATU99999999</errorMessage>
+        <name>ZR_VAT_Format_Account_AT</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte gebe das richtige Format für die Umsatzsteuer-ID ein. Diese sollte mit dem zweistelligen Ländercode beginnen, gefolgt von neun oder zehn Zahlen. Beispiel: BG999999999</errorMessage>
+        <name>ZR_VAT_Format_Account_BG</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte gebe das richtige Format für die Umsatzsteuer-ID ein. Diese sollte mit dem dreistelligen Ländercode „CHE“ beginnen, gefolgt von einem Bindestrich, drei Zahlen, einem Punkt, drei Zahlen, einem Punkt und drei weiteren Zahlen. Beispiel: CHE-999.999.999</errorMessage>
+        <name>ZR_VAT_Format_Account_CH</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte gebe das richtige Format für die Umsatzsteuer-ID ein. Diese sollte mit dem zweistelligen Ländercode beginnen, gefolgt von acht Zahlen und einem Großbuchstaben. Beispiel: CY99999999X</errorMessage>
+        <name>ZR_VAT_Format_Account_CY</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte gebe das richtige Format für die Umsatzsteuer-ID ein. Diese sollte mit dem zweistelligen Ländercode beginnen, gefolgt von acht, neun oder zehn Zahlen. Beispiel: CZ99999999</errorMessage>
+        <name>ZR_VAT_Format_Account_CZ</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte gebe das richtige Format für die Umsatzsteuer-ID ein. Diese sollte mit dem zweistelligen Ländercode beginnen, gefolgt von neun Zahlen: Beispiel: DE999999999</errorMessage>
+        <name>ZR_VAT_Format_Account_DE_EE_PT</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte gebe das richtige Format für die Umsatzsteuer-ID ein. Diese sollte mit dem zweistelligen Ländercode beginnen, gefolgt von acht Zahlen. Beispiel: DK99999999</errorMessage>
+        <name>ZR_VAT_Format_Account_DK_HU_LU_MT_SI_FI</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte gebe das richtige Format für die Umsatzsteuer-ID ein. Diese sollte mit den Großbuchstaben „ES“ beginnen, gefolgt von einer Zahl oder einem Großbuchstaben, sieben Zahlen und einem Großbuchstaben oder einer Zahl. Die erste und letzte Stelle können nicht beide Zahlen sein. Beispiel: ESX999999999</errorMessage>
+        <name>ZR_VAT_Format_Account_ES</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte gebe das richtige Format für die Umsatzsteuer-ID ein. Diese sollte mit dem zweistelligen Ländercode beginnen, gefolgt von zwei Großbuchstaben und neun weiteren Zahlen. Beispiel: FRXX999999999</errorMessage>
+        <name>ZR_VAT_Format_Account_FR</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte gebe das richtige Format für die Umsatzsteuer-ID ein. Diese sollte mit dem zweistelligen Ländercode beginnen, gefolgt von neun oder zwölf Zahlen. Beispiel: GB999999999</errorMessage>
+        <name>ZR_VAT_Format_Account_GB</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte gebe das richtige Format für die Umsatzsteuer-ID ein. Diese sollte mit den zwei Großbuchstaben „EL“ beginnen, gefolgt von neun Zahlen. Beispiel: EL999999999</errorMessage>
+        <name>ZR_VAT_Format_Account_GR</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte gebe das richtige Format für die Umsatzsteuer-ID ein. Diese sollte mit dem zweistelligen Ländercode beginnen, gefolgt von elf Zahlen. Beispiel: HR99999999999</errorMessage>
+        <name>ZR_VAT_Format_Account_HR_IT_LV</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte gebe das richtige Format für die Umsatzsteuer-ID ein. Diese sollte mit dem zweistelligen Ländercode beginnen, gefolgt von einem Großbuchstaben oder einer Zahl, fünf Zahlen und einem Großbuchstaben oder sollte aus sieben Zahlen und zwei Buchstaben bestehen. Beispiel: IE9X99999X oder IE9999999AA</errorMessage>
+        <name>ZR_VAT_Format_Account_IE</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte gebe das richtige Format für die Umsatzsteuer-ID ein. Diese sollte mit dem zweistelligen Ländercode beginnen, gefolgt von neun oder zwölf Zahlen. Beispiel: LT999999999 oder LT999999999999</errorMessage>
+        <name>ZR_VAT_Format_Account_LT</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte gebe das richtige Format für die Umsatzsteuer-ID ein. Diese sollte mit dem zweistelligen Ländercode beginnen, gefolgt von zwischen zwei und zehn Zahlen. Beispiel: RO22222222</errorMessage>
+        <name>ZR_VAT_Format_Account_RO</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte gebe das richtige Format für die Umsatzsteuer-ID ein. Diese sollte mit dem zweistelligen Ländercode beginnen, gefolgt von zwölf Zahlen. Beispiel: SE999999999999</errorMessage>
+        <name>ZR_VAT_Format_Account_SE_NL</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte gebe das richtige Format für die Umsatzsteuer-ID ein. Diese sollte mit dem zweistelligen Ländercode beginnen, gefolgt von zehn Zahlen. Beispiel: SK9999999999</errorMessage>
+        <name>ZR_VAT_Format_Account_SK_PL_BE</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage maximal als 60 Zeichen ein.</errorMessage>
+        <name>ZR_Websitelenght_Account</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus drei Zahlen bestehen. Beispiel: 999</errorMessage>
+        <name>ZR_ZipCode_Validation_999</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus vier Zahlen bestehen. Beispiel: 9999</errorMessage>
+        <name>ZR_ZipCode_Validation_9999</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus fünf Zahlen bestehen. Beispiel: 99999</errorMessage>
+        <name>ZR_ZipCode_Validation_99999</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus sechs Zahlen bestehen. Beispiel: 999999</errorMessage>
+        <name>ZR_ZipCode_Validation_999999</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit drei Zahlen beginnen, gefolgt von einem Leerzeichen und zwei weiteren Zahlen. Beispiel: 999 99</errorMessage>
+        <name>ZR_ZipCode_Validation_999_99</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus zwei Großbuchstaben gefolgt von drei Zahlen bestehen. Beispiel: AA999</errorMessage>
+        <name>ZR_ZipCode_Validation_AD</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus vier oder sechs Zahlen bestehen. Beispiel: 9999 oder 999999</errorMessage>
+        <name>ZR_ZipCode_Validation_AZ</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus zwei Großbuchstaben und vier Zahlen bestehen. Beispiel: AA9999</errorMessage>
+        <name>ZR_ZipCode_Validation_BN</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus acht Zahlen bestehen und kann zwischen der fünften und sechsten Zahl einen Bindestrich haben. Beispiel: 99999999 oder 99999-999</errorMessage>
+        <name>ZR_ZipCode_Validation_BR</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit einem Großbuchstaben beginnen, gefolgt von einer Zahl, einem Großbuchstaben, einem Leerzeichen, einer weiteren Zahl, einem Großuchstaben und optional einer weiteren Zahl. Beispiel: A9A 9A oder A9A 9A9</errorMessage>
+        <name>ZR_ZipCode_Validation_CA</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte einem dieser Beispiele folgen: A9 9AA, AA9 9AA, AA99 9AA, A99 9AA, A9A 9AA oder AA9A 9AA.</errorMessage>
+        <name>ZR_ZipCode_Validation_GB</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte einem dieser Beispiele folgen: AA9 9AA oder AA99 9AA</errorMessage>
+        <name>ZR_ZipCode_Validation_GG</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus fünf oder sieben Zahlen bestehen. Beispiel: 99999 oder 9999999</errorMessage>
+        <name>ZR_ZipCode_Validation_IL</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit zwei Zahlen beginnen, gefolgt von einem Großbuchstaben, einem Leerzeichen, einer Zahl und zwei weiteren Großbuchstaben. Beispiel: AA9 9AA</errorMessage>
+        <name>ZR_ZipCode_Validation_JE</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit drei Zahlen beginnen, gefolgt von einem Bindestrich und vier weiteren Zahlen. Beispiel: 999-9999</errorMessage>
+        <name>ZR_ZipCode_Validation_JP</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Dieser sollte mit drei Zahlen beginnen, gefolgt von einem Bindestrich und drei weiteren Zahlen. Beispiel: 999-999</errorMessage>
+        <name>ZR_ZipCode_Validation_KR</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus fünf oder sechs Zahlen bestehen. Beispiel: 99999 oder 999999</errorMessage>
+        <name>ZR_ZipCode_Validation_MN</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus vier oder fünf Zahlen bestehen. Beispiel: 9999 oder 99999</errorMessage>
+        <name>ZR_ZipCode_Validation_MV_MX</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit vier Zahlen beginnen, optional gefolgt von einem Leerzeichen und zwei Großbuchstaben. Beispiel: 9999 oder 9999 AA</errorMessage>
+        <name>ZR_ZipCode_Validation_NL</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit zwei Zahlen beginnen, gefolgt von einem Bindestrich und vier weiteren Zahlen. Beispiel: 99-9999</errorMessage>
+        <name>ZR_ZipCode_Validation_PL</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit vier Zahlen beginnen, gefpögt von einem Bindestrich und drei weiteren Zahlen. Beispiel: 9999-999</errorMessage>
+        <name>ZR_ZipCode_Validation_PT</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus einem Großbuchstaben gefolgt von drei Zahlen bestehen. Beispiel: A999</errorMessage>
+        <name>ZR_ZipCode_Validation_SZ</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus drei oder fünf Zahlen bestehen. Beispiel: 999 oder 99999</errorMessage>
+        <name>ZR_ZipCode_Validation_TW</name>
+    </validationRules>
+    <webLinks>
+        <label></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label>Kartendarstellung</label>
+        <name>Open_Map</name>
+    </webLinks>
+</CustomObjectTranslation>

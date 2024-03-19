@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Project Account Lead Relation</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Project Account Lead Relations</value>
+    </caseValues>
+    <gender>Neuter</gender>
+    <layouts>
+        <layout>Project Account Lead Relation Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage>Es kann maximal ein Bauherr pro Projekt hinzugefügt werden.</errorMessage>
+        <name>Max_One_Building_Owner_Per_Project</name>
+    </validationRules>
+</CustomObjectTranslation>

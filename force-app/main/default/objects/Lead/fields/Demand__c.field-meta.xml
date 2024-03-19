@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Demand__c</fullName>
+    <description>1. Integration relevant (XFAIR)
+2. ZRD
+3. SF-323</description>
+    <externalId>false</externalId>
+    <label>Demand</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Construction Devices</fullName>
+                <default>false</default>
+                <label>Construction Devices</label>
+            </value>
+            <value>
+                <fullName>Construction Logistics</fullName>
+                <default>false</default>
+                <label>Construction Logistics</label>
+            </value>
+            <value>
+                <fullName>Construction Machinery</fullName>
+                <default>false</default>
+                <label>Construction Machinery</label>
+            </value>
+            <value>
+                <fullName>Electricity, Climate, Water</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Electricity, Climate, Water</label>
+            </value>
+            <value>
+                <fullName>Elevators</fullName>
+                <default>false</default>
+                <label>Elevators</label>
+            </value>
+            <value>
+                <fullName>Energy Climate Water</fullName>
+                <default>false</default>
+                <label>Energy, Climate, Water</label>
+            </value>
+            <value>
+                <fullName>Forklifts</fullName>
+                <default>false</default>
+                <label>Forklifts</label>
+            </value>
+            <value>
+                <fullName>Industrial Equipment</fullName>
+                <default>false</default>
+                <label>Industrial Equipment</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Room Systems</fullName>
+                <default>false</default>
+                <label>Room Systems</label>
+            </value>
+            <value>
+                <fullName>TS</fullName>
+                <default>false</default>
+                <label>TS</label>
+            </value>
+            <value>
+                <fullName>Vehicles</fullName>
+                <default>false</default>
+                <label>Vehicles</label>
+            </value>
+            <value>
+                <fullName>Working Platforms</fullName>
+                <default>false</default>
+                <label>Working Platforms</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

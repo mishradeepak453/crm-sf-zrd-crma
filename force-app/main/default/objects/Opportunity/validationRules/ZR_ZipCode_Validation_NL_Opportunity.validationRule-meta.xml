@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_NL_Opportunity</fullName>
+    <active>true</active>
+    <description>SF-93 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country. Format (&quot;\\d{4}[ ][A-Z]{2}&quot;) or (&quot;\\d{4}&quot;)). Example: 9999 AA or 9999</description>
+    <errorConditionFormula>IF(AND(
+NOT(ISBLANK( Construction_Site_Address__PostalCode__s )),
+ISPICKVAL( Construction_Site_Address__CountryCode__s , &quot;NL&quot;)
+),
+NOT(
+OR(
+REGEX(Construction_Site_Address__PostalCode__s ,(&quot;\\d{4}[ ][A-Z]{2}&quot;)),
+REGEX(Construction_Site_Address__PostalCode__s ,(&quot;\\d{4}&quot;))
+)
+),
+FALSE)
+&amp;&amp;  $Permission.Core_Opportunity_Bypass_Validation_Rules  = FALSE</errorConditionFormula>
+    <errorDisplayField>Construction_Site_Address__PostalCode__s</errorDisplayField>
+    <errorMessage>Please enter a valid format for the Zip Code! This should start with four numbers optionally followed by a space and two uppercase letters. Example: 9999 or 9999 AA</errorMessage>
+</ValidationRule>

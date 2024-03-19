@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Excellence_is_Owner__c</fullName>
+    <description>1. Not integration relevant
+2. ZR
+3. SF-587 Helper Field to display &quot;Assign new Owner&quot; Quick Action only if the Sales Excellence Queue is the Owner of the project</description>
+    <externalId>false</externalId>
+    <formula>Owner:Queue.QueueName = &quot;Sales Excellence&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Sales Excellence is Owner</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

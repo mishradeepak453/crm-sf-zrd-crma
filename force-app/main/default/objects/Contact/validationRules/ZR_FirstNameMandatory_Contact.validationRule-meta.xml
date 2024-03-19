@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_FirstNameMandatory_Contact</fullName>
+    <active>true</active>
+    <description>SF-99 This rule ensures, that the First Name on the contact is always filled.</description>
+    <errorConditionFormula>ISBLANK(FirstName)
+&amp;&amp; $Permission.Core_Contact_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>FirstName</errorDisplayField>
+    <errorMessage>Please enter a First Name.</errorMessage>
+</ValidationRule>

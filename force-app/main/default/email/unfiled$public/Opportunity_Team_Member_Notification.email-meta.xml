@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>1. Not integration relevant, 2. ZR, 3. SF-120</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Opportunity Team Member Notification</name>
+    <style>none</style>
+    <subject>Du wurdest einem Opportunity Team hinzugefügt!</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

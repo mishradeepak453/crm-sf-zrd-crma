@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_GB</fullName>
+    <active>true</active>
+    <description>SF-113 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country.</description>
+    <errorConditionFormula>IF(
+AND(
+NOT(ISBLANK(MailingPostalCode)),
+MailingCountry == &quot;GB&quot;),
+NOT(
+OR(
+REGEX(MailingPostalCode, (&quot;[A-Z][0-9][ ][0-9][A-Z][A-Z]&quot;)),
+REGEX(MailingPostalCode, (&quot;[A-Z][A-Z][0-9][ ][0-9][A-Z][A-Z]&quot;)),
+REGEX(MailingPostalCode, (&quot;[A-Z][A-Z][0-9][0-9][ ][0-9][A-Z][A-Z]&quot;)),
+REGEX(MailingPostalCode, (&quot;[A-Z][0-9][0-9][ ][0-9][A-Z][A-Z]&quot;)),
+REGEX(MailingPostalCode, (&quot;[A-Z][0-9][A-Z][ ][0-9][A-Z][A-Z]&quot;)),
+REGEX(MailingPostalCode, (&quot;[A-Z][A-Z][0-9][A-Z][ ][0-9][A-Z][A-Z]&quot;))
+)
+),FALSE)
+&amp;&amp; $Permission.Core_Contact_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorMessage>Please enter a valid format for the Zip Code! This should follow one of these examples: A9 9AA, AA9 9AA, AA99 9AA, A99 9AA, A9A 9AA or AA9A 9AA.</errorMessage>
+</ValidationRule>

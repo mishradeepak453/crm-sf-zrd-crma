@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <assignments>
+        <name>Assign_Close_Date</name>
+        <label>Assign Close Date</label>
+        <locationX>50</locationX>
+        <locationY>695</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.CloseDate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Assign_new_Address_to_custom_Address_Fields</name>
+        <label>Assign new Address to custom Address Fields</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Street__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Construction_Site_Address__Street__s</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Postal_Code__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Construction_Site_Address__PostalCode__s</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.City__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Construction_Site_Address__City__s</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Opportunity_Closed</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Adrdess_Changed</name>
+        <label>Adrdess Changed?</label>
+        <locationX>182</locationX>
+        <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>Opportunity_Closed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Address not changed</defaultConnectorLabel>
+        <rules>
+            <name>Adress_has_changed</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record__Prior.Construction_Site_Address__Street__s</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Construction_Site_Address__Street__s</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Construction_Site_Address__PostalCode__s</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Construction_Site_Address__PostalCode__s</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Construction_Site_Address__City__s</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Construction_Site_Address__City__s</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_new_Address_to_custom_Address_Fields</targetReference>
+            </connector>
+            <label>Adress has changed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Is Opportunity marked as closed? (Stages Closed Won or Closed Lost)</description>
+        <name>Opportunity_Closed</name>
+        <label>Opportunity Closed?</label>
+        <locationX>182</locationX>
+        <locationY>587</locationY>
+        <defaultConnectorLabel>Not closed</defaultConnectorLabel>
+        <rules>
+            <name>Closed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.IsClosed</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.StageName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.StageName</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Close_Date</targetReference>
+            </connector>
+            <label>Closed</label>
+        </rules>
+    </decisions>
+    <description>- Sets Close Date to today&apos;s date when the Opportunity is closed
+- Updates the Address in the custom Address fields, if those have been changed</description>
+    <environments>Default</environments>
+    <interviewLabel>Opportunity {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity Before Update Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Adrdess_Changed</targetReference>
+        </connector>
+        <object>Opportunity</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

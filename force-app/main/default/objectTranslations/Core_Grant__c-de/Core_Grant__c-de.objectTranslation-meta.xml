@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Zuwendung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Zuwendungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Zuwendung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Zuwendungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Zuwendung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Zuwendungen</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Zuwendung</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Zuwendungen</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Grant Layout</layout>
+        <sections>
+            <label>Genehmigungsinformationen</label>
+            <section>Approval Information</section>
+        </sections>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Zuwendung</nameFieldLabel>
+    <validationRules>
+        <errorMessage>Bitte trage eine Art für die Zuwendung in das Feld &apos;Andere Art der Zuwendung ein&apos;.</errorMessage>
+        <name>Core_Other_Type_of_Grant_Muss_be_filled</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage einen Grund für die Zuwendung in das Feld &apos;Anderer Grund für Zuwendung ein&apos;.</errorMessage>
+        <name>Core_Reason_for_Grant_Musst_be_filled</name>
+    </validationRules>
+</CustomObjectTranslation>

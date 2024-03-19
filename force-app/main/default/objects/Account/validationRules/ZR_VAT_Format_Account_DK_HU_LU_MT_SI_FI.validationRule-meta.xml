@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_VAT_Format_Account_DK_HU_LU_MT_SI_FI</fullName>
+    <active>true</active>
+    <description>SF-64 This validation rule should ensure, that all Sales Tax Id Numbers are in the correct format according to their respective country. Format (&quot;[DK]\\d{8}&quot;). Example: DK99999999</description>
+    <errorConditionFormula>IF(
+AND(
+NOT(ISBLANK(Core_Sales_Tax_ID_No__c )),
+BillingCountry == &quot;DK&quot;
+),
+NOT(REGEX( Core_Sales_Tax_ID_No__c , (&quot;[DK]{2}\\d{8}&quot;))),
+IF(
+AND(
+NOT(ISBLANK(Core_Sales_Tax_ID_No__c )),
+BillingCountry == &quot;HU&quot;
+),
+NOT(REGEX( Core_Sales_Tax_ID_No__c , (&quot;[HU]{2}\\d{8}&quot;))),
+IF(
+AND(
+NOT(ISBLANK(Core_Sales_Tax_ID_No__c )),
+BillingCountry == &quot;LU&quot;
+),
+NOT(REGEX( Core_Sales_Tax_ID_No__c , (&quot;[LU]{2}\\d{8}&quot;))),
+IF(
+AND(
+NOT(ISBLANK(Core_Sales_Tax_ID_No__c )),
+BillingCountry == &quot;MT&quot;
+),
+NOT(REGEX( Core_Sales_Tax_ID_No__c , (&quot;[MT]{2}\\d{8}&quot;))),
+IF(
+AND(
+NOT(ISBLANK(Core_Sales_Tax_ID_No__c )),
+BillingCountry == &quot;SI&quot;
+),
+NOT(REGEX( Core_Sales_Tax_ID_No__c , (&quot;[SI]{2}\\d{8}&quot;))),
+IF(
+AND(
+NOT(ISBLANK(Core_Sales_Tax_ID_No__c )),
+BillingCountry == &quot;FI&quot;
+),
+NOT(REGEX( Core_Sales_Tax_ID_No__c , (&quot;[FI]{2}\\d{8}&quot;))),
+False))))))
+&amp;&amp; ISPICKVAL( Core_Customer_Type__c, &quot;7&quot;)
+&amp;&amp; $Permission.Core_Account_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>Core_Sales_Tax_ID_No__c</errorDisplayField>
+    <errorMessage>Please enter a valid Sales Tax format! This should start with the two letter country code, followed by eight numbers. Example: DK99999999</errorMessage>
+</ValidationRule>

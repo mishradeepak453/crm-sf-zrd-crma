@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Neukunden_meiner_Vertriebsgebiete</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Core_Customer_Number__c</columns>
+    <columns>ACCOUNT.ADDRESS1_ZIP</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>Core_New_Customer_Date__c</columns>
+    <filterScope>MyTeamTerritory</filterScope>
+    <filters>
+        <field>Core_New_Customer_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>Deletion_Code__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Neukunden meiner Vertriebsgebiete</label>
+</ListView>

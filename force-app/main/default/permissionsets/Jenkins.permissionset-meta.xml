@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Used by DevOps (CI/CD) for connection between Jenkins and Salesforce</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Jenkins</label>
+</PermissionSet>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_999999_AccountLead</fullName>
+    <active>true</active>
+    <description>SF-1155 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country. Format (&quot;\\d{6}&quot;). Example: 999999.</description>
+    <errorConditionFormula>IF(
+AND(
+NOT(ISBLANK(Address__PostalCode__s)),
+OR(
+ISPICKVAL(Address__CountryCode__s, &quot;BY&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;CN&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;EC&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;IN&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;KZ&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;KG&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;RO&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;RU&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;SG&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;TJ&quot;),
+ISPICKVAL(Address__CountryCode__s, &quot;UZ&quot;)
+)),
+NOT(REGEX(Address__PostalCode__s, (&quot;\\d{6}&quot;))),FALSE)
+&amp;&amp;  ISPICKVAL(Status__c, &quot;Qualification&quot;)</errorConditionFormula>
+    <errorMessage>Please enter a valid format for the Zip Code! This should consist of six numbers. Example: 999999</errorMessage>
+</ValidationRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Checksum__c</fullName>
+    <description>1. Integration relevant (GRACE)
+2. ZR
+3. Helper Field for Integration</description>
+    <externalId>false</externalId>
+    <label>Total Checksum</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

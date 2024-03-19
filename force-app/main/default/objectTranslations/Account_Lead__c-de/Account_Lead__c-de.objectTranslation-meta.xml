@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Account Lead</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Account Leads</value>
+    </caseValues>
+    <gender>Neuter</gender>
+    <layouts>
+        <layout>Account Lead Layout</layout>
+        <sections>
+            <label>Adressinformationen</label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label>Benutzerdefinierte  Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>In Account umwandeln</label>
+        <name>Convert_to_Account</name>
+    </quickActions>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Account_Lead_Record_Type</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage>Bitte trage weniger als 60 Zeichen ein.</errorMessage>
+        <name>ZR_Emaillenght_Account_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage eine valide Faxnummer ein, diese sollte mit einem &apos;+&apos; und der Ländervorwahl beginnen, keine Buchstaben oder Sonderzeichen enthalten und mindestens 10, maximal 20 Zeichen lang sein. Beispiel: +49123456789</errorMessage>
+        <name>ZR_Faxnumber_DIN5008_Account_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage eine valide Telefonnummer ein, diese sollte mit einem &apos;+&apos; und der Ländervorwahl beginnen, keine Buchstaben oder Sonderzeichen enthalten und mindestens 10, maximal 20 Zeichen lang sein. Beispiel: +49123456789</errorMessage>
+        <name>ZR_Phonenumber_DIN5008_Account_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus sechs Zahlen bestehen. Beispiel: 999999</errorMessage>
+        <name>ZR_ZipCode_Validation_999999_AccountLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus fünf Zahlen bestehen. Beispiel: 99999</errorMessage>
+        <name>ZR_ZipCode_Validation_99999_AccountLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus vier Zahlen bestehen. Beispiel: 9999</errorMessage>
+        <name>ZR_ZipCode_Validation_9999_Lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit drei Zahlen beginnen, gefolgt von einem Leerzeichen und zwei weiteren Zahlen. Beispiel: 999 99</errorMessage>
+        <name>ZR_ZipCode_Validation_999_99_AccountLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus drei Zahlen bestehen. Beispiel: 999</errorMessage>
+        <name>ZR_ZipCode_Validation_999_AccountLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus zwei Großbuchstaben gefolgt von drei Zahlen bestehen. Beispiel: AA999</errorMessage>
+        <name>ZR_ZipCode_Validation_AD_AccountLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus vier oder sechs Zahlen bestehen. Beispiel: 9999 oder 999999</errorMessage>
+        <name>ZR_ZipCode_Validation_AZ_AccountLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus zwei Großbuchstaben und vier Zahlen bestehen. Beispiel: AA9999</errorMessage>
+        <name>ZR_ZipCode_Validation_BN_AccountLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus acht Zahlen bestehen und kann zwischen der fünften und sechsten Zahl einen Bindestrich haben. Beispiel: 99999999 oder 99999-999</errorMessage>
+        <name>ZR_ZipCode_Validation_BR_AccountLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit einem Großbuchstaben beginnen, gefolgt von einer Zahl, einem Großbuchstaben, einem Leerzeichen, einer weiteren Zahl, einem Großuchstaben und optional einer weiteren Zahl. Beispiel: A9A 9A oder A9A 9A9</errorMessage>
+        <name>ZR_ZipCode_Validation_CA_AccountLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte einem dieser Beispiele folgen: A9 9AA, AA9 9AA, AA99 9AA, A99 9AA, A9A 9AA oder AA9A 9AA.</errorMessage>
+        <name>ZR_ZipCode_Validation_GB_AccountLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte einem dieser Beispiele folgen: AA9 9AA oder AA99 9AA</errorMessage>
+        <name>ZR_ZipCode_Validation_GG_AccountLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus fünf oder sieben Zahlen bestehen. Beispiel: 99999 oder 9999999</errorMessage>
+        <name>ZR_ZipCode_Validation_IL_AccountLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit zwei Zahlen beginnen, gefolgt von einem Großbuchstaben, einem Leerzeichen, einer Zahl und zwei weiteren Großbuchstaben. Beispiel: AA9 9AA</errorMessage>
+        <name>ZR_ZipCode_Validation_JE_AccountLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit drei Zahlen beginnen, gefolgt von einem Bindestrich und vier weiteren Zahlen. Beispiel: 999-9999</errorMessage>
+        <name>ZR_ZipCode_Validation_JP_AccountLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Dieser sollte mit drei Zahlen beginnen, gefolgt von einem Bindestrich und drei weiteren Zahlen. Beispiel: 999-999</errorMessage>
+        <name>ZR_ZipCode_Validation_KR_AccountLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus vier oder fünf Zahlen bestehen. Beispiel: 9999 oder 99999</errorMessage>
+        <name>ZR_ZipCode_Validation_MN_AccountLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus vier oder fünf Zahlen bestehen. Beispiel: 9999 oder 99999</errorMessage>
+        <name>ZR_ZipCode_Validation_MV_MX_AccountLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit vier Zahlen beginnen, optional gefolgt von einem Leerzeichen und zwei Großbuchstaben. Beispiel: 9999 oder 9999 AA</errorMessage>
+        <name>ZR_ZipCode_Validation_NL_AccountLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit zwei Zahlen beginnen, gefolgt von einem Bindestrich und vier weiteren Zahlen. Beispiel: 99-9999</errorMessage>
+        <name>ZR_ZipCode_Validation_PL_AccountLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit vier Zahlen beginnen, gefpögt von einem Bindestrich und drei weiteren Zahlen. Beispiel: 9999-999</errorMessage>
+        <name>ZR_ZipCode_Validation_PT_AccountLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus einem Großbuchstaben gefolgt von drei Zahlen bestehen. Beispiel: A999</errorMessage>
+        <name>ZR_ZipCode_Validation_SZ_AccountLead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus drei oder fünf Zahlen bestehen. Beispiel: 999 oder 99999</errorMessage>
+        <name>ZR_ZipCode_Validation_TW_AccountLead</name>
+    </validationRules>
+</CustomObjectTranslation>

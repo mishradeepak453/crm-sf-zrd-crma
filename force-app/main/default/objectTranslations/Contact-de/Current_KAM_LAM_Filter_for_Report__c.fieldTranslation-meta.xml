@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Berichtsfilter für aktuellen KAM/LAM</label>
+    <name>Current_KAM_LAM_Filter_for_Report__c</name>
+</CustomFieldTranslation>

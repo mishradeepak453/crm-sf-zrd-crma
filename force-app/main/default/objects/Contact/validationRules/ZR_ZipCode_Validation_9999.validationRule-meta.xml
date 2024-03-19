@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_9999</fullName>
+    <active>true</active>
+    <description>SF-113 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country. Format (&quot;\\d{4}&quot;). Example: 9999.</description>
+    <errorConditionFormula>IF(
+AND(
+NOT(ISBLANK(MailingPostalCode)),
+OR(
+MailingCountry == &quot;AR&quot;,
+MailingCountry == &quot;AM&quot;,
+MailingCountry == &quot;AU&quot;,
+MailingCountry == &quot;AT&quot;,
+MailingCountry == &quot;BD&quot;,
+MailingCountry == &quot;BE&quot;,
+MailingCountry == &quot;BG&quot;,
+MailingCountry == &quot;CY&quot;,
+MailingCountry == &quot;DK&quot;,
+MailingCountry == &quot;GE&quot;,
+MailingCountry == &quot;GL&quot;,
+MailingCountry == &quot;HU&quot;,
+MailingCountry == &quot;LV&quot;,
+MailingCountry == &quot;LI&quot;,
+MailingCountry == &quot;LU&quot;,
+MailingCountry == &quot;MK&quot;,
+MailingCountry == &quot;MD&quot;,
+MailingCountry == &quot;NZ&quot;,
+MailingCountry == &quot;NO&quot;,
+MailingCountry == &quot;PH&quot;,
+MailingCountry == &quot;PT&quot;,
+MailingCountry == &quot;SI&quot;,
+MailingCountry == &quot;ZA&quot;,
+MailingCountry == &quot;CH&quot;,
+MailingCountry == &quot;TN&quot;
+)),
+NOT(REGEX(MailingPostalCode, (&quot;\\d{4}&quot;))),FALSE)
+&amp;&amp; $Permission.Core_Contact_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorMessage>Please enter a valid format for the Zip Code! This should consist of four numbers. Example: 9999</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>2</activeVersionNumber>
+    <description>- Assigns Territory Level 1 and 2 Names to the record
+- Sets the Owner based on the Territory and Potential of the record to the respective Sales Rep
+- Only starts when the Territory ID field has been changed</description>
+    <masterLabel>Lead Before Update Flow</masterLabel>
+</FlowDefinition>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Geschäftsform ID</label>
+    <name>Core_Legal_Status_ID__c</name>
+    <picklistValues>
+        <masterLabel>A/S</masterLabel>
+        <translation>A/S</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AB Gesellschaft mit beschränkter Haftung (SE)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AG</masterLabel>
+        <translation>AG</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ARGE</masterLabel>
+        <translation>ARGE</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ApS</masterLabel>
+        <translation>ApS</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Einzelfirma</masterLabel>
+        <translation>Einzelfirma</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Einzelunternehmen (SE)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Einzelunternehmen DK</masterLabel>
+        <translation>Einzelunternehmen DK</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Foundation</masterLabel>
+        <translation>Stiftung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GbR</masterLabel>
+        <translation>GbR</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GbRmbH</masterLabel>
+        <translation>GbRmbH</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GmbH</masterLabel>
+        <translation>GmbH</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GmbH &amp; CO KG</masterLabel>
+        <translation>GmbH &amp; CO KG</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GmbH &amp; Co</masterLabel>
+        <translation>GmbH &amp; Co</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GmbH i.G.</masterLabel>
+        <translation>GmbH i.G.</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HB Handelsunternehmen (SE)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KB Begrenzte Partnerschaft (SE)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KG</masterLabel>
+        <translation>KG</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KGaA</masterLabel>
+        <translation>KGaA</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KöRe</masterLabel>
+        <translation>KöRe</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ltd.</masterLabel>
+        <translation>Ltd.</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ltd. &amp; Co. KG</masterLabel>
+        <translation>Ltd. &amp; Co. KG</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partnerschaft</masterLabel>
+        <translation>Partnerschaft</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Privatkunde</masterLabel>
+        <translation>Privatkunde</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UG (haftungsbeschr.)</masterLabel>
+        <translation>UG (haftungsbeschr.)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ausländ.Ges.m.b.H.</masterLabel>
+        <translation>auländ.Ges.m.b.H</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ausländ.Ges.m.unb.H.</masterLabel>
+        <translation>ausländ.Ges.m.unb.H</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>e.V.</masterLabel>
+        <translation>e.V.</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>eG</masterLabel>
+        <translation>eG</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>oHG</masterLabel>
+        <translation>oHG</translation>
+    </picklistValues>
+</CustomFieldTranslation>

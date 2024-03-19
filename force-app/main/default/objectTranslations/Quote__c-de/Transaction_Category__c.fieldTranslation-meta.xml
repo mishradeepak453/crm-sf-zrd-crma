@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Transaktionsart</label>
+    <name>Transaction_Category__c</name>
+    <picklistValues>
+        <masterLabel>Quote Existing Customer Commercial</masterLabel>
+        <translation>Angebot Bestandskunde gewerblich</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quote Existing Customer Private</masterLabel>
+        <translation>Angebot Bestandskunde privat</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quote New Customer Commercial</masterLabel>
+        <translation>Angebot Neukunde gewerblich</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quote New Customer Private</masterLabel>
+        <translation>Angebot Neukunde privat</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quote Rental Online</masterLabel>
+        <translation>Mietangebot Online</translation>
+    </picklistValues>
+</CustomFieldTranslation>

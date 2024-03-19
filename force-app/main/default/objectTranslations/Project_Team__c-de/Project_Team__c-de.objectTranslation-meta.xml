@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Projekt Team - Mitglied</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Projekt Team - Mitglieder</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Projekt Team - Mitglied</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Projekt Team - Mitglieder</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Projekt Team - Mitglieds</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Projekt Teams - Mitglieder</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Projekt Team - Mitglied</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Projekt Teams - Mitglieder</value>
+    </caseValues>
+    <gender>Neuter</gender>
+    <layouts>
+        <layout>Project Team Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Projekt Team - Mitglied Name</nameFieldLabel>
+    <validationRules>
+        <errorMessage>Du kannst das Team Mitglied nicht verändern. Wenn du ein Mitglied ersetzen möchtest, entferne zunächst den Nutzer aus dem Team und füge dann das neue Mitglied hinzu.</errorMessage>
+        <name>ZR_Member_change_not_allowed_ProjectTeam</name>
+    </validationRules>
+</CustomObjectTranslation>

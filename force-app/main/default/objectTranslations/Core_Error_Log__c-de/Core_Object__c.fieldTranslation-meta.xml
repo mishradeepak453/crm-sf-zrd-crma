@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Beinhaltet das Objekt zu dem der Datensatz gehört, der den Fehler verursacht</help>
+    <label>Objekt</label>
+    <name>Core_Object__c</name>
+</CustomFieldTranslation>

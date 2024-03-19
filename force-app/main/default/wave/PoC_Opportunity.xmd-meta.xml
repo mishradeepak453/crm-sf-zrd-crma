@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataset>PoC_Opportunity</dataset>
+    <dimensions>
+        <field>Business_Area__c</field>
+        <isDerived>false</isDerived>
+        <members>
+            <label>Miete</label>
+            <member>1</member>
+            <sortIndex>0</sortIndex>
+        </members>
+        <members>
+            <label>Raumsysteme</label>
+            <member>2</member>
+            <sortIndex>1</sortIndex>
+        </members>
+        <members>
+            <label>BVS</label>
+            <member>3</member>
+            <sortIndex>2</sortIndex>
+        </members>
+        <members>
+            <label>EKW</label>
+            <member>4</member>
+            <sortIndex>3</sortIndex>
+        </members>
+        <members>
+            <label>LC&amp;M</label>
+            <member>5</member>
+            <sortIndex>4</sortIndex>
+        </members>
+        <sortIndex>0</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>Name</field>
+        <isDerived>false</isDerived>
+        <linkTemplateEnabled>true</linkTemplateEnabled>
+        <recordIdField>OpptyDetail.Id</recordIdField>
+        <salesforceActionsEnabled>true</salesforceActionsEnabled>
+        <sortIndex>1</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>OpptyDetail.Loss_Reason__c</field>
+        <isDerived>false</isDerived>
+        <members>
+            <label>Price</label>
+            <member>1</member>
+            <sortIndex>0</sortIndex>
+        </members>
+        <members>
+            <label>Product &amp; Material availability</label>
+            <member>2</member>
+            <sortIndex>1</sortIndex>
+        </members>
+        <members>
+            <label>Faulty Service</label>
+            <member>3</member>
+            <sortIndex>2</sortIndex>
+        </members>
+        <members>
+            <label>Technical product requirements/ features</label>
+            <member>4</member>
+            <sortIndex>3</sortIndex>
+        </members>
+        <members>
+            <label>Others</label>
+            <member>5</member>
+            <sortIndex>4</sortIndex>
+        </members>
+        <members>
+            <label>Project/ Construction cancelled</label>
+            <member>10</member>
+            <sortIndex>5</sortIndex>
+        </members>
+        <members>
+            <label>Project/ Construction postponed</label>
+            <member>12</member>
+            <sortIndex>6</sortIndex>
+        </members>
+        <members>
+            <label>Use of own machines</label>
+            <member>13</member>
+            <sortIndex>7</sortIndex>
+        </members>
+        <members>
+            <label>Transportation costs</label>
+            <member>14</member>
+            <sortIndex>8</sortIndex>
+        </members>
+        <members>
+            <label>Tender criteria</label>
+            <member>15</member>
+            <sortIndex>9</sortIndex>
+        </members>
+        <members>
+            <label>Creditworthiness insufficient</label>
+            <member>16</member>
+            <sortIndex>10</sortIndex>
+        </members>
+        <members>
+            <label>Wrong entry</label>
+            <member>17</member>
+            <sortIndex>11</sortIndex>
+        </members>
+        <members>
+            <label>Not possible shortterm</label>
+            <member>18</member>
+            <sortIndex>12</sortIndex>
+        </members>
+        <members>
+            <label>Double Request</label>
+            <member>23</member>
+            <sortIndex>13</sortIndex>
+        </members>
+        <members>
+            <label>Distance</label>
+            <member>24</member>
+            <sortIndex>14</sortIndex>
+        </members>
+        <members>
+            <label>Capacity limits - service competence centre</label>
+            <member>25</member>
+            <sortIndex>15</sortIndex>
+        </members>
+        <members>
+            <label>Capacity limits - supplier / manufacturer</label>
+            <member>26</member>
+            <sortIndex>16</sortIndex>
+        </members>
+        <members>
+            <label>Capacity limits - staff</label>
+            <member>27</member>
+            <sortIndex>17</sortIndex>
+        </members>
+        <members>
+            <label>Submission Results</label>
+            <member>28</member>
+            <sortIndex>18</sortIndex>
+        </members>
+        <members>
+            <label>Terms of Contract</label>
+            <member>29</member>
+            <sortIndex>19</sortIndex>
+        </members>
+        <members>
+            <label>See proposal</label>
+            <member>8</member>
+            <sortIndex>20</sortIndex>
+        </members>
+        <sortIndex>2</sortIndex>
+    </dimensions>
+</WaveXmd>

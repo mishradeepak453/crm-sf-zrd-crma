@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>4</activeVersionNumber>
+    <description>- Sends Platform Event if a Grace-relevant update was done by anyone but the Integration User.
+- Updates the Role on the direct Account Contact Relationship if a change was made to the Account or Job Title of the User
+- Sends notification to KAM or LAM if the Phone, Mobile or Email of the Contact has been changed</description>
+    <masterLabel>Contact After Update Flow</masterLabel>
+</FlowDefinition>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Core_Invoice_via_Post__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>1. Integration relevant (Grace)
+2. CORE
+3.</description>
+    <externalId>false</externalId>
+    <label>Invoice via Post</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

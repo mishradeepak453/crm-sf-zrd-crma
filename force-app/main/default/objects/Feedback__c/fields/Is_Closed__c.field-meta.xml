@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Closed__c</fullName>
+    <description>1. Not integration relevant
+2. ZRD
+3. SF-1083</description>
+    <externalId>false</externalId>
+    <formula>IF( OR(ISPICKVAL(Status__c, &quot;Delivered&quot;),ISPICKVAL(Status__c, &quot;Merged&quot;), ISPICKVAL(Status__c, &quot;Rejected&quot;)), TRUE, FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is Closed</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Territories_Level_3__c</fullName>
+    <description>1. Not integration relevant
+2. ZRD
+3. SF-622. Used to store alle related Territories on Level 3 directly on Project, so that user can filter list views with territories contains XY.</description>
+    <externalId>false</externalId>
+    <label>Territories Level 3</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

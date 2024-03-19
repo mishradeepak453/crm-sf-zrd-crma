@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>PTEmailDE</name>
+        <label>PTEmailDE</label>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Get_All_Project_Team_Members</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>EmailBodyDE</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Team_Member__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>EmailSubjectDE</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>PTEmailEN</name>
+        <label>PTEmailEN</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <connector>
+            <targetReference>Get_All_Project_Team_Members</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>EmailBodyEN</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Team_Member__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>EmailSubjectEN</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>51.0</apiVersion>
+    <assignments>
+        <name>Assin_AD_Login_Name</name>
+        <label>Assin AD Login Name</label>
+        <locationX>270</locationX>
+        <locationY>1055</locationY>
+        <assignmentItems>
+            <assignToReference>TeamMemberADNames</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>Iterate_over_active_Project_Team_Members.Team_Member_AD_Login_Name__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Iterate_over_active_Project_Team_Members</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Team_Member_Activation_Status</name>
+        <label>Team Member Activation Status?</label>
+        <locationX>380</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Not active Team Member</defaultConnectorLabel>
+        <rules>
+            <name>Active_Team_Member</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Active__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Create_Sharing_Record</targetReference>
+            </connector>
+            <label>Active Team Member</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks whether the current User Language is DE or other.</description>
+        <name>User_DE_or_Other</name>
+        <label>User DE or Other?</label>
+        <locationX>182</locationX>
+        <locationY>539</locationY>
+        <defaultConnector>
+            <targetReference>PTEmailEN</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Other</defaultConnectorLabel>
+        <rules>
+            <name>DE</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Team_Member__r.LanguageLocaleKey</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>de</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>PTEmailDE</targetReference>
+            </connector>
+            <label>DE</label>
+        </rules>
+    </decisions>
+    <description>- Sends an Email to the new Member of a Project Team and creates sharing for that Team Member
+- Writes Names of Team Members onto Project</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>NamesFormula</name>
+        <dataType>String</dataType>
+        <expression>{!TeamMemberADNames}</expression>
+    </formulas>
+    <formulas>
+        <name>ProjectLink</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Enterprise_Server_URL_100}, FIND(&apos;/services&apos;, {!$Api.Enterprise_Server_URL_100})) &amp; {!$Record.Project__r.Id}</expression>
+    </formulas>
+    <interviewLabel>Project Team After Insert Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Project Team After Insert Flow</label>
+    <loops>
+        <name>Iterate_over_active_Project_Team_Members</name>
+        <label>Iterate over active Project Team Members</label>
+        <locationX>182</locationX>
+        <locationY>947</locationY>
+        <collectionReference>TeamMemberIDsRecord</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Assin_AD_Login_Name</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Update_Project</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Sharing_Record</name>
+        <label>Create Sharing Record</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>User_DE_or_Other</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>AccessLevel</field>
+            <value>
+                <stringValue>Edit</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>ParentId</field>
+            <value>
+                <elementReference>$Record.Project__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RowCause</field>
+            <value>
+                <stringValue>Project_Team_Member__c</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>UserOrGroupId</field>
+            <value>
+                <elementReference>$Record.Team_Member__r.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Project__Share</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_All_Project_Team_Members</name>
+        <label>Get All Project Team Members</label>
+        <locationX>182</locationX>
+        <locationY>839</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Iterate_over_active_Project_Team_Members</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Project__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Project__r.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Active__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Project_Team__c</object>
+        <outputReference>TeamMemberIDsRecord</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Team_Member__c</queriedFields>
+        <queriedFields>Team_Member_AD_Login_Name__c</queriedFields>
+        <sortField>Id</sortField>
+        <sortOrder>Asc</sortOrder>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Project</name>
+        <label>Update Project</label>
+        <locationX>182</locationX>
+        <locationY>1247</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Project__r.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Automation_Time__c</field>
+            <value>
+                <elementReference>$Flow.InterviewStartTime</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Collected_Team_Members__c</field>
+            <value>
+                <elementReference>NamesFormula</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Project__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Team_Member_Activation_Status</targetReference>
+        </connector>
+        <object>Project_Team__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>EmailBodyDE</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hallo {!$Record.Team_Member__r.FirstName} {!$Record.Team_Member__r.LastName},
+
+du wurdest von {!$Record.CreatedBy.FirstName} {!$Record.CreatedBy.LastName} dem Projekt {!$Record.Project__r.Name} hinzugefügt.
+Logge dich ein, um mehr über das Projekt zu erfahren. 
+
+{!ProjectLink}
+
+Viele Grüße,
+dein Zeppelin Salesforce-Team
+
+Dies ist eine automatisch generierte E-Mail, bitte nicht antworten.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>EmailBodyEN</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hello {!$Record.Team_Member__r.FirstName} {!$Record.Team_Member__r.LastName},
+
+You have been added to the Project {!$Record.Project__r.Name} by {!$Record.CreatedBy.FirstName} {!$Record.CreatedBy.LastName}.
+Log in to see the details of the Project.
+
+{!ProjectLink}
+
+Best regards,
+Your Zeppelin Salesforce-Team
+
+This is an automatically created Email. Please do not reply.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>EmailSubjectDE</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Du wurdest einem Projekt Team hinzugefügt!</text>
+    </textTemplates>
+    <textTemplates>
+        <name>EmailSubjectEN</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>You have been added to a Project Team!</text>
+    </textTemplates>
+    <variables>
+        <name>TeamMemberADNames</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>TeamMemberIDsRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Project_Team__c</objectType>
+    </variables>
+    <variables>
+        <name>UserRecords</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>User</objectType>
+    </variables>
+</Flow>

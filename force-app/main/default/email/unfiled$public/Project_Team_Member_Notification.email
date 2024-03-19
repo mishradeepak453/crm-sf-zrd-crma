@@ -1,0 +1,13 @@
+Hallo {!Project_Team__c.Member_Name__c},
+
+du wurdest von {!Project_Team__c.CreatedBy} dem Projekt {!Project__c.Name} hinzugefügt.
+
+Logge dich ein um mehr über das Projekt zu erfahren.
+{!Project__c.Link}
+
+Viele Grüße
+dein Zeppelin Salesforce-Team
+
+
+
+Dies ist eine automatische generierte E-Mail, bitte nicht antworten.

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Info_Valid_Until__c</fullName>
+    <description>1. Not integration relevant
+2. ZRD
+3. SF-1038</description>
+    <externalId>false</externalId>
+    <label>Info Valid Until</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

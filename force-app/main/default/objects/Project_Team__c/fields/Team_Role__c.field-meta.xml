@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Team_Role__c</fullName>
+    <description>1. Integration relevant
+2. ZRD
+3.</description>
+    <externalId>false</externalId>
+    <label>Team Role</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Assistant</fullName>
+                <default>false</default>
+                <label>Assistant</label>
+            </value>
+            <value>
+                <fullName>Branch_Manager</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Branch Manager</label>
+            </value>
+            <value>
+                <fullName>Calculator</fullName>
+                <default>false</default>
+                <label>Calculator</label>
+            </value>
+            <value>
+                <fullName>Commercial_Clerk</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Commercial Clerk</label>
+            </value>
+            <value>
+                <fullName>Commercial_Manager</fullName>
+                <default>false</default>
+                <label>Commercial Manager</label>
+            </value>
+            <value>
+                <fullName>Consultant Logistic and Sales</fullName>
+                <default>false</default>
+                <label>Consultant Logistic and Sales</label>
+            </value>
+            <value>
+                <fullName>Contact_Business_Administration</fullName>
+                <default>false</default>
+                <label>Contact - Business Administration</label>
+            </value>
+            <value>
+                <fullName>Controlling</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Controlling</label>
+            </value>
+            <value>
+                <fullName>Deputy_Director_of_Rental_Office</fullName>
+                <default>false</default>
+                <label>Deputy Director of Rental Office</label>
+            </value>
+            <value>
+                <fullName>Deputy_Head_of_Region</fullName>
+                <default>false</default>
+                <label>Deputy Head of Region</label>
+            </value>
+            <value>
+                <fullName>Director_of_Rental_Office</fullName>
+                <default>false</default>
+                <label>Director of Rental Office</label>
+            </value>
+            <value>
+                <fullName>Head_of_Construction</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Head of Construction</label>
+            </value>
+            <value>
+                <fullName>Head_of_Division</fullName>
+                <default>false</default>
+                <label>Head of Division</label>
+            </value>
+            <value>
+                <fullName>Head_of_Energy_Trade</fullName>
+                <default>false</default>
+                <label>Head of Energy Trade</label>
+            </value>
+            <value>
+                <fullName>Head_of_industrial_equipment</fullName>
+                <default>false</default>
+                <label>Head of industrial equipment</label>
+            </value>
+            <value>
+                <fullName>Head_of_operating_platforms_elevators_and_fork_lift_trucks</fullName>
+                <default>false</default>
+                <label>Head of operating platforms elevators and fork lift trucks</label>
+            </value>
+            <value>
+                <fullName>Head_of_Operation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Head of Operation</label>
+            </value>
+            <value>
+                <fullName>Head_of_Region</fullName>
+                <default>false</default>
+                <label>Head of Region</label>
+            </value>
+            <value>
+                <fullName>Head_of_Sales</fullName>
+                <default>false</default>
+                <label>Head of Sales</label>
+            </value>
+            <value>
+                <fullName>Head_of_Service</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Head of Service</label>
+            </value>
+            <value>
+                <fullName>Head_of_Standard</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Head of Standard</label>
+            </value>
+            <value>
+                <fullName>Head_of_Traffic_Telematics</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Head of Traffic Telematics</label>
+            </value>
+            <value>
+                <fullName>Head_of_vehicles</fullName>
+                <default>false</default>
+                <label>Head of vehicles</label>
+            </value>
+            <value>
+                <fullName>Inside_Sales_Customer_Consultant_Rental_Electric_and_Energy_EE</fullName>
+                <default>false</default>
+                <label>Inside Sales/ Customer Consultant EEB (EKW)</label>
+            </value>
+            <value>
+                <fullName>Inside Sales/ Customer Consultant Electricity and Climate</fullName>
+                <default>false</default>
+                <label>Inside Sales/ Customer Consultant Electricity and Climate</label>
+            </value>
+            <value>
+                <fullName>Inside_Sales_Customer_Consultant_Rental_Construction_Logistic_LCM</fullName>
+                <default>false</default>
+                <label>Inside Sales/ Customer Consultant LC&amp;M</label>
+            </value>
+            <value>
+                <fullName>Inside_Sales_Customer_Consultant_Rental_Machine_and_Equipment_Rental</fullName>
+                <default>false</default>
+                <label>Inside Sales/ Customer Consultant Rental</label>
+            </value>
+            <value>
+                <fullName>Inside_Sales_Customer_Consultant_Rental_Accommodation_Units_RS</fullName>
+                <default>false</default>
+                <label>Inside Sales/ Customer Consultant RS</label>
+            </value>
+            <value>
+                <fullName>Key_Account_Manager</fullName>
+                <default>false</default>
+                <label>Key Account Manager</label>
+            </value>
+            <value>
+                <fullName>Key Account Manager Event</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Key Account Manager Event</label>
+            </value>
+            <value>
+                <fullName>Large_Account_Manager</fullName>
+                <default>false</default>
+                <label>Large Account Manager</label>
+            </value>
+            <value>
+                <fullName>Management_Board</fullName>
+                <default>false</default>
+                <label>Management Board</label>
+            </value>
+            <value>
+                <fullName>Manager_Competence_Center</fullName>
+                <default>false</default>
+                <label>Manager Competence Center</label>
+            </value>
+            <value>
+                <fullName>Project_Development_Manager</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Project Development Manager</label>
+            </value>
+            <value>
+                <fullName>Project_Manager</fullName>
+                <default>false</default>
+                <label>Project Manager</label>
+            </value>
+            <value>
+                <fullName>Project Manager Construction Site</fullName>
+                <default>false</default>
+                <label>Project Manager Construction Site</label>
+            </value>
+            <value>
+                <fullName>Project Manager Events</fullName>
+                <default>false</default>
+                <label>Project Manager Events</label>
+            </value>
+            <value>
+                <fullName>Regional_Director</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Regional Director</label>
+            </value>
+            <value>
+                <fullName>Sales_Excellence</fullName>
+                <default>false</default>
+                <label>Sales Excellence</label>
+            </value>
+            <value>
+                <fullName>Sales_Representative_Accommodation_Units_Project</fullName>
+                <default>false</default>
+                <label>Sales Rep Accommodation Units - Project</label>
+            </value>
+            <value>
+                <fullName>Sales_Representative_Accommodation_Units_Standard</fullName>
+                <default>false</default>
+                <label>Sales Rep Accommodation Units - Standard</label>
+            </value>
+            <value>
+                <fullName>Sales_Representative_Construction_Site_and_Traffic_Safety</fullName>
+                <default>false</default>
+                <label>Sales Rep Construction/ Traffic Safety</label>
+            </value>
+            <value>
+                <fullName>Sales_Representative_Construction_Logistic</fullName>
+                <default>false</default>
+                <label>Sales Rep Construction Logistic</label>
+            </value>
+            <value>
+                <fullName>Sales_Representative_Electric_and_Energy</fullName>
+                <default>false</default>
+                <label>Sales Rep Energy, Climate, Water EEB (EKW)</label>
+            </value>
+            <value>
+                <fullName>Sales_Representative_Machine_and_Equipment_Rental</fullName>
+                <default>false</default>
+                <label>Sales Rep Machine and Equipment Rental</label>
+            </value>
+            <value>
+                <fullName>Sales Representative Electricity and Climate</fullName>
+                <default>false</default>
+                <label>Sales Representative Electricity and Climate</label>
+            </value>
+            <value>
+                <fullName>Teamleader_Calculation</fullName>
+                <default>false</default>
+                <label>Teamleader Calculation</label>
+            </value>
+            <value>
+                <fullName>Teamleader_Commercial_adminstration</fullName>
+                <default>false</default>
+                <label>Teamleader Commercial adminstration</label>
+            </value>
+            <value>
+                <fullName>Teamleader_Commercial_Project_Management</fullName>
+                <default>false</default>
+                <label>Teamleader Commercial Project Management</label>
+            </value>
+            <value>
+                <fullName>Teamleader Logistics</fullName>
+                <default>false</default>
+                <label>Teamleader Logistics</label>
+            </value>
+            <value>
+                <fullName>Teamleader_Planing</fullName>
+                <default>false</default>
+                <label>Teamleader Planing</label>
+            </value>
+            <value>
+                <fullName>Teamleader_Project_Services</fullName>
+                <default>false</default>
+                <label>Teamleader Project Services</label>
+            </value>
+            <value>
+                <fullName>Teamleader_Services</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Teamleader Services</label>
+            </value>
+            <value>
+                <fullName>Technical_Manager</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Technical Manager</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

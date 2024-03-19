@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Core_Company_Citylenght_Account</fullName>
+    <active>true</active>
+    <description>SF-51  This validation rule should ensure, that the Company City does not have more than 30 characters.</description>
+    <errorConditionFormula>LEN (BillingCity) &gt; 30
+&amp;&amp; ISPICKVAL( Core_Customer_Type__c, &quot;7&quot;)
+&amp;&amp; $Permission.Core_Account_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>BillingCity</errorDisplayField>
+    <errorMessage>Please enter less than 30 characters into the field Company City.</errorMessage>
+</ValidationRule>

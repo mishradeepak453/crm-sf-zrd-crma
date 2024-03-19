@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Projekt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Projekte</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Projekt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Projekte</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Projektes</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Projekte</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Projekt</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Projekten</value>
+    </caseValues>
+    <gender>Neuter</gender>
+    <layouts>
+        <layout>Project Layout</layout>
+        <sections>
+            <label>Zusätzliche Informationen</label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label>Adressinformationen</label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label>Ausschreibungsinformationen</label>
+            <section>Announcement Information</section>
+        </sections>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Projekt Name</nameFieldLabel>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Mir zuweisen</label>
+        <name>Assign_Myself</name>
+    </quickActions>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Neuen Inhaber zuweisen</label>
+        <name>Assign_new_Owner</name>
+    </quickActions>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Projektphase Updaten</label>
+        <name>Update_Progress</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>ZR_New_Opportunity_Project</name>
+    </quickActions>
+    <recordTypes>
+        <description>Wird für Projekte aus den BIS-Systemen verwendet.</description>
+        <label>BIS Projekt</label>
+        <name>BIS_Project</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Wird für Projektanlagen in Salesforce verwendet.</description>
+        <label>Salesforce Projekt</label>
+        <name>Salesforce_Project</name>
+    </recordTypes>
+    <sharingReasons>
+        <label></label>
+        <name>Project_Team_Member</name>
+    </sharingReasons>
+    <validationRules>
+        <errorMessage>Du kannst diese Informationen nicht auf Projekten ändern, die von BIS nach Salesforce synchronisiert wurden. Wenn Werte angepasst werden müssen, wende dich bitte an Sales Excellence.</errorMessage>
+        <name>ZR_BISProjectEditRights</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Die externe ID muss mit &quot;ibau_&quot; oder &quot;infobau_&quot; beginnen.</errorMessage>
+        <name>ZR_External_ID_Format</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>PLZ, Stadt und Land sind Pflichtfelder für ein Projekt.</errorMessage>
+        <name>ZR_Mandatory_Address_Fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die genaue Quelle des Projekts ein!</errorMessage>
+        <name>ZR_Other_Project_Sources</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte fülle das Potenzial für dieses Projekt.</errorMessage>
+        <name>ZR_Potential_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Das Startdatum eines Projekts muss vor dem Enddatum eines Projekts liegen.</errorMessage>
+        <name>ZR_Start_before_End_Date_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus sechs Zahlen bestehen. Beispiel: 999999</errorMessage>
+        <name>ZR_ZipCode_Validation_999999_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus fünf Zahlen bestehen. Beispiel: 99999</errorMessage>
+        <name>ZR_ZipCode_Validation_99999_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus vier Zahlen bestehen. Beispiel: 9999</errorMessage>
+        <name>ZR_ZipCode_Validation_9999_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit zwei Zahlen beginnen, gefolgt von einem Bindestrich und vier weiteren Zahlen. Beispiel: 99-9999</errorMessage>
+        <name>ZR_ZipCode_Validation_999_99_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus drei Zahlen bestehen. Beispiel: 999</errorMessage>
+        <name>ZR_ZipCode_Validation_999_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus zwei Großbuchstaben gefolgt von drei Zahlen bestehen. Beispiel: AA999</errorMessage>
+        <name>ZR_ZipCode_Validation_AD_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus vier oder sechs Zahlen bestehen. Beispiel: 9999 oder 999999</errorMessage>
+        <name>ZR_ZipCode_Validation_AZ_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus zwei Großbuchstaben und vier Zahlen bestehen. Beispiel: AA9999</errorMessage>
+        <name>ZR_ZipCode_Validation_BN_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus acht Zahlen bestehen und kann zwischen der fünften und sechsten Zahl einen Bindestrich haben. Beispiel: 99999999 oder 99999-999</errorMessage>
+        <name>ZR_ZipCode_Validation_BR_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit einem Großbuchstaben beginnen, gefolgt von einer Zahl, einem Großbuchstaben, einem Leerzeichen, einer weiteren Zahl, einem Großuchstaben und optional einer weiteren Zahl. Beispiel: A9A 9A oder A9A 9A9</errorMessage>
+        <name>ZR_ZipCode_Validation_CA_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte einem dieser Beispiele folgen: A9 9AA, AA9 9AA, AA99 9AA, A99 9AA, A9A 9AA oder AA9A 9AA.</errorMessage>
+        <name>ZR_ZipCode_Validation_GB_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte einem dieser Beispiele folgen: AA9 9AA oder AA99 9AA</errorMessage>
+        <name>ZR_ZipCode_Validation_GG_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus fünf oder sieben Zahlen bestehen. Beispiel: 99999 oder 9999999</errorMessage>
+        <name>ZR_ZipCode_Validation_IL_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit zwei Zahlen beginnen, gefolgt von einem Großbuchstaben, einem Leerzeichen, einer Zahl und zwei weiteren Großbuchstaben. Beispiel: AA9 9AA</errorMessage>
+        <name>ZR_ZipCode_Validation_JE_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit drei Zahlen beginnen, gefolgt von einem Bindestrich und vier weiteren Zahlen. Beispiel: 999-9999</errorMessage>
+        <name>ZR_ZipCode_Validation_JP_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Dieser sollte mit drei Zahlen beginnen, gefolgt von einem Bindestrich und drei weiteren Zahlen. Beispiel: 999-999</errorMessage>
+        <name>ZR_ZipCode_Validation_KR_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus fünf oder sechs Zahlen bestehen. Beispiel: 99999 oder 999999</errorMessage>
+        <name>ZR_ZipCode_Validation_MN_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus vier oder fünf Zahlen bestehen. Beispiel: 9999 oder 99999</errorMessage>
+        <name>ZR_ZipCode_Validation_MV_MX_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit vier Zahlen beginnen, optional gefolgt von einem Leerzeichen und zwei Großbuchstaben. Beispiel: 9999 oder 9999 AA</errorMessage>
+        <name>ZR_ZipCode_Validation_NL_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit zwei Zahlen beginnen, gefolgt von einem Bindestrich und vier weiteren Zahlen. Beispiel: 99-9999</errorMessage>
+        <name>ZR_ZipCode_Validation_PL_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit vier Zahlen beginnen, gefpögt von einem Bindestrich und drei weiteren Zahlen. Beispiel: 9999-999</errorMessage>
+        <name>ZR_ZipCode_Validation_PT_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus einem Großbuchstaben gefolgt von drei Zahlen bestehen. Beispiel: A999</errorMessage>
+        <name>ZR_ZipCode_Validation_SZ_Project</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus drei oder fünf Zahlen bestehen. Beispiel: 999 oder 99999</errorMessage>
+        <name>ZR_ZipCode_Validation_TW_Project</name>
+    </validationRules>
+    <webLinks>
+        <label>Kartendarstellung</label>
+        <name>Open_Map</name>
+    </webLinks>
+</CustomObjectTranslation>

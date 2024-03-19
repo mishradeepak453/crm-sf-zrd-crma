@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Part_of_Project_Team__c</fullName>
+    <description>1. Not integration relevant
+2. ZRD
+3. Help field used to filter Projects where the current user is part of the project team for list views and reports.</description>
+    <externalId>false</externalId>
+    <formula>IF( CONTAINS( Collected_Team_Members__c ,   $User.AD_Login_Name__c  ), TRUE, FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Part of Project Team?</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

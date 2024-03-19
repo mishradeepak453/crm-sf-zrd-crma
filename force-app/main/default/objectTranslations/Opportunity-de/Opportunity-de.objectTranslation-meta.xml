@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Opportunity Layout</layout>
+        <sections>
+            <label>Adressinformationen</label>
+            <section>Address Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Opportunity Löschen</label>
+        <name>Delete_Custom</name>
+    </quickActions>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>Neues Angebot</label>
+        <name>New_Quote</name>
+    </quickActions>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>ZR_Opportunity</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage>Straße, PLZ, Stadt und Land sind Pflichtfelder und müssen gefüllt sein.</errorMessage>
+        <name>Address_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>BItte verbinde die Opportunity mit einem Account, bevor du in die Angebotsphase wechselst!</errorMessage>
+        <name>ZR_Account_Required_Quotation_Phase</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Der Start des Bedarfszeitraums muss vor dem Ende des Bedarfszeitraums der Opportunity liegen.</errorMessage>
+        <name>ZR_Requirement_Date_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus sechs Zahlen bestehen. Beispiel: 999999</errorMessage>
+        <name>ZR_ZipCode_Validation_999999_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus fünf Zahlen bestehen. Beispiel: 99999</errorMessage>
+        <name>ZR_ZipCode_Validation_99999_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus vier Zahlen bestehen. Beispiel: 9999</errorMessage>
+        <name>ZR_ZipCode_Validation_9999_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit zwei Zahlen beginnen, gefolgt von einem Bindestrich und vier weiteren Zahlen. Beispiel: 99-9999</errorMessage>
+        <name>ZR_ZipCode_Validation_999_99_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus drei Zahlen bestehen. Beispiel: 999</errorMessage>
+        <name>ZR_ZipCode_Validation_999_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus zwei Großbuchstaben gefolgt von drei Zahlen bestehen. Beispiel: AA999</errorMessage>
+        <name>ZR_ZipCode_Validation_AD_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus vier oder sechs Zahlen bestehen. Beispiel: 9999 oder 999999</errorMessage>
+        <name>ZR_ZipCode_Validation_AZ_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus zwei Großbuchstaben und vier Zahlen bestehen. Beispiel: AA9999</errorMessage>
+        <name>ZR_ZipCode_Validation_BN_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus acht Zahlen bestehen und kann zwischen der fünften und sechsten Zahl einen Bindestrich haben. Beispiel: 99999999 oder 99999-999</errorMessage>
+        <name>ZR_ZipCode_Validation_BR_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit einem Großbuchstaben beginnen, gefolgt von einer Zahl, einem Großbuchstaben, einem Leerzeichen, einer weiteren Zahl, einem Großuchstaben und optional einer weiteren Zahl. Beispiel: A9A 9A oder A9A 9A9</errorMessage>
+        <name>ZR_ZipCode_Validation_CA_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte einem dieser Beispiele folgen: A9 9AA, AA9 9AA, AA99 9AA, A99 9AA, A9A 9AA oder AA9A 9AA.</errorMessage>
+        <name>ZR_ZipCode_Validation_GB_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte einem dieser Beispiele folgen: AA9 9AA oder AA99 9AA</errorMessage>
+        <name>ZR_ZipCode_Validation_GG_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus fünf oder sieben Zahlen bestehen. Beispiel: 99999 oder 9999999</errorMessage>
+        <name>ZR_ZipCode_Validation_IL_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit zwei Zahlen beginnen, gefolgt von einem Großbuchstaben, einem Leerzeichen, einer Zahl und zwei weiteren Großbuchstaben. Beispiel: AA9 9AA</errorMessage>
+        <name>ZR_ZipCode_Validation_JE_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit drei Zahlen beginnen, gefolgt von einem Bindestrich und vier weiteren Zahlen. Beispiel: 999-9999</errorMessage>
+        <name>ZR_ZipCode_Validation_JP_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Dieser sollte mit drei Zahlen beginnen, gefolgt von einem Bindestrich und drei weiteren Zahlen. Beispiel: 999-999</errorMessage>
+        <name>ZR_ZipCode_Validation_KR_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus fünf oder sechs Zahlen bestehen. Beispiel: 99999 oder 999999</errorMessage>
+        <name>ZR_ZipCode_Validation_MN_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus vier oder fünf Zahlen bestehen. Beispiel: 9999 oder 99999</errorMessage>
+        <name>ZR_ZipCode_Validation_MV_MX_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit vier Zahlen beginnen, optional gefolgt von einem Leerzeichen und zwei Großbuchstaben. Beispiel: 9999 oder 9999 AA</errorMessage>
+        <name>ZR_ZipCode_Validation_NL_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit zwei Zahlen beginnen, gefolgt von einem Bindestrich und vier weiteren Zahlen. Beispiel: 99-9999</errorMessage>
+        <name>ZR_ZipCode_Validation_PL_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte mit vier Zahlen beginnen, gefpögt von einem Bindestrich und drei weiteren Zahlen. Beispiel: 9999-999</errorMessage>
+        <name>ZR_ZipCode_Validation_PT_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus einem Großbuchstaben gefolgt von drei Zahlen bestehen. Beispiel: A999</errorMessage>
+        <name>ZR_ZipCode_Validation_SZ_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte trage die Postleitzahl im richtigen Format ein! Diese sollte aus drei oder fünf Zahlen bestehen. Beispiel: 999 oder 99999</errorMessage>
+        <name>ZR_ZipCode_Validation_TW_Opportunity</name>
+    </validationRules>
+</CustomObjectTranslation>

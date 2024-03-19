@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Save_without_Email__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>1. Integration irrelevant
+2. ZR
+3. Use this field to disable the validation rule that is set on the Email address field to save an account without an email address</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If you want to save a Lead without an Email or Personal Email address please check this box.</inlineHelpText>
+    <label>Save without Email</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

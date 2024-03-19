@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Wähle bitte aus, für welches Geschäftsfeld dieser Lead Potenzial hat.</help>
+    <label>Geschäftsfeld</label>
+    <name>Potential__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_Start_before_End_Date_Quote</fullName>
+    <active>true</active>
+    <description>SF-772 This validation rule ensures, that the Start Date of a Quote is before the End Date of a Quote.</description>
+    <errorConditionFormula>( Start_Date__c &gt;  End_Date__c)
+&amp;&amp;  $Permission.Core_Quote_Bypass_Validation_Rules =False</errorConditionFormula>
+    <errorDisplayField>Start_Date__c</errorDisplayField>
+    <errorMessage>The Start Date of a Quote must be earlier than the End Date of a Quote!</errorMessage>
+</ValidationRule>

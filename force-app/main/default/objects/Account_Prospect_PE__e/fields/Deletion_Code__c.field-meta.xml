@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deletion_Code__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>1. Integration relevant (GRACE)
+2. ZRD
+3. SF-832</description>
+    <externalId>false</externalId>
+    <isFilteringDisabled>false</isFilteringDisabled>
+    <isNameField>false</isNameField>
+    <isSortingDisabled>false</isSortingDisabled>
+    <label>Deletion Code</label>
+    <type>Checkbox</type>
+</CustomField>

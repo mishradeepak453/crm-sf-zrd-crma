@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Bedarf</label>
+    <name>Demand__c</name>
+    <picklistValues>
+        <masterLabel>Construction Devices</masterLabel>
+        <translation>Baugeräte</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Construction Logistics</masterLabel>
+        <translation>Baulogistik</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Construction Machinery</masterLabel>
+        <translation>Baumaschinen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Elevators</masterLabel>
+        <translation>Aufzüge</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Energy, Climate, Water</masterLabel>
+        <translation>Energie, Klima, Wasser</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Forklifts</masterLabel>
+        <translation>Gabelstapler</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Industrial Equipment</masterLabel>
+        <translation>Industrielles Equipment</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation>Sonstiges</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Room Systems</masterLabel>
+        <translation>Raumsysteme</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TS</masterLabel>
+        <translation>BVS</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vehicles</masterLabel>
+        <translation>Fahrzeuge</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Working Platforms</masterLabel>
+        <translation>Arbeitsbühnen</translation>
+    </picklistValues>
+</CustomFieldTranslation>

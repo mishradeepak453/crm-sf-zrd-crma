@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subproject_Opportunities__c</fullName>
+    <description>1. Not integration relevant
+2. ZRD
+3. SF-1232</description>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&quot;/lightning/r/Report/&quot; &amp;  $Setup.Report_IDs__c.Subproject_Opportunities__c &amp; &quot;/view?queryScope=userFolders&quot; &amp; &quot;&amp;fv0=&quot; &amp;  Id , IF( ISPICKVAL($User.LanguageLocaleKey, &quot;de&quot;), &quot;Öffnen&quot;, &quot;Open&quot;) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Subproject Opportunities</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

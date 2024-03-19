@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <assignments>
+        <name>Assign_SF_Project_Team_as_Owner</name>
+        <label>Assign SF Project Team as Owner</label>
+        <locationX>264</locationX>
+        <locationY>551</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_SF_Project_Team_Queue.Id</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <description>Checks whether the Feedback is already assiged to SF Project Team Queue or not.</description>
+        <name>Is_SF_Project_Team_Owner</name>
+        <label>Is SF Project Team Owner?</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <defaultConnector>
+            <targetReference>Get_SF_Project_Team_Queue</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>SF Project Team is NOT Owner</defaultConnectorLabel>
+        <rules>
+            <name>SF_Project_Team_is_Owner</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Owner:Group.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SF_Project_Team</stringValue>
+                </rightValue>
+            </conditions>
+            <label>SF Project Team is Owner</label>
+        </rules>
+    </decisions>
+    <description>:: Updates Owner to SF Project Team Queue</description>
+    <environments>Default</environments>
+    <interviewLabel>Feedback Before Insert Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Feedback Before Insert Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_SF_Project_Team_Queue</name>
+        <label>Get SF Project Team Queue</label>
+        <locationX>264</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_SF_Project_Team_as_Owner</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>SF_Project_Team</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Group</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_SF_Project_Team_Owner</targetReference>
+        </connector>
+        <object>Feedback__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

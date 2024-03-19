@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_Emaillenght_Account_Lead</fullName>
+    <active>true</active>
+    <description>SF-1155 This validation rule should enforce a field lengths of maximum 60 characters for this Email-field.</description>
+    <errorConditionFormula>LEN(Email__c)&gt;= 60
+&amp;&amp; ISPICKVAL(Status__c, &quot;Qualification&quot;)</errorConditionFormula>
+    <errorDisplayField>Email__c</errorDisplayField>
+    <errorMessage>Please enter less than 60 characters.</errorMessage>
+</ValidationRule>

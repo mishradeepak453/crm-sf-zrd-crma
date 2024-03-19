@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Info_Valid_Until_mandatory_for_CG_Info</fullName>
+    <active>true</active>
+    <description>SF-1038. Makes sure that Info Valid Until is filled, when Company Group Info is entered.</description>
+    <errorConditionFormula>NOT(ISBLANK( Company_Group_Info__c ))&amp;&amp;  ISBLANK( Info_Valid_Until__c )</errorConditionFormula>
+    <errorDisplayField>Info_Valid_Until__c</errorDisplayField>
+    <errorMessage>Please enter a Valid Until Date for the Company Group Info.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>6</activeVersionNumber>
+    <description>- Sends an Email to the new Member of a Project Team and creates sharing for that Team Member</description>
+    <masterLabel>Project Team After Insert Flow</masterLabel>
+</FlowDefinition>

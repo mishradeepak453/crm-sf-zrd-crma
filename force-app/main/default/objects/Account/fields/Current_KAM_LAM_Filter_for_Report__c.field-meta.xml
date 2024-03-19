@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_KAM_LAM_Filter_for_Report__c</fullName>
+    <description>1. Not integration relevant.
+2. ZRD
+3. Help field for reports in order to filter Accounts for the KAM or LAM looking at the report.</description>
+    <externalId>false</externalId>
+    <formula>IF( Key_Account_Manager__c =  $User.Id  ||  Large_Account_Manager__c = $User.Id,TRUE,FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Current KAM/LAM Filter for Report</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

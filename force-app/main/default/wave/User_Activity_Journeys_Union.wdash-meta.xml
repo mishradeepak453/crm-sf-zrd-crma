@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveDashboard xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <content xsi:nil="true"/>
+    <application>Demo_ValueAnalytics</application>
+    <dateVersion>1</dateVersion>
+    <description>For exec-level summary of interactions in the system down to individual page views and components being used.
+Uses a combined dataset of LightingPageView, LightningInteraction and ApexExection logs.</description>
+    <masterLabel>User Activity &amp; Journeys (Union)</masterLabel>
+    <templateAssetSourceName>User_Activity_Journeys_Union_tp</templateAssetSourceName>
+</WaveDashboard>

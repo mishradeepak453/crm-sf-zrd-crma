@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>1. Not integration relevant
+2. ZRD
+3. SF-1134 Anzeige von Projekten und Accounts auf einer grafischen Karte</description>
+    <label>Project Map View</label>
+    <lwcComponent>mapListViewScreen</lwcComponent>
+    <motif>Custom78: Map</motif>
+</CustomTab>

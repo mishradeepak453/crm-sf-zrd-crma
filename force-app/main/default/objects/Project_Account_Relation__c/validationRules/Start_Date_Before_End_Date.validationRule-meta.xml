@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Start_Date_Before_End_Date</fullName>
+    <active>true</active>
+    <description>SF-973. Makes sure that the Start Date cannot be after the End Date.</description>
+    <errorConditionFormula>( Start_Date__c  &gt;   End_Date__c ) &amp;&amp; NOT(ISBLANK(  End_Date__c ) )</errorConditionFormula>
+    <errorDisplayField>Start_Date__c</errorDisplayField>
+    <errorMessage>The Start Date must be earlier than the End Date.</errorMessage>
+</ValidationRule>

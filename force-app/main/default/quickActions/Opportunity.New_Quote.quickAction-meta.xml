@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>1. Not integration relevant
+2. ZR
+3. SF-1062</description>
+    <flowDefinition>ZR_Quote_Creation_Screen_Flow</flowDefinition>
+    <label>New Quote</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

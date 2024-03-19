@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expertise__c</fullName>
+    <description>1. Not integration relevant
+2. ZRD
+3. SF-726</description>
+    <externalId>false</externalId>
+    <label>Expertise</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>FT</fullName>
+                <default>false</default>
+                <label>Access Equipment (AE)</label>
+            </value>
+            <value>
+                <fullName>RS</fullName>
+                <default>false</default>
+                <label>Accommodation Units (AU)</label>
+            </value>
+            <value>
+                <fullName>LT</fullName>
+                <default>false</default>
+                <label>Agriculture machines (AM)</label>
+            </value>
+            <value>
+                <fullName>BM</fullName>
+                <default>false</default>
+                <label>Construction Equipment (CE)</label>
+            </value>
+            <value>
+                <fullName>BG</fullName>
+                <default>false</default>
+                <label>Construction Tools (CT)</label>
+            </value>
+            <value>
+                <fullName>EE</fullName>
+                <default>false</default>
+                <label>Electric &amp; Energy (EE)</label>
+            </value>
+            <value>
+                <fullName>Expertise 3</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Expertise 3</label>
+            </value>
+            <value>
+                <fullName>IE</fullName>
+                <default>false</default>
+                <label>Industrial Equipment (IE)</label>
+            </value>
+            <value>
+                <fullName>LC</fullName>
+                <default>false</default>
+                <label>Logistics Consulting &amp; Management (LC)</label>
+            </value>
+            <value>
+                <fullName>SA</fullName>
+                <default>false</default>
+                <label>Sanitary Systems (SA)</label>
+            </value>
+            <value>
+                <fullName>ET</fullName>
+                <default>false</default>
+                <label>Spare Parts (SP)</label>
+            </value>
+            <value>
+                <fullName>ZH</fullName>
+                <default>false</default>
+                <label>Tower Cranes (TC)</label>
+            </value>
+            <value>
+                <fullName>BI</fullName>
+                <default>false</default>
+                <label>Traffic Safety (TS)</label>
+            </value>
+            <value>
+                <fullName>FZ</fullName>
+                <default>false</default>
+                <label>Vehicles (VH)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

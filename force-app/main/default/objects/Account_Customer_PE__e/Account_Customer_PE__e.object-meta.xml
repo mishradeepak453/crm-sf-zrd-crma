@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Integration SF -&gt; Grace
+ZRD
+SF-842</description>
+    <eventType>HighVolume</eventType>
+    <label>Account Customer PE</label>
+    <pluralLabel>Account Customer PEs</pluralLabel>
+    <publishBehavior>PublishAfterCommit</publishBehavior>
+</CustomObject>

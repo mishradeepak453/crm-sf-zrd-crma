@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_English_Email</name>
+        <label>Send English Email</label>
+        <locationX>506</locationX>
+        <locationY>575</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>EnglishBody</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.CreatedBy.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>EnglishSubject</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_German_Email</name>
+        <label>Send German Email</label>
+        <locationX>242</locationX>
+        <locationY>575</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>GermanBody</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.CreatedBy.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>GermanSubject</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>55.0</apiVersion>
+    <decisions>
+        <name>Is_owner_equal_creator</name>
+        <label>Is owner equal creator</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <defaultConnector>
+            <targetReference>Recipient_Language</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Owner is not equal creator</defaultConnectorLabel>
+        <rules>
+            <name>Owner_is_equal</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CreatedById</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.OwnerId</elementReference>
+                </rightValue>
+            </conditions>
+            <label>Owner is equal</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Recipient_Language</name>
+        <label>Recipient Language</label>
+        <locationX>374</locationX>
+        <locationY>455</locationY>
+        <defaultConnector>
+            <targetReference>Send_English_Email</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>English Creator</defaultConnectorLabel>
+        <rules>
+            <name>German_Creator</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.LanguageLocaleKey</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>de</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_German_Email</targetReference>
+            </connector>
+            <label>German Creator</label>
+        </rules>
+    </decisions>
+    <description>- Send Email to the Creator of a Task when it is closed</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>TaskLink</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Enterprise_Server_URL_100}, FIND(&apos;/services&apos;, {!$Api.Enterprise_Server_URL_100})) &amp; {!$Record.Id}</expression>
+    </formulas>
+    <interviewLabel>Task after Update Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Task after Update Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_owner_equal_creator</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </filters>
+        <object>Task</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>EnglishBody</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hello {!$Record.CreatedBy.FirstName} {!$Record.CreatedBy.LastName},
+
+your task {!$Record.Subject} has been closed. 
+
+Please log in to learn more about it. 
+{!TaskLink}
+
+Best regards,
+your Zeppelin Salesforce-Team</text>
+    </textTemplates>
+    <textTemplates>
+        <name>EnglishSubject</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Your Task has been closed</text>
+    </textTemplates>
+    <textTemplates>
+        <name>GermanBody</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hallo {!$Record.CreatedBy.FirstName} {!$Record.CreatedBy.LastName},
+
+deine Aufgabe {!$Record.Subject} wurde abgeschlossen.
+
+Logge dich ein um mehr über die Aufgabe zu erfahren.
+{!TaskLink}
+
+Viele Grüße
+dein Zeppelin Salesforce-Team</text>
+    </textTemplates>
+    <textTemplates>
+        <name>GermanSubject</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Deine Aufgabe wurde abgeschlossen</text>
+    </textTemplates>
+</Flow>

@@ -1,0 +1,321 @@
+{
+  "version" : "60.0",
+  "nodes" : {
+    "LOAD_DATASET0" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Jahr", "Kunde", "Date", "Monat", "Umsatzgruppe", "Umsatz" ],
+        "dataset" : {
+          "type" : "analyticsDataset",
+          "label" : "umsatz sample data raw",
+          "name" : "umsatz_sample_data_raw"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "LOAD_DATASET1" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Buchungstext", "Mahndatum", "B_Art", "Buchdatum", "MSP", "MST", "Name", "Zuordnung", "Kunde", "FKZ", "F_llig", "Beleg", "Betrag", "Tage" ],
+        "dataset" : {
+          "type" : "analyticsDataset",
+          "label" : "op sample data raw",
+          "name" : "op_sample_data_raw"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "LOAD_DATASET2" : {
+      "action" : "load",
+      "sources" : [ ],
+      "parameters" : {
+        "fields" : [ "Core_Customer_Number__c", "Id", "Name" ],
+        "dataset" : {
+          "type" : "connectedDataset",
+          "label" : "Account",
+          "connectionName" : "SFDC_LOCAL",
+          "sourceObjectName" : "Account"
+        },
+        "sampleDetails" : {
+          "type" : "TopN",
+          "sortBy" : [ ]
+        }
+      }
+    },
+    "JOIN0" : {
+      "action" : "join",
+      "sources" : [ "LOAD_DATASET1", "LOAD_DATASET2" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "Kunde" ],
+        "rightQualifier" : "Account",
+        "rightKeys" : [ "Core_Customer_Number__c" ]
+      }
+    },
+    "JOIN1" : {
+      "action" : "join",
+      "sources" : [ "LOAD_DATASET0", "LOAD_DATASET2" ],
+      "schema" : {
+        "fields" : [ ],
+        "slice" : {
+          "mode" : "DROP",
+          "ignoreMissingFields" : true,
+          "fields" : [ ]
+        }
+      },
+      "parameters" : {
+        "joinType" : "LOOKUP",
+        "leftKeys" : [ "Kunde" ],
+        "rightQualifier" : "Account",
+        "rightKeys" : [ "Core_Customer_Number__c" ]
+      }
+    },
+    "OUTPUT0" : {
+      "action" : "save",
+      "sources" : [ "BUCKET1" ],
+      "parameters" : {
+        "fields" : [ ],
+        "dataset" : {
+          "type" : "analyticsDataset",
+          "label" : "Umsätze",
+          "name" : "Umsaetze",
+          "folderName" : "PoC_23_24"
+        },
+        "measuresToCurrencies" : [ ]
+      }
+    },
+    "OUTPUT1" : {
+      "action" : "save",
+      "sources" : [ "BUCKET0" ],
+      "parameters" : {
+        "fields" : [ ],
+        "dataset" : {
+          "type" : "analyticsDataset",
+          "label" : "Offene Posten",
+          "name" : "Offene_Posten"
+        },
+        "measuresToCurrencies" : [ ]
+      }
+    },
+    "FORMULA0" : {
+      "action" : "formula",
+      "sources" : [ "JOIN0" ],
+      "parameters" : {
+        "expressionType" : "SQL",
+        "fields" : [ {
+          "type" : "NUMBER",
+          "name" : "TageFaellig",
+          "label" : "Tage über Fälligkeit",
+          "formulaExpression" : "datediff(now(), F_llig)",
+          "precision" : 18,
+          "scale" : 0,
+          "defaultValue" : ""
+        } ]
+      }
+    },
+    "BUCKET0" : {
+      "action" : "bucket",
+      "sources" : [ "FORMULA0" ],
+      "parameters" : {
+        "fields" : [ {
+          "name" : "TageFaellig_bucket",
+          "label" : "Tage über Fälligkeit Bucket",
+          "type" : "TEXT",
+          "bucketsSetup" : {
+            "isPassthroughEnabled" : false,
+            "sourceField" : {
+              "name" : "TageFaellig",
+              "type" : "NUMBER"
+            },
+            "buckets" : [ {
+              "value" : "D) noch nicht fällig",
+              "rangeEnd" : 1.0
+            }, {
+              "value" : "A) weniger als 30 Tage",
+              "rangeStart" : 1.0,
+              "rangeEnd" : 30.0
+            }, {
+              "value" : "B) 30 bis 60 Tage",
+              "rangeStart" : 30.0,
+              "rangeEnd" : 60.0
+            }, {
+              "value" : "C) mehr als 60 Tage",
+              "rangeStart" : 60.0
+            } ]
+          }
+        } ]
+      }
+    },
+    "BUCKET1" : {
+      "action" : "bucket",
+      "sources" : [ "JOIN1" ],
+      "parameters" : {
+        "fields" : [ {
+          "name" : "SGF",
+          "label" : "SGF",
+          "type" : "TEXT",
+          "bucketsSetup" : {
+            "defaultBucketValue" : null,
+            "nullBucketValue" : null,
+            "isPassthroughEnabled" : true,
+            "algorithm" : null,
+            "sourceField" : {
+              "name" : "Umsatzgruppe",
+              "type" : "TEXT"
+            },
+            "buckets" : [ {
+              "value" : "Miete",
+              "sourceValues" : [ "BG", "BM", "FT", "FZ" ]
+            }, {
+              "value" : "BVS",
+              "sourceValues" : [ "BI" ]
+            }, {
+              "value" : "EKW",
+              "sourceValues" : [ "EE" ]
+            }, {
+              "value" : "LC&M",
+              "sourceValues" : [ "LC" ]
+            }, {
+              "value" : "Raumsysteme",
+              "sourceValues" : [ "RS" ]
+            }, {
+              "value" : "Sonstiges",
+              "sourceValues" : [ "SO" ]
+            } ]
+          }
+        } ]
+      }
+    }
+  },
+  "ui" : {
+    "nodes" : {
+      "LOAD_DATASET0" : {
+        "label" : "umsatz sample data raw",
+        "type" : "LOAD_DATASET",
+        "top" : 112,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "LOAD_DATASET1" : {
+        "label" : "op sample data raw",
+        "type" : "LOAD_DATASET",
+        "top" : 252,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "LOAD_DATASET2" : {
+        "label" : "Account",
+        "type" : "LOAD_DATASET",
+        "top" : 392,
+        "left" : 112,
+        "parameters" : {
+          "sampleSize" : 2000
+        }
+      },
+      "JOIN0" : {
+        "label" : "Verknüpfen 0",
+        "type" : "JOIN",
+        "top" : 252,
+        "left" : 252
+      },
+      "JOIN1" : {
+        "label" : "Verknüpfen 1",
+        "type" : "JOIN",
+        "top" : 112,
+        "left" : 252
+      },
+      "OUTPUT0" : {
+        "label" : "Ausgabe 0",
+        "type" : "OUTPUT",
+        "top" : 112,
+        "left" : 532
+      },
+      "OUTPUT1" : {
+        "label" : "Ausgabe 1",
+        "type" : "OUTPUT",
+        "top" : 252,
+        "left" : 672
+      },
+      "TRANSFORM0" : {
+        "label" : "Umwandeln 0",
+        "type" : "TRANSFORM",
+        "top" : 252,
+        "left" : 392,
+        "graph" : {
+          "FORMULA0" : {
+            "parameters" : {
+              "type" : "DATE_DIFFERENCE_UI"
+            },
+            "label" : "Zeitraum zwischen Datumsangaben zurückgeben"
+          },
+          "BUCKET0" : {
+            "label" : "Bucket"
+          }
+        },
+        "connectors" : [ {
+          "source" : "FORMULA0",
+          "target" : "BUCKET0"
+        } ]
+      },
+      "TRANSFORM1" : {
+        "label" : "Umwandeln 1",
+        "type" : "TRANSFORM",
+        "top" : 112,
+        "left" : 392,
+        "graph" : {
+          "BUCKET1" : {
+            "label" : "Geschäftsfelder definieren"
+          }
+        },
+        "connectors" : [ ]
+      }
+    },
+    "connectors" : [ {
+      "source" : "LOAD_DATASET1",
+      "target" : "JOIN0"
+    }, {
+      "source" : "LOAD_DATASET2",
+      "target" : "JOIN0"
+    }, {
+      "source" : "LOAD_DATASET0",
+      "target" : "JOIN1"
+    }, {
+      "source" : "LOAD_DATASET2",
+      "target" : "JOIN1"
+    }, {
+      "source" : "TRANSFORM1",
+      "target" : "OUTPUT0"
+    }, {
+      "source" : "TRANSFORM0",
+      "target" : "OUTPUT1"
+    }, {
+      "source" : "JOIN0",
+      "target" : "TRANSFORM0"
+    }, {
+      "source" : "JOIN1",
+      "target" : "TRANSFORM1"
+    } ],
+    "hiddenColumns" : [ ]
+  },
+  "runMode" : "full"
+}

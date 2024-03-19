@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Z000</fullName>
+        <default>false</default>
+        <label>payable immediately without discount Z000</label>
+    </customValue>
+    <customValue>
+        <fullName>Z001</fullName>
+        <default>false</default>
+        <label>payable immediately without discount Z001</label>
+    </customValue>
+    <customValue>
+        <fullName>Z011</fullName>
+        <default>false</default>
+        <label>1 day 2%  30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z012</fullName>
+        <default>false</default>
+        <label>1 day 3%  14 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z013</fullName>
+        <default>false</default>
+        <label>1 day 3%  30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z014</fullName>
+        <default>false</default>
+        <label>1 days 3% 7 days 2%  14 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z015</fullName>
+        <default>false</default>
+        <label>1 days 3% 10 days 2%  30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z021</fullName>
+        <default>false</default>
+        <label>2 days 3%  30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z031</fullName>
+        <default>false</default>
+        <label>3 days 2% 10 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z032</fullName>
+        <default>false</default>
+        <label>3 days 3%  30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z041</fullName>
+        <default>false</default>
+        <label>4 days 3% 60 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z042</fullName>
+        <default>false</default>
+        <label>4 days 3% 8 days 2%  14 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z043</fullName>
+        <default>false</default>
+        <label>4 days 3% 10 days 2%  30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z051</fullName>
+        <default>false</default>
+        <label>5 days 2% 10 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z052</fullName>
+        <default>false</default>
+        <label>5 days 3% 14 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z053</fullName>
+        <default>false</default>
+        <label>5 days 3% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z054</fullName>
+        <default>false</default>
+        <label>5 days 2% 10 days 1%  14 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z055</fullName>
+        <default>false</default>
+        <label>5 days 3% 10 days 2%  30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z056</fullName>
+        <default>false</default>
+        <label>5 days 3% 14 days 2%  30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z071</fullName>
+        <default>false</default>
+        <label>7 days 1% 14 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z072</fullName>
+        <default>false</default>
+        <label>7 days 2% 14 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z073</fullName>
+        <default>false</default>
+        <label>7 days 2% 20 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z074</fullName>
+        <default>false</default>
+        <label>7 days 2% 30days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z075</fullName>
+        <default>false</default>
+        <label>7 days 2% 14 days 1%  30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z076</fullName>
+        <default>false</default>
+        <label>7 days 3% 14 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z077</fullName>
+        <default>false</default>
+        <label>7 days 3% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z078</fullName>
+        <default>false</default>
+        <label>7 days 3% 11 days 2% 14 days. net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z079</fullName>
+        <default>false</default>
+        <label>7 days 3% 14 days 2%  30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z081</fullName>
+        <default>false</default>
+        <label>8 days 1% 14 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z082</fullName>
+        <default>false</default>
+        <label>8 days 1%  20 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z083</fullName>
+        <default>false</default>
+        <label>8 days 1% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z084</fullName>
+        <default>false</default>
+        <label>8 days 2% 14 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z085</fullName>
+        <default>false</default>
+        <label>8 days 2% 20 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z086</fullName>
+        <default>false</default>
+        <label>8 days 2% 45 days net Z086</label>
+    </customValue>
+    <customValue>
+        <fullName>Z087</fullName>
+        <default>false</default>
+        <label>8 days 2% 45 days net Z087</label>
+    </customValue>
+    <customValue>
+        <fullName>Z088</fullName>
+        <default>false</default>
+        <label>8 days 2% 14 days 1%  30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z089</fullName>
+        <default>false</default>
+        <label>8 days 3% 20 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z08A</fullName>
+        <default>false</default>
+        <label>8 days 3% 20 days net Z08A</label>
+    </customValue>
+    <customValue>
+        <fullName>Z08B</fullName>
+        <default>false</default>
+        <label>8 days 3% 20 days net Z08B</label>
+    </customValue>
+    <customValue>
+        <fullName>Z08C</fullName>
+        <default>false</default>
+        <label>8 days 3% 12 days 2%  30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z08D</fullName>
+        <default>false</default>
+        <label>8 days 3% 30 days 2%  60 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z091</fullName>
+        <default>false</default>
+        <label>9 days 3% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z0B0</fullName>
+        <default>false</default>
+        <label>payable immediatley (cash) without discount</label>
+    </customValue>
+    <customValue>
+        <fullName>Z0B2</fullName>
+        <default>false</default>
+        <label>payable immediately (cash) 2%</label>
+    </customValue>
+    <customValue>
+        <fullName>Z0B3</fullName>
+        <default>false</default>
+        <label>payable immediately (cash) 3%</label>
+    </customValue>
+    <customValue>
+        <fullName>Z0S0</fullName>
+        <default>false</default>
+        <label>payable immediately (check) without discount</label>
+    </customValue>
+    <customValue>
+        <fullName>Z0S2</fullName>
+        <default>false</default>
+        <label>payable immediately (check) 2%</label>
+    </customValue>
+    <customValue>
+        <fullName>Z0S3</fullName>
+        <default>false</default>
+        <label>payable immediately (check) 3%</label>
+    </customValue>
+    <customValue>
+        <fullName>Z100</fullName>
+        <default>false</default>
+        <label>10 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z101</fullName>
+        <default>false</default>
+        <label>10 days 1%  30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z102</fullName>
+        <default>false</default>
+        <label>10 days 1,5%  25 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z103</fullName>
+        <default>false</default>
+        <label>10 days 2% 14 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z104</fullName>
+        <default>false</default>
+        <label>10 days 2% 20 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z105</fullName>
+        <default>false</default>
+        <label>10 days 2% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z106</fullName>
+        <default>false</default>
+        <label>10 days 2% 40 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z107</fullName>
+        <default>false</default>
+        <label>10 days 3% 20 days 2% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z108</fullName>
+        <default>false</default>
+        <label>10 days 3% 14 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z109</fullName>
+        <default>false</default>
+        <label>10 days 3% 20 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z10A</fullName>
+        <default>false</default>
+        <label>10 days 3% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z10B</fullName>
+        <default>false</default>
+        <label>10 days 3% 60 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z10C</fullName>
+        <default>false</default>
+        <label>10 days 3% 14 days 2% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z10D</fullName>
+        <default>false</default>
+        <label>10 days 3% 20 days 2% 30days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z10E</fullName>
+        <default>false</default>
+        <label>10 days 3% 20 days 2% 45 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z10F</fullName>
+        <default>false</default>
+        <label>10 days 3% 30 days 2% 45 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z111</fullName>
+        <default>false</default>
+        <label>11 days 2% 18 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z121</fullName>
+        <default>false</default>
+        <label>12 days 2% 14 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z122</fullName>
+        <default>false</default>
+        <label>12 days 3% 30 days net Z122</label>
+    </customValue>
+    <customValue>
+        <fullName>Z123</fullName>
+        <default>false</default>
+        <label>12 days 3% 30 days net Z123</label>
+    </customValue>
+    <customValue>
+        <fullName>Z124</fullName>
+        <default>false</default>
+        <label>12 days 3% 22 days 2% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z140</fullName>
+        <default>false</default>
+        <label>14 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z141</fullName>
+        <default>false</default>
+        <label>14 days 1% 45 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z142</fullName>
+        <default>false</default>
+        <label>14 days 1,5% 45 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z143</fullName>
+        <default>false</default>
+        <label>14 days 2%  15 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z144</fullName>
+        <default>false</default>
+        <label>14 days 2% 20 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z145</fullName>
+        <default>false</default>
+        <label>14 days 2% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z146</fullName>
+        <default>false</default>
+        <label>14 days 2% 60 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z147</fullName>
+        <default>false</default>
+        <label>14 days 2,5% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z148</fullName>
+        <default>false</default>
+        <label>14 days. 2,5% 30 days. 1% 40 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z149</fullName>
+        <default>false</default>
+        <label>14 days 3% 15 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z14A</fullName>
+        <default>false</default>
+        <label>14 days 3% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z14B</fullName>
+        <default>false</default>
+        <label>14 days 3% 60 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z14C</fullName>
+        <default>false</default>
+        <label>14 days 3% 21 days 2% 30 days</label>
+    </customValue>
+    <customValue>
+        <fullName>Z14D</fullName>
+        <default>false</default>
+        <label>14 days 3% 30 days 2% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z14E</fullName>
+        <default>false</default>
+        <label>14 days 3% 30 days 2% 60 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z14F</fullName>
+        <default>false</default>
+        <label>14 days 3% 45 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z14G</fullName>
+        <default>false</default>
+        <label>14 days 4% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z14H</fullName>
+        <default>false</default>
+        <label>14 days 2%  45 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z151</fullName>
+        <default>false</default>
+        <label>15 days 2% 20 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z152</fullName>
+        <default>false</default>
+        <label>15 days 2% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z153</fullName>
+        <default>false</default>
+        <label>15 days 2% 35 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z154</fullName>
+        <default>false</default>
+        <label>15 days 3% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z161</fullName>
+        <default>false</default>
+        <label>16 days 2% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z181</fullName>
+        <default>false</default>
+        <label>18 days 2,5% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z182</fullName>
+        <default>false</default>
+        <label>18 days 3% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z200</fullName>
+        <default>false</default>
+        <label>20 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z201</fullName>
+        <default>false</default>
+        <label>20 days 2% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z202</fullName>
+        <default>false</default>
+        <label>20 days 2% 35 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z203</fullName>
+        <default>false</default>
+        <label>20 days 2% 40 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z204</fullName>
+        <default>false</default>
+        <label>20 days 3% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z205</fullName>
+        <default>false</default>
+        <label>20 days 3% 40 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z206</fullName>
+        <default>false</default>
+        <label>20 days 3% 30 days 2% 40 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z211</fullName>
+        <default>false</default>
+        <label>21 days 3% 40 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z212</fullName>
+        <default>false</default>
+        <label>21 days 3% 45 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z213</fullName>
+        <default>false</default>
+        <label>21 days 3% 60 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z241</fullName>
+        <default>false</default>
+        <label>24 days 2% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z251</fullName>
+        <default>false</default>
+        <label>25 days 3% 35 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z281</fullName>
+        <default>false</default>
+        <label>28 days 3% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z291</fullName>
+        <default>false</default>
+        <label>29 days 2% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z292</fullName>
+        <default>false</default>
+        <label>29 days 2,5% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z293</fullName>
+        <default>false</default>
+        <label>29 days 3% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z300</fullName>
+        <default>false</default>
+        <label>30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z301</fullName>
+        <default>false</default>
+        <label>30 days 1% 60 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z302</fullName>
+        <default>false</default>
+        <label>30 days 1,68%  42 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z303</fullName>
+        <default>false</default>
+        <label>30 days 2% 40 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z304</fullName>
+        <default>false</default>
+        <label>30 days 2% 45 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z305</fullName>
+        <default>false</default>
+        <label>30 days 2% 60 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z306</fullName>
+        <default>false</default>
+        <label>30 days 2,5% 60 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z307</fullName>
+        <default>false</default>
+        <label>30 days 3% 40 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z308</fullName>
+        <default>false</default>
+        <label>30 days 3% 60 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z309</fullName>
+        <default>false</default>
+        <label>30 days 3% 90 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z350</fullName>
+        <default>false</default>
+        <label>35 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z360</fullName>
+        <default>false</default>
+        <label>30 days 4% 60 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z400</fullName>
+        <default>false</default>
+        <label>40 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z450</fullName>
+        <default>false</default>
+        <label>45 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z453</fullName>
+        <default>false</default>
+        <label>45 days 3% 60 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z600</fullName>
+        <default>false</default>
+        <label>60 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z601</fullName>
+        <default>false</default>
+        <label>60 days 2% 70 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z700</fullName>
+        <default>false</default>
+        <label>70 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z900</fullName>
+        <default>false</default>
+        <label>90 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>ZO..</fullName>
+        <default>false</default>
+        <label>...rates for interest....</label>
+    </customValue>
+    <customValue>
+        <fullName>ZO01</fullName>
+        <default>false</default>
+        <label>12 rates 1. day of month, from gross</label>
+    </customValue>
+    <customValue>
+        <fullName>ZO02</fullName>
+        <default>false</default>
+        <label>24 rates 1. day of month, from gross</label>
+    </customValue>
+    <customValue>
+        <fullName>ZO03</fullName>
+        <default>false</default>
+        <label>36 rates 1. day of month, from gross</label>
+    </customValue>
+    <customValue>
+        <fullName>ZO11</fullName>
+        <default>false</default>
+        <label>deposit 10% from gross, 12 rates, 1st of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZO12</fullName>
+        <default>false</default>
+        <label>deposit 10% from gross, 24 rates 1st of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZO13</fullName>
+        <default>false</default>
+        <label>deposit 10% from gross, 36 rates 1st of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZO21</fullName>
+        <default>false</default>
+        <label>deposit 20% from gross, 12 rates 1st of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZO22</fullName>
+        <default>false</default>
+        <label>deposit 20% from gross, 24 rates 1st of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZO23</fullName>
+        <default>false</default>
+        <label>deposit 20% from gross, 36 rates 1st of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZO51</fullName>
+        <default>false</default>
+        <label>12 rates 15 of month, from gross</label>
+    </customValue>
+    <customValue>
+        <fullName>ZO52</fullName>
+        <default>false</default>
+        <label>24 rates 15 of month, from gross</label>
+    </customValue>
+    <customValue>
+        <fullName>ZO53</fullName>
+        <default>false</default>
+        <label>36 rates 15 of month, from gross</label>
+    </customValue>
+    <customValue>
+        <fullName>ZO61</fullName>
+        <default>false</default>
+        <label>deposit 10% from gross, 12 rates 15 of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZO62</fullName>
+        <default>false</default>
+        <label>deposit 10% from gross, 24 rates 15 of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZO63</fullName>
+        <default>false</default>
+        <label>deposit 10% from gross, 36 rates 15 of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZO71</fullName>
+        <default>false</default>
+        <label>deposit 20% from gross, 12 rates 15 of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZO72</fullName>
+        <default>false</default>
+        <label>deposit 20% from gross, 24 rates 15 of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZO73</fullName>
+        <default>false</default>
+        <label>deposit 20% from gross, 36 rates 15 of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR..</fullName>
+        <default>false</default>
+        <label>…payment of an instalament with MWST 16%..</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR01</fullName>
+        <default>false</default>
+        <label>12 rates 1. day of month, 1.Rate +MWS</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR02</fullName>
+        <default>false</default>
+        <label>24 rates 1. day of month, 1.Rate +MWS</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR03</fullName>
+        <default>false</default>
+        <label>36 rates 1. day of month, 1.Rate +MWS</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR05</fullName>
+        <default>false</default>
+        <label>MWS immediately, Rest 15 of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR06</fullName>
+        <default>false</default>
+        <label>MWS immediately, Rest 1st of the following month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR07</fullName>
+        <default>false</default>
+        <label>MWS immediately, Rest 15 day of the following month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR08</fullName>
+        <default>false</default>
+        <label>MWS immediately, Rest 1st of the months next</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR09</fullName>
+        <default>false</default>
+        <label>MWS immediately, Rest 15 of the month next</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR11</fullName>
+        <default>false</default>
+        <label>deposit 10% +MWS, 12 rates 1st of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR12</fullName>
+        <default>false</default>
+        <label>deposit 10% +MWS, 24 rates 1st of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR13</fullName>
+        <default>false</default>
+        <label>deposit 10% +MWS, 36 rates 1st of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR21</fullName>
+        <default>false</default>
+        <label>deposit 20% +MWS, 12 rates 1st of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR22</fullName>
+        <default>false</default>
+        <label>deposit 20% +MWS, 24 rates 1st of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR23</fullName>
+        <default>false</default>
+        <label>deposit 20% +MWS, 36 rates 1st of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR51</fullName>
+        <default>false</default>
+        <label>12 rates 15.d.M, 1.Rate +MWS</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR52</fullName>
+        <default>false</default>
+        <label>24 rates 15.d.M, 1.Rate +MWS</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR53</fullName>
+        <default>false</default>
+        <label>36 rates 15.d.M, 1.Rate +MWS</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR61</fullName>
+        <default>false</default>
+        <label>deposit 10% +MWS, 12 rates 15.d.M</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR62</fullName>
+        <default>false</default>
+        <label>deposit 10% +MWS, 24 rates 15.d.M</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR63</fullName>
+        <default>false</default>
+        <label>deposit 10% +MWS, 36 rates 15.d.M</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR71</fullName>
+        <default>false</default>
+        <label>deposit 20% +MWS, 12 rates 15.d.M</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR72</fullName>
+        <default>false</default>
+        <label>deposit 20% +MWS, 24 rates 15.d.M</label>
+    </customValue>
+    <customValue>
+        <fullName>ZR73</fullName>
+        <default>false</default>
+        <label>deposit 20% +MWS, 36 rates 15.d.M</label>
+    </customValue>
+    <customValue>
+        <fullName>ZU..</fullName>
+        <default>false</default>
+        <label>...var. rates of interests</label>
+    </customValue>
+    <customValue>
+        <fullName>ZU01</fullName>
+        <default>false</default>
+        <label>deposit 25% from gross, 2 rates 1st of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZU02</fullName>
+        <default>false</default>
+        <label>deposit 25% from gross, 3 rates 15 of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZU06</fullName>
+        <default>false</default>
+        <label>6 rates 15 of month, from gross</label>
+    </customValue>
+    <customValue>
+        <fullName>ZV..</fullName>
+        <default>false</default>
+        <label>...var. Rate payment MWST 16%...</label>
+    </customValue>
+    <customValue>
+        <fullName>ZV01</fullName>
+        <default>false</default>
+        <label>deposit 25% +MWS, 2 rates 1st of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZV02</fullName>
+        <default>false</default>
+        <label>deposit 25% +MWS, 3 rates 15 of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZV03</fullName>
+        <default>false</default>
+        <label>deposit 14,474% +MWS, 1 rates 15.</label>
+    </customValue>
+    <customValue>
+        <fullName>ZV04</fullName>
+        <default>false</default>
+        <label>deposit 25% +MWS, 1 rates 15 of month</label>
+    </customValue>
+    <customValue>
+        <fullName>ZV05</fullName>
+        <default>false</default>
+        <label>6 rates 1st of month, 1. Rate +MWS</label>
+    </customValue>
+    <customValue>
+        <fullName>ZV06</fullName>
+        <default>false</default>
+        <label>6 rates 15 of month, 1. Rate +MWS</label>
+    </customValue>
+    <customValue>
+        <fullName>Z210</fullName>
+        <default>false</default>
+        <label>21 days 2% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z214</fullName>
+        <default>false</default>
+        <label>21 days 3% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>ZPCP</fullName>
+        <default>false</default>
+        <label>1. of the following month plus 180 days</label>
+    </customValue>
+    <customValue>
+        <fullName>ZLAS</fullName>
+        <default>false</default>
+        <label>direct debit order</label>
+    </customValue>
+    <customValue>
+        <fullName>ZLA2</fullName>
+        <default>false</default>
+        <label>direct debit order 2% discount</label>
+    </customValue>
+    <customValue>
+        <fullName>ZLA3</fullName>
+        <default>false</default>
+        <label>direct debit order 3% discount</label>
+    </customValue>
+    <customValue>
+        <fullName>Z215</fullName>
+        <default>false</default>
+        <label>21 days 2% 60 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z310</fullName>
+        <default>false</default>
+        <label>30 days 3% 45 days 2% 60 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z183</fullName>
+        <default>false</default>
+        <label>18 days 2% 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z207</fullName>
+        <default>false</default>
+        <label>20 days 4 % 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z216</fullName>
+        <default>false</default>
+        <label>lt. VOB 21 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z314</fullName>
+        <default>false</default>
+        <label>lt. VOB 30 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>ZY54</fullName>
+        <default>false</default>
+        <label>4. Rate</label>
+    </customValue>
+    <customValue>
+        <fullName>Z311</fullName>
+        <default>false</default>
+        <label>30 days, 1,5 % discount</label>
+    </customValue>
+    <customValue>
+        <fullName>ZLA1</fullName>
+        <default>false</default>
+        <label>deposit 5 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z08E</fullName>
+        <default>false</default>
+        <label>10 days 4%  30 days 2,25%  60 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z313</fullName>
+        <default>false</default>
+        <label>31 days 3% discount, 60 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z452</fullName>
+        <default>false</default>
+        <label>45 days 2% discount, 60 days net</label>
+    </customValue>
+    <customValue>
+        <fullName>Z720</fullName>
+        <default>false</default>
+        <label>20th of the following month, 7% discount</label>
+    </customValue>
+    <masterLabel>Payment Terms</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

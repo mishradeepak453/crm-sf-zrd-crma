@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meine_Konzernschl_ssel</fullName>
+    <columns>NAME</columns>
+    <columns>Company_Key_ID__c</columns>
+    <columns>Company_Group__c</columns>
+    <columns>Payment_Terms__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Current_User_is_AM__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Meine Konzernschlüssel</label>
+</ListView>

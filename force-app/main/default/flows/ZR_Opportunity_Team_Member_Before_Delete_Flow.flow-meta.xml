@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Deletion_Email_DE</name>
+        <label>Deletion Email DE</label>
+        <locationX>50</locationX>
+        <locationY>551</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>DeletionEmailBodyDE</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Member__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>DeletionEmailSubjectDE</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Deletion_Email_EN</name>
+        <label>Deletion Email EN</label>
+        <locationX>314</locationX>
+        <locationY>551</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>DeletionEmailBodyEN</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>$Record.Member__r.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>DeletionEmailSubjectEN</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <apiVersion>53.0</apiVersion>
+    <decisions>
+        <name>Is_Opportunity_Team_Member_active</name>
+        <label>Is Opportunity Team Member active</label>
+        <locationX>380</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Team Member is not active</defaultConnectorLabel>
+        <rules>
+            <name>Team_Member_is_active_and_not_Remover</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.User.IsActive</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.User.Id</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$User.Id</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Is_Team_Member_DE</targetReference>
+            </connector>
+            <label>Team Member is active and not Remover</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks whether the Team Member has language de or other.</description>
+        <name>Is_Team_Member_DE</name>
+        <label>Is Team Member DE?</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Deletion_Email_EN</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Team Member is NOT DE</defaultConnectorLabel>
+        <rules>
+            <name>Team_Member_is_DE</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Member__r.LanguageLocaleKey</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>de</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Deletion_Email_DE</targetReference>
+            </connector>
+            <label>Team Member is DE</label>
+        </rules>
+    </decisions>
+    <description>- Sends an Email to the User that has been removed from an Opportunity Team</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>OpportunityLink</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Enterprise_Server_URL_100}, FIND(&apos;/services&apos;, {!$Api.Enterprise_Server_URL_100})) &amp; {!$Record.Opportunity.Id}</expression>
+    </formulas>
+    <interviewLabel>Opportunity Team Member Before Delete Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity Team Member Before Delete Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_Opportunity_Team_Member_active</targetReference>
+        </connector>
+        <object>OpportunityTeamMember</object>
+        <recordTriggerType>Delete</recordTriggerType>
+        <triggerType>RecordBeforeDelete</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>DeletionEmailBodyDE</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hallo {!$Record.Member__r.FirstName} {!$Record.Member__r.LastName},
+
+du wurdest von {!$User.FirstName} {!$User.LastName} aus dem Opportunity Team von {!$Record.Opportunity.Name} entfernt.
+
+Logge dich bei Salesforce ein, um mehr über die Opportunity zu erfahren.
+{!OpportunityLink}
+
+Viele Grüße,
+Dein Zeppelin Salesforce-Team
+
+Dies ist eine automatisch generierte E-Mail, bitte nicht antworten.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>DeletionEmailBodyEN</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Hello {!$Record.Member__r.FirstName} {!$Record.Member__r.LastName},
+
+You have been removed from the Opportunity Team of {!$Record.Opportunity.Name} by {!$User.FirstName} {!$User.LastName}.
+
+Please log in to see the details of the Opportunity:
+{!OpportunityLink}
+
+Best regards,
+Your Zeppelin Salesforce-Team
+
+This is an automatically created Email. Please do not reply.</text>
+    </textTemplates>
+    <textTemplates>
+        <name>DeletionEmailSubjectDE</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Du wurdest aus einem Opportunity Team entfernt</text>
+    </textTemplates>
+    <textTemplates>
+        <name>DeletionEmailSubjectEN</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>You have been removed from an Opportunity Team</text>
+    </textTemplates>
+</Flow>

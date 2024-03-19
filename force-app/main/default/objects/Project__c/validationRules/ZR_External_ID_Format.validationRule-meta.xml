@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_External_ID_Format</fullName>
+    <active>true</active>
+    <description>Makes sure that the external ID entered has prefix &apos;ibau&apos; or &apos;Infobau&apos;.</description>
+    <errorConditionFormula>NOT(ISBLANK(External_ID__c)) &amp;&amp; NOT(OR(BEGINS(External_ID__c, &quot;ibau_&quot;),BEGINS(External_ID__c, &quot;infobau_&quot;)))</errorConditionFormula>
+    <errorDisplayField>External_ID__c</errorDisplayField>
+    <errorMessage>The external ID has to start with &apos;ibau_&apos; or &apos;infobau_&apos;.</errorMessage>
+</ValidationRule>

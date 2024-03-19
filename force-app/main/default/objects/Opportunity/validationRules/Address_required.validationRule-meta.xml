@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Address_required</fullName>
+    <active>true</active>
+    <description>SF-728 Makes sure that all address fields except State are filled for creating an Opportunity. Validation rule is necessary due to new custom address fields cannot be made mandatory on quick actions.</description>
+    <errorConditionFormula>((ISBLANK(Construction_Site_Address__Street__s )  || 
+ISBLANK(Construction_Site_Address__PostalCode__s )  || 
+ISBLANK(Construction_Site_Address__City__s )  || 
+ISBLANK(TEXT(Construction_Site_Address__CountryCode__s  ))) &amp;&amp;
+NOT(ISBLANK(Lead_Id__c))&amp;&amp;
+NOT(ISNEW())&amp;&amp;
+NOT(ISCHANGED(Primary_Contact__c )))
+||
+((ISBLANK(Construction_Site_Address__Street__s )  || 
+ISBLANK(Construction_Site_Address__PostalCode__s )  || 
+ISBLANK(Construction_Site_Address__City__s )  || 
+ISBLANK(TEXT(Construction_Site_Address__CountryCode__s  ))) &amp;&amp;
+ISBLANK(Lead_Id__c))</errorConditionFormula>
+    <errorMessage>Street, Postal Code, City and Country are mandatory Address fields.</errorMessage>
+</ValidationRule>

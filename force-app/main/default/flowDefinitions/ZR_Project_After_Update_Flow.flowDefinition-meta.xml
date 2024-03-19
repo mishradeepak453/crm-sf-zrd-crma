@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>6</activeVersionNumber>
+    <description>- Sends a Platform Event to Grace if Postal Code is changed to receive the territory of the record and deletes all associated Project Territories
+- Sends a notification to the Project Team and Owner of the record if changes are made to history tracking fields
+- Creates Project Team Members for new Potentials</description>
+    <masterLabel>Project After Update Flow</masterLabel>
+</FlowDefinition>

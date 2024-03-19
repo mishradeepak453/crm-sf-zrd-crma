@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Core_Approval_for_PEP__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>1. Not integration relevant
+2. Core
+3. Set by Flow &quot;Core_Grant_Screen_Flow&quot;  if the Grant is above 25 Euro for a Politically exposed Person.</description>
+    <externalId>false</externalId>
+    <label>Approval for PEP</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

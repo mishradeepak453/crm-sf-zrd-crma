@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <isExposed>true</isExposed>
+    
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <propertyType name="sObjectType" extends="SObject" label="sObject" description="Generic sObject data type used for input sObject properties" />
+            <property name="projectList" type="{sObjectType[]}" label="Potential Duplicate Projects" role="inputOnly" />
+            <property name="manualProjectList" type="{sObjectType[]}" label="Manual Project Created In Flow" role="inputOnly" />
+
+            <property name="selectedDuplicateRecordId" type="String" label="Selected Duplicate Record Id" role="outputOnly"></property>
+            <property name="selectedButtonId" type="String" label="Selected Button ID" role="outputOnly"/>
+        </targetConfig>
+    </targetConfigs>
+
+</LightningComponentBundle>

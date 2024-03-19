@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <errorMessage>Auf einer direkten Account Kontakt Beziehung kann kein Löschkennzeichen gesetzt werden. Wenn dies gesetzt werden soll, muss dies direkt auf dem Kontakt getan werden.</errorMessage>
+        <name>No_Deletion_Code_on_Direct_ACR</name>
+    </validationRules>
+</CustomObjectTranslation>

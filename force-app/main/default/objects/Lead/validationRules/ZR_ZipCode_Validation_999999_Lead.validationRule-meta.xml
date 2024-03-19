@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ZR_ZipCode_Validation_999999_Lead</fullName>
+    <active>true</active>
+    <description>SF-158 This validation rule should ensure, that all Zip Codes are in the correct format according to their respective country. Format (&quot;\\d{6}&quot;). Example: 999999.</description>
+    <errorConditionFormula>IF(
+AND(
+NOT(ISBLANK( PostalCode )),
+OR(
+Country == &quot;BY&quot;,
+Country == &quot;CN&quot;,
+Country == &quot;EC&quot;,
+Country == &quot;IN&quot;,
+Country == &quot;KZ&quot;,
+Country == &quot;KG&quot;,
+Country == &quot;RO&quot;,
+Country == &quot;RU&quot;,
+Country == &quot;SG&quot;,
+Country == &quot;TJ&quot;,
+Country == &quot;UZ&quot;
+)),
+NOT(REGEX( PostalCode , (&quot;\\d{6}&quot;))),FALSE)
+&amp;&amp;  $Permission.Core_Lead_Bypass_Validation_Rules = FALSE</errorConditionFormula>
+    <errorDisplayField>PostalCode</errorDisplayField>
+    <errorMessage>Please enter a valid format for the Zip Code! This should consist of six numbers. Example: 999999</errorMessage>
+</ValidationRule>

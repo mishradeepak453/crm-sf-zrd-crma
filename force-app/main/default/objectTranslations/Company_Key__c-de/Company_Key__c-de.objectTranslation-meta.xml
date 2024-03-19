@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Konzernschlüssel</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Konzernschlüssel</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Konzernschlüssel</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Konzernschlüsseln</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Konzernschlüssels</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Konzernschlüssel</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Konzernschlüssel</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Konzernschlüsseln</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Company Key-Layout</layout>
+        <sections>
+            <label>Benutzerdefinierte Links</label>
+            <section>Benutzerdefinierte Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Konzernschlüssel</nameFieldLabel>
+</CustomObjectTranslation>

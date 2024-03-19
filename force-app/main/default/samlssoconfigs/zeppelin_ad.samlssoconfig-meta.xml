@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SamlSsoConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <executionUserId>0053X00000FZBzp</executionUserId>
+    <identityLocation>SubjectNameId</identityLocation>
+    <identityMapping>FederationId</identityMapping>
+    <issuer>https://sts.windows.net/0250981a-1133-49e1-ba8e-3b02b77bfa04/</issuer>
+    <loginUrl>https://login.microsoftonline.com/0250981a-1133-49e1-ba8e-3b02b77bfa04/saml2</loginUrl>
+    <name>Zeppelin AD</name>
+    <oauthTokenEndpoint>https://zeppelin-zr--zrfullcrma.sandbox.my.salesforce.com/services/oauth2/token?so=00D9M000000y2mv</oauthTokenEndpoint>
+    <redirectBinding>true</redirectBinding>
+    <requestSignatureMethod>1</requestSignatureMethod>
+    <requestSigningCertId>0P13X000003em8j</requestSigningCertId>
+    <salesforceLoginUrl>https://zeppelin-zr--zrfullcrma.sandbox.my.salesforce.com?so=00D9M000000y2mv</salesforceLoginUrl>
+    <samlEntityId>https://zeppelin-zr.my.salesforce.com</samlEntityId>
+    <samlJitHandlerId>01p3X00000GZBml</samlJitHandlerId>
+    <samlVersion>SAML2_0</samlVersion>
+    <singleLogoutBinding>RedirectBinding</singleLogoutBinding>
+    <singleLogoutUrl>https://login.microsoftonline.com/0250981a-1133-49e1-ba8e-3b02b77bfa04/saml2</singleLogoutUrl>
+    <useConfigRequestMethod>false</useConfigRequestMethod>
+    <useSameDigestAlgoForSigning>true</useSameDigestAlgoForSigning>
+    <userProvisioning>true</userProvisioning>
+    <validationCert>MIIC8DCCAdigAwIBAgIQQ45ffmV2t6RL7tVfwk+BTDANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yMjA0MTEwNjIzMjVaFw0yNTA0MTEwNjIzMjVaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApS/xqtpyZnpXDp/UcRvFzfZXKc+EwRKt1qu3BDeieMZ7bHO6cfulTWetQfRghypUkyepAsl8nSgeZ3co4WOLuVfhB3SZrOvBaU/h40WJx+etWJOEKlIEZpzQIPLYdmFBAQI7C24jjsSh3xApg2HJUgdRu+DcOhUyFvyjvBrantyWd9lEH7NoD4zAm4YHsAnDGal0BDsvPNbKwSLNj6vnZ82Yxioufd8NX+U7hGnH88PJHJkfSYn7ns0XbTl63u8PMcj/Yg/aSa1F3LopFzyK3m1K2uAhvAd86t2BzCUSi9GGq8X3MWC/heh1AWdb9SxsyePeIUW9BWAUg+guHxrz/QIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBo8lVeC9LIOkNbn5OCnBhWQc2li2GJnKls+QYhxVOFOfce/kWRHJ7OJ1s2Id0WRx3Q5DJ3El0QapKbi7G9FsRxrUPDto9f/6LnOrWVEKUa64dh21gbNOXGIWJ1q89FgAXdMFU+O08Sr4fIHY3MQLEZiQGijoZzUkl0qnvcrRQb1l8AJAAS+wNZRWddNY990XGMuTc2EcjJK15kGG/6Rl1TwHAuxtATOyW/mhtciYELZ+KlGfKehaECtCLBXuK+j+i2jV97sUC32HntIUx+osIqav/N6inOu5MSin+6ZxILNJdnv3FuhPzg8FIwLa1i76pDOVm2FWr1e+eUQPDlKuu5</validationCert>
+</SamlSsoConfig>

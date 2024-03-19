@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Core_Legal_Status_ID__c</field>
+    </columns>
+    <columns>
+        <field>Account.Core_Customer_Type__c</field>
+    </columns>
+    <columns>
+        <field>Account.Core_Customer_Number__c</field>
+    </columns>
+    <columns>
+        <field>Account.Core_WZ_Code_1__c</field>
+    </columns>
+    <columns>
+        <field>Account.Creation_User__c</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <description>Zeigt alle Accounts, die entweder als Gesellschaftform &quot;Privatkunde&quot; oder keinen Wert eingetragen haben</description>
+    <filter>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <column>Account.Core_Legal_Status_ID__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>07</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Core_Legal_Status_ID__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Privatkunden Accounts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

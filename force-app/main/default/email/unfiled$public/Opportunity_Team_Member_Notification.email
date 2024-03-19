@@ -1,0 +1,13 @@
+Hallo {!OpportunityTeamMember.Member_Name__c},
+
+du wurdest von {!OpportunityTeamMember.CreatedBy} als {!OpportunityTeamMember.TeamMemberRole} der Opportunity {!Opportunity.Name} hinzugefügt.
+
+Logge dich ein um mehr über die Opportunity zu erfahren.
+{!Opportunity.Link}
+
+Viele Grüße
+dein Zeppelin Salesforce-Team
+
+
+
+Dies ist eine automatische generierte E-Mail, bitte nicht antworten.

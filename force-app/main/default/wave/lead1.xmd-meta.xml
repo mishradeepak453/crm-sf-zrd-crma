@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WaveXmd xmlns="http://soap.sforce.com/2006/04/metadata">
+    <dataset>lead1</dataset>
+    <dimensions>
+        <customActionsEnabled>true</customActionsEnabled>
+        <field>IsConverted</field>
+        <isDerived>false</isDerived>
+        <label>Is Converted</label>
+        <linkTemplateEnabled>true</linkTemplateEnabled>
+        <members>
+            <color>#005FB2</color>
+            <label>Yes</label>
+            <member>true</member>
+            <sortIndex>0</sortIndex>
+        </members>
+        <members>
+            <color>#A9DCF5</color>
+            <label>No</label>
+            <member>false</member>
+            <sortIndex>1</sortIndex>
+        </members>
+        <salesforceActionsEnabled>true</salesforceActionsEnabled>
+        <showInExplorer>true</showInExplorer>
+        <sortIndex>0</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>Company</field>
+        <isDerived>false</isDerived>
+        <label>Company</label>
+        <linkTemplate>/{{row.Id}}</linkTemplate>
+        <linkTooltip>Open Lead</linkTooltip>
+        <recordIdField>Id</recordIdField>
+        <sortIndex>1</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>Name</field>
+        <isDerived>false</isDerived>
+        <linkTemplate>/{{row.Id}}</linkTemplate>
+        <linkTooltip>Open Lead</linkTooltip>
+        <recordIdField>Id</recordIdField>
+        <sortIndex>2</sortIndex>
+    </dimensions>
+    <dimensions>
+        <field>UserOrQueueName</field>
+        <isDerived>false</isDerived>
+        <linkTemplate>/{{row.Id}}</linkTemplate>
+        <linkTooltip>Open Lead</linkTooltip>
+        <recordIdField>Id</recordIdField>
+        <sortIndex>3</sortIndex>
+    </dimensions>
+    <dimensions>
+        <customActionsEnabled>true</customActionsEnabled>
+        <field>Rating</field>
+        <isDerived>false</isDerived>
+        <label>Bewertung</label>
+        <linkTemplateEnabled>true</linkTemplateEnabled>
+        <members>
+            <color>#8F8F8F</color>
+            <label>No Rating</label>
+            <member>-N/A</member>
+            <sortIndex>0</sortIndex>
+        </members>
+        <salesforceActionsEnabled>true</salesforceActionsEnabled>
+        <showInExplorer>true</showInExplorer>
+        <sortIndex>4</sortIndex>
+    </dimensions>
+    <measures>
+        <field>percent</field>
+        <formatCustomFormat>[&quot;#,###%&quot;,100]</formatCustomFormat>
+        <isDerived>true</isDerived>
+        <label>percent</label>
+        <showInExplorer>false</showInExplorer>
+        <sortIndex>0</sortIndex>
+    </measures>
+</WaveXmd>

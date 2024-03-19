@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$Account</field>
+    </columns>
+    <columns>
+        <field>Contact$Email</field>
+    </columns>
+    <columns>
+        <field>Contact$Phone</field>
+    </columns>
+    <columns>
+        <field>Contact$MailingStreet</field>
+    </columns>
+    <columns>
+        <field>Contact$MailingPostalCode</field>
+    </columns>
+    <columns>
+        <field>Contact$MailingCity</field>
+    </columns>
+    <columns>
+        <field>Contact.DuplicateRecordItems$Name</field>
+    </columns>
+    <description>Dieser Bericht identifiziert Kontakte, die möglicherweise Duplikate sind. Duplikate werden anhand der Salesforce Standard Kontakt-Matching-Rules angezeigt. 
+https://help.salesforce.com/s/articleView?id=sf.duplicate_rules_standard_contact_rule.htm&amp;type=5</description>
+    <format>Tabular</format>
+    <name>Kontakt Duplikate-Bericht</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Contact_with_Duplicates__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Contact$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

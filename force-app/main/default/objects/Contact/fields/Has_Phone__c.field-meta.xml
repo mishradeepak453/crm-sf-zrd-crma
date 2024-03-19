@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_Phone__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(len( Phone)=0 , if(len(MobilePhone)=0,&quot;nein&quot;,&quot;nur Mobil&quot;),if(len(MobilePhone)=0,&quot;nur Festnetz&quot;,&quot;ja&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Has Phone</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

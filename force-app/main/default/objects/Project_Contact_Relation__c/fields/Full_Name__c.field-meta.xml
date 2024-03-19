@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Full_Name__c</fullName>
+    <description>1. Not integration relevant
+2. ZRD
+3. Used to display full name and link to contact on Contacts related list on Projects.</description>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&quot;/lightning/r/Project_Contact_Relation__c/&quot;+Contact__r.Id+&quot;/view&quot;,  Contact__r.FirstName + &quot; &quot; +  Contact__r.LastName)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Full Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

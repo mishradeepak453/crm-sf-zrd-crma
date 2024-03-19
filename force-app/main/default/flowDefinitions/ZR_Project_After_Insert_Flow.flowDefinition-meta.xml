@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>4</activeVersionNumber>
+    <description>- Sends a Platform Event to Grace to receive the territory of the record
+- Sends a notification to the public group Vertriebssteuerung</description>
+    <masterLabel>Project After Insert Flow</masterLabel>
+</FlowDefinition>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>1. Not integration relevant
+2. ZR
+3. SF-850</description>
+    <flowDefinition>ZR_Account_Owner_Change_Flow</flowDefinition>
+    <label>Assign Myself</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>
